@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Package;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -12,9 +14,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        $event = Event::all();
+        $event = Event::all(); // Mengambil semua event dari database
+        $packages = Package::all(); // Mengambil semua paket dari database
         return view('event.index', [
-            'event' => $event
+            'event' => $event,
+            'packages' => $packages, // Mengirim data paket ke tampilan dengan nama variabel $packages
         ]);
     }
 
@@ -23,7 +27,10 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('event.create');
+        $packages = Package::all(); // Mengambil semua paket dari database
+        return view('event.create', [
+            'packages' => $packages, // Mengirim data paket ke tampilan dengan nama variabel $packages
+        ]);
     }
 
     /**
@@ -35,19 +42,28 @@ class EventController extends Controller
             'tenant_name' => 'required',
             'institution_origin' => 'required',
             'phone' => 'required',
-            'capacity' => 'required',
+            'package_id' => 'required|exists:packages,id',
             'event_date' => 'required',
             'rehearsal_date' => 'required',
-            'venue' => 'required',
-            'description' => 'required',
-            'about' => 'required',
-
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'capacity' => 'required|integer',
+            'payment_amount' => 'required|numeric',
+            'remaining_payment' => 'nullable|numeric',
         ]);
 
-        // Buat pengguna baru
-        $event = Event::create($validatedData);
+        // Check if receipt_dp is uploaded
+        if ($request->hasFile('receipt_dp')) {
+            $validatedData['receipt_dp'] = $request->file('receipt_dp')->store('receipt-dp');
+            // Set status to 'DP' since receipt_dp exists
+            $validatedData['status'] = 'DP';
+        } else {
+            // If receipt_dp is not uploaded, set status to 'Pending'
+            $validatedData['status'] = 'Pending';
+        }
 
-
+        // Create the event
+        Event::create($validatedData);
 
         return redirect()->route('event')->with('success', 'Event added successfully.');
     }
@@ -58,7 +74,8 @@ class EventController extends Controller
     public function show(string $id)
     {
         $event = Event::findOrFail($id); // Contoh: Menggunakan Eloquent untuk mengambil data event berdasarkan ID
-        return view('event.show', compact('event'));
+        $package = Package::findOrFail($id); // Contoh: Menggunakan Eloquent untuk mengambil data event berdasarkan ID
+        return view('event.show', compact('event', 'package'));
     }
 
     /**
@@ -67,7 +84,8 @@ class EventController extends Controller
     public function edit(string $id)
     {
         $event = Event::findOrFail($id);
-        return view('event.edit', compact('event')); // Kirim data peran ke tampilan
+        $packages = Package::all(); // Mengambil semua paket dari database
+        return view('event.edit', compact('event', 'packages')); // Kirim data peran ke tampilan
     }
 
     /**
@@ -81,15 +99,32 @@ class EventController extends Controller
             'tenant_name' => 'required',
             'institution_origin' => 'required',
             'phone' => 'required',
-            'capacity' => 'required',
+            'package_id' => 'required|exists:packages,id',
             'event_date' => 'required',
             'rehearsal_date' => 'required',
-            'venue' => 'required',
-            'description' => 'required',
-            'about' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'capacity' => 'required|integer',
+            'payment_amount' => 'required|numeric',
+            'remaining_payment' => 'nullable|numeric',
         ]);
 
-        // Memperbarui model dengan data yang divalidasi
+        // Check if receipt_dp is uploaded
+        if ($request->hasFile('receipt_dp')) {
+            // Delete old image if exists
+            if ($event->receipt_dp) {
+                Storage::delete($event->receipt_dp);
+            }
+
+            $validatedData['receipt_dp'] = $request->file('receipt_dp')->store('gallery-images');
+            // Set status to 'DP' since receipt_dp exists
+            $validatedData['status'] = 'DP';
+        } else {
+            // If receipt_dp is not uploaded, set status to 'Pending'
+            $validatedData['status'] = 'Pending';
+        }
+
+        // Update the event model with validated data
         $event->fill($validatedData);
         $event->save();
 
@@ -105,5 +140,11 @@ class EventController extends Controller
         $event->delete();
 
         return redirect()->route('event')->with('success', 'event was successfully deleted.');
+    }
+
+    public function getPackagePrice($packageId)
+    {
+        $package = Package::findOrFail($packageId);
+        return response()->json(['price' => $package->price]);
     }
 }

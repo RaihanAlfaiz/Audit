@@ -2,22 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
-use App\Models\Event;
-use App\Http\Requests\StoreBookingRequest;
-use App\Http\Requests\UpdateBookingRequest;
+use App\Models\Addition;
+use App\Http\Requests\StoreAdditionRequest;
+use App\Http\Requests\UpdateAdditionRequest;
 
-class BookingController extends Controller
+class AdditionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $booking = Booking::all();
-        return view('booking.index', [
-            'booking' => $booking
-        ]);
+        //
     }
 
     /**
@@ -25,14 +21,13 @@ class BookingController extends Controller
      */
     public function create()
     {
-        $events = Event::all();
-        return view('booking.create', ['events' => $events]);
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreBookingRequest $request)
+    public function store(StoreAdditionRequest $request)
     {
         //
     }
@@ -40,7 +35,7 @@ class BookingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Booking $booking)
+    public function show(Addition $addition)
     {
         //
     }
@@ -48,7 +43,7 @@ class BookingController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Booking $booking)
+    public function edit(Addition $addition)
     {
         //
     }
@@ -56,7 +51,7 @@ class BookingController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateBookingRequest $request, Booking $booking)
+    public function update(UpdateAdditionRequest $request, Addition $addition)
     {
         //
     }
@@ -64,7 +59,7 @@ class BookingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Booking $booking)
+    public function destroy(Addition $addition)
     {
         //
     }

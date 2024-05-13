@@ -7,7 +7,7 @@
             <div class="card">
                 
                 <div class="card-body">
-                    <a href="{{ route('booking.create') }}" class="btn btn-primary mb-3"> Tambah Data</a>
+                   
                     <table id="tbl_list" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                             <tr>

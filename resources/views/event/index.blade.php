@@ -15,6 +15,8 @@
                                 <th>Tenant Name </th>
                                 <th>Phone </th>
                                 <th>Event Date</th>
+                                <th>Package</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -26,6 +28,8 @@
                           <td>{{ $ev->tenant_name}}</td>
                           <td>{{ $ev->phone}}</td>
                           <td>{{ $ev->event_date}}</td>
+                          <td>{{ $ev->package->Name}}</td>
+                          <td> <i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>  
                           <td>
                             <a href="{{ route('event.show', $ev->id) }}" class="btn btn-sm btn-success">Detail</a>
                             <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning">Edit</a>
@@ -33,6 +37,9 @@
                               @csrf
                               @method('DELETE')
                               <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
+                              @if($ev->receipt_dp)
+                              <a href="{{ route('booking.create', $ev->id) }}" class="btn btn-sm btn-primary mt-3">BOOKING</a>
+                             @endif
                           </td>
                          </tr>
                          @endforeach

@@ -5,7 +5,9 @@ use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PackageController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -44,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
+    // Rute-rute yang sudah ada sebelumnya
     Route::get('/event', [EventController::class, 'index'])->name('event');
     Route::get('/event/create', [EventController::class, 'create'])->name('event.create');
     Route::post('/event', [EventController::class, 'store'])->name('event.store');
@@ -51,6 +54,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/event/{id}/edit', [EventController::class, 'edit'])->name('event.edit');
     Route::put('/event/{id}/update', [EventController::class, 'update'])->name('event.update');
     Route::delete('/event/{id}', [EventController::class, 'destroy'])->name('event.destroy');
+    
+    // Rute untuk mendapatkan harga paket berdasarkan package_id
+    Route::get('/get-package-price/{packageId}', [EventController::class, 'getPackagePrice']);
 });
 
 Route::middleware(['auth'])->group(function () {
@@ -61,4 +67,24 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/booking/{id}/edit', [BookingController::class, 'edit'])->name('booking.edit');
     Route::put('/booking/{id}/update', [BookingController::class, 'update'])->name('booking.update');
     Route::delete('/booking/{id}', [BookingController::class, 'destroy'])->name('booking.destroy');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/package', [PackageController::class, 'index'])->name('package');
+    Route::get('/package/create', [PackageController::class, 'create'])->name('package.create');
+    Route::post('/package', [PackageController::class, 'store'])->name('package.store');
+    Route::get('/package/{id}/show', [PackageController::class, 'show'])->name('package.show');
+    Route::get('/package/{id}/edit', [PackageController::class, 'edit'])->name('package.edit');
+    Route::put('/package/{id}/update', [PackageController::class, 'update'])->name('package.update');
+    Route::delete('/package/{id}', [PackageController::class, 'destroy'])->name('package.destroy');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/service', [ServiceController::class, 'index'])->name('service');
+    Route::get('/service/create', [ServiceController::class, 'create'])->name('service.create');
+    Route::post('/service', [ServiceController::class, 'store'])->name('service.store');
+    Route::get('/service/{id}/show', [ServiceController::class, 'show'])->name('service.show');
+    Route::get('/service/{id}/edit', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::put('/service/{id}/update', [ServiceController::class, 'update'])->name('service.update');
+    Route::delete('/service/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
 });

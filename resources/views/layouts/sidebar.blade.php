@@ -23,7 +23,24 @@
                 <div data-i18n="Dashboards">home</div>
             </a>
         </li>
-
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Service and Package </span>
+        </li>
+        <li class="menu-item  {{ Request::is('package*') ? 'active' : '' }}">
+            <a href="{{ route('package') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx  bx-box"></i>
+                <div data-i18n="Dashboards">Package</div>
+            </a>
+        </li>
+        <li class="menu-item  {{ Request::is('service*') ? 'active' : '' }}">
+            <a href="{{ route('service') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-unite"></i>
+                <div data-i18n="Dashboards">Service</div>
+            </a>
+        </li>
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Book</span>
+        </li>
         <li class="menu-item  {{ Request::is('event*') ? 'active' : '' }}">
             <a href="{{ route('event') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>

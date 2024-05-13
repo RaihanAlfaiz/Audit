@@ -16,7 +16,7 @@
                             </div>
                             <div class="mb-3">
                                 <strong>Institution Origin:</strong>
-                                <p>{{ $event->institution_origin }}</p>
+                                <p>{{ $event->Institution_origin }}</p>
                             </div>
                             <div class="mb-3">
                                 <strong>Number Phone:</strong>
@@ -34,21 +34,26 @@
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <strong>About:</strong>
-                                <p>{{ $event->about }}</p>
+                                <strong>Package:</strong>
+                                <p>{{ $event->package->Name }}</p>
                             </div>
                             <div class="mb-3">
                                 <strong>Rehearsal Date:</strong>
                                 <p>{{ date('d/m/Y', strtotime($event->rehearsal_date)) }}</p>
                             </div>
                             <div class="mb-3">
-                                <strong>Venue:</strong>
-                                <p>{{ $event->venue }}</p>
+                                <strong>Start - end:</strong>
+                                <p>{{ $event->start_time }} - {{ $event->end_time }}</p>
                             </div>
                             <div class="mb-3">
-                                <strong>Description:</strong>
-                                <p>{{ $event->description }}</p>
+                                <strong>Status:</strong>
+                                <p><i class="badge rounded-pill bg-{{ $event->color }}" style="font-size:10pt;">{{ $event->status }}</i></p>
                             </div>
+                            <div class="mb-3">
+                                <strong>Remaining Payment:</strong>
+                                <p>{{ 'Rp ' . number_format($event->remaining_payment, 0, ',', '.') }}</p>
+                            </div>
+                     
                             <div class="mb-3">
                                <a href="{{ route('event') }}" class="btn btn-primary">Kembali</a>
                             </div>

@@ -1,6 +1,8 @@
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
 {{-- <script src="{{asset('assets/vendor/libs/jquery/jquery.js')}}"></script> --}}
+<script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="{{asset('assets/vendor/libs/popper/popper.js')}}"></script>
 {{-- <script src="{{asset('assets/vendor/js/bootstrap.js')}}"></script> --}}
@@ -15,13 +17,15 @@
 
 <!-- Vendors JS -->
 <script src="{{asset('assets/vendor/libs/shepherd/shepherd.js')}}"></script>
-
 <!-- Main JS -->
 <script src="{{asset('assets/js/main.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script
+src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js">
+</script>
 
 <!-- Page JS -->
 @yield('script')
