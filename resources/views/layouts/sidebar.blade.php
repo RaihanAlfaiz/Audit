@@ -22,6 +22,14 @@
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Dashboards">home</div>
             </a>
+
+        
+        </li>
+        <li class="menu-item  {{ Request::is('calendar') ? 'active' : '' }}">
+        <a href="{{ route('calendar') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-calendar"></i>
+            <div data-i18n="Dashboards">Calendar</div>
+        </a>
         </li>
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Service and Package </span>

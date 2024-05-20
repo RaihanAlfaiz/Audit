@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('event_id'); // Change the data type to string
-            $table->foreign('event_id')->references('id')->on('events');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('CASCADE'); // Menambahkan onDelete('CASCADE')
             $table->string('total_payment');
             $table->string('ktp');
             $table->string('receipt_full');
-           
+
 
             $table->timestamps();
         });

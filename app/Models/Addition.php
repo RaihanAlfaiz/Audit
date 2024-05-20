@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Addition extends Model
 {
     use HasFactory;
-
+    
     protected $fillable = [
         'service_id',
         'booking_id',

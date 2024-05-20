@@ -5,7 +5,6 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                
                 <div class="card-body">
                     <a href="{{ route('event.create') }}" class="btn btn-primary mb-3"> Tambah Data</a>
                     <table id="tbl_list" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -22,13 +21,12 @@
                         </thead>
                         <tbody>
                          @foreach ($event as $ev)
-                             
                          <tr>
                           <td>{{ $loop->iteration }}</td>
-                          <td>{{ $ev->tenant_name}}</td>
-                          <td>{{ $ev->phone}}</td>
-                          <td>{{ $ev->event_date}}</td>
-                          <td>{{ $ev->package->Name}}</td>
+                          <td>{{ $ev->tenant_name }}</td>
+                          <td>{{ $ev->phone }}</td>
+                          <td>{{ $ev->event_date }}</td>
+                          <td>{{ $ev->package->Name }}</td>
                           <td> <i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>  
                           <td>
                             <a href="{{ route('event.show', $ev->id) }}" class="btn btn-sm btn-success">Detail</a>
@@ -36,24 +34,21 @@
                             <form action="{{ route('event.destroy', $ev->id) }}" method="POST" style="display: inline;">
                               @csrf
                               @method('DELETE')
-                              <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
-                              @if($ev->receipt_dp)
+                              <button type="submit" class="btn btn-sm btn-danger delete-btn ">Hapus</button>
+                            </form>
+                            @if($ev->receipt_dp && $ev->bookings->isEmpty())
                               <a href="{{ route('booking.create', $ev->id) }}" class="btn btn-sm btn-primary mt-3">BOOKING</a>
-                             @endif
+                            @endif
                           </td>
                          </tr>
                          @endforeach
-                       
                         </tbody>
                     </table>
-                    
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 @endsection
 
 @section('script')
@@ -86,20 +81,18 @@
                     }
                 });
             });
-        });
 
-        $(document).ready(function(){
-        // Check if success message exists
-        var successMessage = '{{ session('success') }}';
-        if(successMessage){
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: successMessage,
-                showConfirmButton: false,
-                timer: 1500
-            });
-        }
-    });
+            // Check if success message exists
+            var successMessage = '{{ session('success') }}';
+            if(successMessage){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        });
     </script>
 @endsection

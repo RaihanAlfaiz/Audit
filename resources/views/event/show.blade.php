@@ -1,5 +1,25 @@
 @extends('layouts.master')
+@section('css')
+<style>
+    .img-fluid{
+        width: 100px;
+        height: 100px;
+    }
+    .gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 20px solid #fff;
+}
 
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+</style>
+@endsection
 @section('content')
 
 <div class="container">
@@ -53,7 +73,16 @@
                                 <strong>Remaining Payment:</strong>
                                 <p>{{ 'Rp ' . number_format($event->remaining_payment, 0, ',', '.') }}</p>
                             </div>
-                     
+                            @if ($event->receipt_dp)
+                            <div class="mb-3">
+                                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                                    <strong>Receipt DP:</strong><br>
+                                    <a href="{{ asset('storage/' . $event->receipt_dp) }}" class="gallery-lightbox">
+                                    <img src="{{ asset('storage/' . $event->receipt_dp) }}" class="img-fluid" alt="Receipt DP">
+                                </a>
+                                </div>
+                            </div>
+                        @endif
                             <div class="mb-3">
                                <a href="{{ route('event') }}" class="btn btn-primary">Kembali</a>
                             </div>
@@ -65,8 +94,14 @@
         </div>
     </div>
 </div>
+
 @endsection
 
 @section('script')
 <!-- Jika diperlukan script tambahan -->
+<script>
+    const galleryLightbox = GLightbox({
+    selector: '.gallery-lightbox'
+  });
+</script>
 @endsection

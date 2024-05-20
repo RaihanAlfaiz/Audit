@@ -73,8 +73,8 @@ class EventController extends Controller
      */
     public function show(string $id)
     {
-        $event = Event::findOrFail($id); // Contoh: Menggunakan Eloquent untuk mengambil data event berdasarkan ID
-        $package = Package::findOrFail($id); // Contoh: Menggunakan Eloquent untuk mengambil data event berdasarkan ID
+        $event = Event::findOrFail($id);
+        $package = Package::findOrFail($event->package_id); // Ambil paket berdasarkan package_id dari event
         return view('event.show', compact('event', 'package'));
     }
 
@@ -120,8 +120,8 @@ class EventController extends Controller
             // Set status to 'DP' since receipt_dp exists
             $validatedData['status'] = 'DP';
         } else {
-            // If receipt_dp is not uploaded, set status to 'Pending'
-            $validatedData['status'] = 'Pending';
+            // If receipt_dp is not uploaded, keep the previous status
+            $validatedData['status'] = $event->status;
         }
 
         // Update the event model with validated data
@@ -130,6 +130,7 @@ class EventController extends Controller
 
         return redirect()->route('event')->with('success', 'Event updated successfully.');
     }
+
 
     /**
      * Remove the specified resource from storage.

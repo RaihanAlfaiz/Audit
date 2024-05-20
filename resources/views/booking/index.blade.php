@@ -12,24 +12,28 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>booking_date</th>
-                                <th>Phone </th>
+                                <th>tenant Name</th>
+                                <th>Package</th>
                                 <th>Event Date</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                     
-                             
-                         <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td>
-                          
-                          </td>
-                         </tr>
+                            @foreach ($booking as $bk)
+                                
+                            <tr>
+                             <td>{{ $loop->iteration }}</td>
+                             <td>{{ $bk->event->tenant_name }}</td>
+                             <td>{{ $bk->event->package->Name }}</td>
+                             <td>{{ date('d F Y', strtotime($bk->event->event_date)) }}</td>
+                             <td> <i class="badge rounded-pill bg-{{ $bk->event->color }}" style="font-size:10pt;">{{ $bk->event->status }}</i></td>  
+                             <td>
+                              <a href="" class="btn btn-sm btn-primary"><i class='bx bxs-file-pdf'></i></a>
+                             </td>
+                            </tr>
+                            @endforeach
                        
                         </tbody>
                     </table>

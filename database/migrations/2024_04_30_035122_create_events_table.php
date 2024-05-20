@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('capacity');
             $table->date('event_date');
             $table->string('tenant_name');
-            $table->date('rehearsal_date');
+            $table->date('rehearsal_date')->nullable();
             $table->string('status')->nullable();
             $table->string('receipt_dp')->nullable();
             $table->string('start_time');

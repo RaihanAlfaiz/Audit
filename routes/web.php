@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -54,14 +55,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/event/{id}/edit', [EventController::class, 'edit'])->name('event.edit');
     Route::put('/event/{id}/update', [EventController::class, 'update'])->name('event.update');
     Route::delete('/event/{id}', [EventController::class, 'destroy'])->name('event.destroy');
-    
+
     // Rute untuk mendapatkan harga paket berdasarkan package_id
     Route::get('/get-package-price/{packageId}', [EventController::class, 'getPackagePrice']);
 });
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/booking', [BookingController::class, 'index'])->name('booking');
-    Route::get('/booking/create', [BookingController::class, 'create'])->name('booking.create');
+    Route::get('/booking/create/{event}', [BookingController::class, 'create'])->name('booking.create');
     Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
     Route::get('/booking/{id}/show', [BookingController::class, 'show'])->name('booking.show');
     Route::get('/booking/{id}/edit', [BookingController::class, 'edit'])->name('booking.edit');
@@ -87,4 +88,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/service/{id}/edit', [ServiceController::class, 'edit'])->name('service.edit');
     Route::put('/service/{id}/update', [ServiceController::class, 'update'])->name('service.update');
     Route::delete('/service/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar');
+    Route::get('/events', [EventController::class, 'getEvents'])->name('events');
 });
