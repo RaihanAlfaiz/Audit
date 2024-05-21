@@ -52,4 +52,6 @@ class User extends Authenticatable
     {
         return $this->roles()->where('role_id', $role)->count() == 1;
     }
+
+
 }

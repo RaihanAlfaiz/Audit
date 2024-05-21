@@ -62,9 +62,7 @@
                 <div data-i18n="Dashboards">Booking</div>
             </a>
         </li>
-       
-       
-
+        
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Config</span>
         </li>

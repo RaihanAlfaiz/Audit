@@ -94,3 +94,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar');
     Route::get('/events', [EventController::class, 'getEvents'])->name('events');
 });
+
+Route::get('/myprofile', [App\Http\Controllers\MyProfileController::class, 'myprofile'])->name('user.myprofile');
+Route::patch('/myprofile/{id}', [App\Http\Controllers\MyProfileController::class, 'update'])->name('profile.update');
+
+
