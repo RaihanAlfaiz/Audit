@@ -8,7 +8,6 @@
                 <div class="card-header">{{ __('Profile') }}</div>
 
                 <div class="card-body">
-                    
                     @if(session('status'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ session('status') }}
