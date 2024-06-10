@@ -137,7 +137,7 @@
 
                 <h3><span>01</span> Weeding</h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                  <p>  Penjelasan weeding.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -145,7 +145,7 @@
               <div class="faq-item">
                 <h3><span>02</span> Graduation</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                <p> Penjelasan tentang Graduation</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -153,7 +153,7 @@
               <div class="faq-item">
                 <h3><span>03</span>Seminar</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                <p>Penjelasan mengenai Seminar</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -161,7 +161,7 @@
               <div class="faq-item">
                 <h3><span>04</span>Meeting</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                  <p>Penjelasan mengenai meeting</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -169,7 +169,7 @@
               <div class="faq-item">
                 <h3><span>05</span>Exhibition dll</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                <p>Penjelasan mengenai Exhibition dll</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
