@@ -3,7 +3,7 @@
     <div class="app-brand demo ">
         <a href="" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="{{asset('assets/img/logo-sjgu.png')}}" height="44">
+                <img src="{{asset('assets/img/logo-jgu.png')}}" height="44">
             </span>
         </a>
 
@@ -28,24 +28,10 @@
         <li class="menu-item  {{ Request::is('calendar') ? 'active' : '' }}">
         <a href="{{ route('calendar') }}" class="menu-link">
             <i class="menu-icon tf-icons bx bx-calendar"></i>
-            <div data-i18n="Dashboards">Calendar</div>
+            <div data-i18n="Dashboards">Schedule</div>
         </a>
         </li>
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Service and Package </span>
-        </li>
-        <li class="menu-item  {{ Request::is('package*') ? 'active' : '' }}">
-            <a href="{{ route('package') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx  bx-box"></i>
-                <div data-i18n="Dashboards">Package</div>
-            </a>
-        </li>
-        <li class="menu-item  {{ Request::is('service*') ? 'active' : '' }}">
-            <a href="{{ route('service') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-unite"></i>
-                <div data-i18n="Dashboards">Service</div>
-            </a>
-        </li>
+     
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Book</span>
         </li>
@@ -62,11 +48,38 @@
                 <div data-i18n="Dashboards">Booking</div>
             </a>
         </li>
-       
-       
 
         <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Building Management</span>
+        </li>
+
+        <li class="menu-item  {{ Request::is('tools*') ? 'active' : '' }}">
+            <a href="{{ route('tools') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-buildings"></i>
+                <div data-i18n="Dashboards">Tools</div>
+            </a>
+        </li>
+       
+       
+        {{-- <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Service and Package </span>
+        </li> --}}
+      
+        <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Config</span>
+        </li>
+
+        <li class="menu-item  {{ Request::is('package*') ? 'active' : '' }}">
+            <a href="{{ route('package') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx  bx-box"></i>
+                <div data-i18n="Dashboards">Package</div>
+            </a>
+        </li>
+        <li class="menu-item  {{ Request::is('service*') ? 'active' : '' }}">
+            <a href="{{ route('service') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-unite"></i>
+                <div data-i18n="Dashboards">Service</div>
+            </a>
         </li>
       
         <li class="menu-item  {{ Request::is('roles','profile') ? 'active' : '' }}">

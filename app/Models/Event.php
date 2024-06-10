@@ -28,6 +28,11 @@ class Event extends Model
         return $this->hasMany(Booking::class);
     }
 
+    public function booking()
+    {
+        return $this->hasOne(Booking::class, 'event_id');
+    }
+
     public function package()
     {
         return $this->belongsTo(Package::class, 'package_id');
@@ -42,14 +47,14 @@ class Event extends Model
             $x = "primary";
         } else if ($this->status == "DP") {
             $x = "warning";
-        } else if ($this->status == "EE") {
+        } else if ($this->status == "Pending") {
             $x = "danger";
         } else if ($this->status == "Process") {
             $x = "info";
         } else if ($this->status == "Success") {
             $x = "success";
-        } else if ($this->status == "Pending") {
-            $x = "secondary";
+        } else if ($this->status == "ready") {
+            $x = "info";
         } else {
             $x = "dark";
         }

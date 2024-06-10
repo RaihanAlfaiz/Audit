@@ -26,10 +26,10 @@
                                     <label for="event_id">Event</label>
                                     <select name="event_id" id="event_id" class="form-control" onchange="updateRemainingPayment()">
                                         @foreach($events as $event)
-                                            <option value="{{ $event->id }}" data-remaining-payment="{{ $event->remaining_payment }}" {{ old('event_id', $event->id) == $event->id ? 'selected' : '' }}>
-                                                {{ $event->tenant_name }} - {{ $event->package->Name }}
-                                            </option>
-                                        @endforeach
+                                        <option value="{{ $event->id }}" data-remaining-payment="{{ $event->remaining_payment }}" {{ $event->id == $eventId ? 'selected' : '' }}>
+                                            {{ $event->tenant_name }} - {{ $event->package->Name }}
+                                        </option>
+                                    @endforeach
                                     </select>
                                 </div>
 

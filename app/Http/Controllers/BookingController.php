@@ -5,23 +5,62 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\Event;
 use App\Models\Service;
+use App\Models\Package;
 use App\Models\Addition;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreBookingRequest;
 use App\Http\Requests\UpdateBookingRequest;
+use Endroid\QrCode\Color\Color;
+use Endroid\QrCode\Encoding\Encoding;
+use Endroid\QrCode\ErrorCorrectionLevel;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Label\Label;
+use Endroid\QrCode\Logo\Logo;
+use Endroid\QrCode\RoundBlockSizeMode;
+use Endroid\QrCode\Writer\PngWriter;
+
 
 class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $booking = Booking::all();
+        $query = Booking::query();
+
+        // Filter by date range
+        if ($request->has('range') && !empty($request->input('range'))) {
+            $dates = explode(' - ', $request->input('range'));
+            $start_date = $dates[0];
+            $end_date = $dates[1];
+            $query->whereHas('event', function ($q) use ($start_date, $end_date) {
+                $q->whereBetween('event_date', [$start_date, $end_date]);
+            });
+        }
+
+        // Filter by package
+        if ($request->has('package') && !empty($request->input('package'))) {
+            $query->whereHas('event.package', function ($q) use ($request) {
+                $q->where('id', $request->input('package'));
+            });
+        }
+
+        // Filter by status
+        if ($request->has('status') && !empty($request->input('status'))) {
+            $query->whereHas('event', function ($q) use ($request) {
+                $q->where('status', $request->input('status'));
+            });
+        }
+
+        // Order by event date
+        $query->orderBy(Event::select('event_date')->whereColumn('events.id', 'bookings.event_id'));
+
+        $booking = $query->get();
         $events = Event::all();
         $services = Service::all();
+        $packages = Package::all(); // Mendapatkan data paket
 
-        return view('booking.index', compact('booking', 'events', 'services'));
+        return view('booking.index', compact('booking', 'events', 'services', 'packages'));
     }
 
     /**
@@ -33,7 +72,7 @@ class BookingController extends Controller
         $events = Event::all();
         $services = Service::all();
 
-        return view('booking.create', compact('event', 'events', 'services'));
+        return view('booking.create', compact('event', 'events', 'services', 'eventId'));
     }
 
     /**
@@ -100,6 +139,18 @@ class BookingController extends Controller
         }
 
         return redirect()->route('event', $request->event_id)->with('success', 'Booking created successfully.');
+    }
+
+    public function print($id)
+    {
+        $booking = Booking::find($id);
+        $event = Event::find($booking->event_id);
+        $package = Package::find($event->package_id);
+        $additions = Addition::where('booking_id', $booking->id)->get();
+
+
+
+        return view('booking.booking_print', compact('booking', 'event', 'package', 'additions'));
     }
 
     /**

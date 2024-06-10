@@ -1,12 +1,30 @@
 @extends('layouts.master')
 @section('css')
 <link rel="stylesheet" href="{{ asset('assets/vendor/css/datatables.bootstrap5.css') }}">
+<style>
+      .table {
+        font-size: 12px;
+    }
+
+    .table th, .table td {
+        padding: 5px;
+    }
+
+    .table th {
+        white-space: nowrap;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+</style>
 @endsection
 @section('content')
 
-<div class="container">
+<div class="card app-calendar-wrapper">
+    
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                
                 <div class="card-body">
@@ -24,19 +42,20 @@
                             </thead>
                             <tbody>
                              @foreach ($package as $pck)
+                    
                              <tr>
                               <td>{{ $loop->iteration }}</td>
                               <td>{{ $pck->Name }}</td>
                               <td>{!! $pck->service !!}</td>
                               <td>{!! $pck->item !!}</td>
-                              <td>Rp.{{ $pck->price }}</td>
+                              <td>{{ 'Rp ' . number_format($pck->price, 0, ',', '.') }}</td>
                               <td>
-                                <a href="{{ route('package.show', $pck->id) }}" class="btn btn-sm btn-success mb-3">Detail</a>
-                                <a href="{{ route('package.edit', $pck->id) }}" class="btn btn-sm btn-warning mb-3">Edit</a>
+                                <a href="{{ route('package.show', $pck->id) }}" class="btn btn-sm btn-success ">Detail</a>
+                                <a href="{{ route('package.edit', $pck->id) }}" class="btn btn-sm btn-warning ">Edit</a>
                                 <form action="{{ route('package.destroy', $pck->id) }}" method="POST" style="display: inline;">
                                   @csrf
                                   @method('DELETE')
-                                  <button type="submit" class="btn btn-sm btn-danger delete-btn mb-3">Hapus</button>
+                                  <button type="submit" class="btn btn-sm btn-danger delete-btn ">Hapus</button>
                                 </form>
                               </td>
                              </tr>

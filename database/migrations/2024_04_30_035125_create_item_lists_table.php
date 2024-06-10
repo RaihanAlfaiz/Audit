@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('item_lists', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('booking_id'); // Foreign key to bookings table
+            $table->foreign('booking_id')->references('id')->on('bookings')->onDelete('cascade');
+            $table->string('description'); // Description of the item
+            $table->boolean('status')->default(false); // Status of the item, default is false (unchecked)
             $table->timestamps();
         });
     }

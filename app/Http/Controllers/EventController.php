@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Package;
+use App\Models\Booking;
 use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
@@ -12,15 +13,37 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $event = Event::all(); // Mengambil semua event dari database
-        $packages = Package::all(); // Mengambil semua paket dari database
+        $query = Event::query();
+
+        // Filter by date range
+        if ($request->has('range') && !empty($request->input('range'))) {
+            $dates = explode(' - ', $request->input('range'));
+            $start_date = $dates[0];
+            $end_date = $dates[1];
+            $query->whereBetween('event_date', [$start_date, $end_date]);
+        }
+
+        // Filter by package
+        if ($request->has('package') && !empty($request->input('package'))) {
+            $query->where('package_id', $request->input('package'));
+        }
+
+        // Filter by status
+        if ($request->has('status') && !empty($request->input('status'))) {
+            $query->where('status', $request->input('status'));
+        }
+
+        $event = $query->get();
+        $packages = Package::all();
+
         return view('event.index', [
             'event' => $event,
-            'packages' => $packages, // Mengirim data paket ke tampilan dengan nama variabel $packages
+            'packages' => $packages,
         ]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -62,6 +85,12 @@ class EventController extends Controller
             $validatedData['status'] = 'Pending';
         }
 
+        // Check if the event date is already taken
+        $existingEvent = Event::where('event_date', $validatedData['event_date'])->first();
+        if ($existingEvent) {
+            return redirect()->back()->withInput()->withErrors(['event_date' => 'The event date is already taken.']);
+        }
+
         // Create the event
         Event::create($validatedData);
 
@@ -74,8 +103,9 @@ class EventController extends Controller
     public function show(string $id)
     {
         $event = Event::findOrFail($id);
+        $booking = Booking::findOrFail($id);
         $package = Package::findOrFail($event->package_id); // Ambil paket berdasarkan package_id dari event
-        return view('event.show', compact('event', 'package'));
+        return view('event.show', compact('event', 'package', 'booking'));
     }
 
     /**
