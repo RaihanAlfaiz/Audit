@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/fonts/boxicons.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/vendor/fonts/fontawesome.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/vendor/fonts/flag-icons.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/libs/autosize/autosize.js')}}" />
+    {{-- <link rel="stylesheet" href="{{asset('assets/vendor/libs/autosize/autosize.js')}}" /> --}}
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{asset('assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{asset('assets/vendor/css/theme-default.css')}}"

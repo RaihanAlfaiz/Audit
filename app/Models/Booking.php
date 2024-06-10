@@ -25,4 +25,14 @@ class Booking extends Model
     {
         return $this->belongsTo(Addition::class);
     }
+
+    public function additions()
+    {
+        return $this->hasMany(Addition::class, 'booking_id');
+    }
+
+    public function itemList()
+    {
+        return $this->hasMany(ItemList::class, 'booking_id');
+    }
 }

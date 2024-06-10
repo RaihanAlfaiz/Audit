@@ -137,13 +137,14 @@
                                 
                                 <div class="mb-3">
                                     <label for="payment_amount" class="form-label">The price want to pay</label>
-                                    <input type="text" name="payment_amount" class="form-control" id="payment_amount" placeholder="Enter the payment amount" value="{{ old('payment_amount', $event->payment_amount) }}">
+                                    <input type="text" name="payment_amount" class="form-control" id="payment_amount" placeholder="Enter the payment amount" value="{{ old('payment_amount', $event->payment_amount ?? 0) }}">
                                     @error('payment_amount')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
                                     @enderror
                                 </div>
+                                
                                 
                                 <div class="mb-3">
                                     <label for="remaining_payment" class="form-label">Remaining payment</label>
@@ -231,27 +232,33 @@ $(".selectpicker").selectpicker();
     });
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mendengarkan perubahan pada input jumlah pembayaran
-        document.getElementById('payment_amount').addEventListener('input', function() {
-            // Mendapatkan jumlah pembayaran yang dimasukkan pengguna
-            var paymentAmount = parseFloat(this.value);
-            
-            // Mendapatkan estimasi sisa pembayaran
-            var estimatedRemainingPayment = parseFloat(document.getElementById('remaining_payment_estimate').value);
-            
-            // Menghitung sisa pembayaran aktual
-            var remainingPayment = estimatedRemainingPayment - paymentAmount;
-            
-            // Menghindari nilai negatif
-            var absoluteRemainingPayment = Math.max(0, remainingPayment);
+  document.addEventListener('DOMContentLoaded', function() {
+    // Atur nilai awal "The price want to pay" menjadi 0 jika kosong
+    var paymentAmountInput = document.getElementById('payment_amount');
+    if (!paymentAmountInput.value) {
+        paymentAmountInput.value = 0;
+    }
 
-            // Menampilkan sisa pembayaran di dalam input "remaining_payment"
-            document.getElementById('remaining_payment').value = absoluteRemainingPayment.toFixed(2); // Menampilkan 2 digit desimal
+    // Mendengarkan perubahan pada input jumlah pembayaran
+    paymentAmountInput.addEventListener('input', function() {
+        // Mendapatkan jumlah pembayaran yang dimasukkan pengguna
+        var paymentAmount = parseFloat(this.value);
+        
+        // Mendapatkan estimasi sisa pembayaran
+        var estimatedRemainingPayment = parseFloat(document.getElementById('remaining_payment_estimate').value);
+        
+        // Menghitung sisa pembayaran aktual
+        var remainingPayment = estimatedRemainingPayment - paymentAmount;
+        
+        // Menghindari nilai negatif
+        var absoluteRemainingPayment = Math.max(0, remainingPayment);
 
-            // Mengupdate hidden input "remaining_payment_actual" untuk disubmit ke server
-            document.getElementById('remaining_payment_actual').value = absoluteRemainingPayment.toFixed(2);
-        });
+        // Menampilkan sisa pembayaran di dalam input "remaining_payment"
+        document.getElementById('remaining_payment').value = absoluteRemainingPayment.toFixed(2); // Menampilkan 2 digit desimal
+
+        // Mengupdate hidden input "remaining_payment_actual" untuk disubmit ke server
+        document.getElementById('remaining_payment_actual').value = absoluteRemainingPayment.toFixed(2);
     });
+});
 </script>
 @endsection

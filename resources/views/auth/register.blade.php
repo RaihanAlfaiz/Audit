@@ -15,7 +15,7 @@
               </a>
             </div>
             <!-- /Logo -->
-            <h4 class="mb-2">Adventure starts here 🚀</h4>
+            <img src="assets/img/logo2-.png" height="129" >
             <p class="mb-4">create an account to enter the application!</p>
   
             <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('register') }}">
