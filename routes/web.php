@@ -10,6 +10,8 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MyProfileController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ToolsController;
 
 /*
@@ -96,12 +98,5 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar');
     // Route::get('/events', [EventController::class, 'getEvents'])->name('events');
-});
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
-    Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
-    Route::post('/tools/{eventId}', [ToolsController::class, 'submitChecklist'])->name('tools.submit');
-    Route::post('/tools/updateStatus', [ToolsController::class, 'updateStatus'])->name('tools.updateStatus');
 });
 

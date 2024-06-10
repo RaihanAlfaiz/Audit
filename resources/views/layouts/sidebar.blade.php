@@ -2,8 +2,13 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme no-print">
     <div class="app-brand demo ">
         <a href="" class="app-brand-link">
+<<<<<<< HEAD
+            <span class="app-brand-logo demo">   
+            <img src="{{asset('assets/img/jgu-audit2.png')}}" height="44">
+=======
             <span class="app-brand-logo demo">
                 <img src="{{asset('assets/img/logo-jgu.png')}}" height="44">
+>>>>>>> 9e8eddef9024d7ff37d538c43d3e192b6b130788
             </span>
         </a>
 
@@ -48,7 +53,7 @@
                 <div data-i18n="Dashboards">Booking</div>
             </a>
         </li>
-
+        
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Building Management</span>
         </li>
