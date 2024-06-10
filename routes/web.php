@@ -100,23 +100,3 @@ Route::middleware(['auth'])->group(function () {
     // Route::get('/events', [EventController::class, 'getEvents'])->name('events');
 });
 
-<<<<<<< HEAD
-=======
-Route::middleware(['auth'])->group(function () {
-    Route::get('/myprofile', [MyProfileController::class, 'myprofile'])->name('myprofile');
-    Route::post('/myprofile/upload', [MyProfileController::class, 'upload'])->name('myprofile.upload');
-    Route::patch('/profile/update/{id}', [MyProfileController::class, 'update'])->name('profile.update');
-
-});
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
-    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');   
-    Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
-    Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
-    Route::post('/tools/{eventId}', [ToolsController::class, 'submitChecklist'])->name('tools.submit');
-    Route::post('/tools/updateStatus', [ToolsController::class, 'updateStatus'])->name('tools.updateStatus');
-
-});
-
->>>>>>> 9e8eddef9024d7ff37d538c43d3e192b6b130788
