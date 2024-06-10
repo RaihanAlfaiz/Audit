@@ -15,8 +15,8 @@
               </a>
             </div>
             <!-- /Logo -->
-            <h4 class="mb-2">Welcome to CRUD Campus! 👋</h4>
-            <p class="mb-4">Please sign-in to your account and start the adventure</p>
+            <img src="assets/img/logo2-.png" height="129" >
+            <p class="mb-4">Welcome Back!</p>
   
             <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('login') }}">
                 @csrf
