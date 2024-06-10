@@ -10,6 +10,8 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MyProfileController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,7 +97,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/events', [EventController::class, 'getEvents'])->name('events');
 });
 
-Route::get('/myprofile', [App\Http\Controllers\MyProfileController::class, 'myprofile'])->name('user.myprofile');
-Route::patch('/myprofile/{id}', [App\Http\Controllers\MyProfileController::class, 'update'])->name('profile.update');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/myprofile', [MyProfileController::class, 'myprofile'])->name('myprofile');
+    Route::post('/myprofile/upload', [MyProfileController::class, 'upload'])->name('myprofile.upload');
+    Route::patch('/profile/update/{id}', [MyProfileController::class, 'update'])->name('profile.update');
 
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');   
+});
 

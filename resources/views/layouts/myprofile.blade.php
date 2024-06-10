@@ -59,7 +59,43 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="" class="col-md-4 col-form-label text-md-end">{{ __('Change Profile Photo') }}</label>
+                                    <label for="old_password" class="col-md-4 col-form-label text-md-end">{{ __('Old Password') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="old_password" type="password" class="form-control @error('old_password') is-invalid @enderror" name="old_password" autocomplete="old-password">
+
+                                        @error('old_password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('New Password') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
+
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Change Profile Photo') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="photo" type="file" class="form-control" name="photo">
@@ -83,4 +119,3 @@
     </div>
 </div>
 @endsection
-
