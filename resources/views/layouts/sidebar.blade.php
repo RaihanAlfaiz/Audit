@@ -2,8 +2,8 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme no-print">
     <div class="app-brand demo ">
         <a href="" class="app-brand-link">
-            <span class="app-brand-logo demo">
-                <img src="{{asset('assets/img/logo-sjgu.png')}}" height="44">
+            <span class="app-brand-logo demo">   
+            <img src="{{asset('assets/img/jgu-audit2.png')}}" height="44">
             </span>
         </a>
 
