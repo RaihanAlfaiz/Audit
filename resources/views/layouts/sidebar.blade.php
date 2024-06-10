@@ -48,11 +48,7 @@
                 <div data-i18n="Dashboards">Booking</div>
             </a>
         </li>
-<<<<<<< HEAD
         
-=======
-
->>>>>>> 18de48b085bccfa42faece1c0dcac6194edfed9e
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Building Management</span>
         </li>

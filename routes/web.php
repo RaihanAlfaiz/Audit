@@ -10,12 +10,9 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
-<<<<<<< HEAD
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\SettingController;
-=======
 use App\Http\Controllers\ToolsController;
->>>>>>> 18de48b085bccfa42faece1c0dcac6194edfed9e
 
 /*
 |--------------------------------------------------------------------------
@@ -104,7 +101,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-<<<<<<< HEAD
     Route::get('/myprofile', [MyProfileController::class, 'myprofile'])->name('myprofile');
     Route::post('/myprofile/upload', [MyProfileController::class, 'upload'])->name('myprofile.upload');
     Route::patch('/profile/update/{id}', [MyProfileController::class, 'update'])->name('profile.update');
@@ -114,11 +110,10 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');   
-=======
     Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
     Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
     Route::post('/tools/{eventId}', [ToolsController::class, 'submitChecklist'])->name('tools.submit');
     Route::post('/tools/updateStatus', [ToolsController::class, 'updateStatus'])->name('tools.updateStatus');
->>>>>>> 18de48b085bccfa42faece1c0dcac6194edfed9e
+
 });
 
