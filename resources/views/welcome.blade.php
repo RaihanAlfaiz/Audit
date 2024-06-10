@@ -49,11 +49,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="">Home</a></li>
+          <li><a href="#home" class="">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="#calendar">Calendar</a></li>
           <li class="dropdown"><a href="#"><span>Login/Register</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               @if (Route::has('login'))
@@ -81,7 +81,7 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="home" class="hero section">
 
       <div class="container">
         <div class="row gy-4">
@@ -125,7 +125,7 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
 
             <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h4><span>JGU | BALLROOM </span><strong>(1500M2) Convention Centre (MICE)</strong></h4>
+              <h4><span>JGU BALLROOM </span><strong>(1500M2) Convention Centre (MICE)</strong></h4>
               <p>
                Auditorium Jakarta Global University Melayani Produk atau Layanan Untuk Event :
               </p>
@@ -249,7 +249,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2>Package</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
@@ -260,7 +260,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
+              <h4><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div><!-- End Service Item -->
@@ -268,7 +268,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Sed ut perspici</a></h4>
+              <h4><a href="#" class="stretched-link">Sed ut perspici</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div><!-- End Service Item -->
@@ -276,7 +276,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
+              <h4><a href="#" class="stretched-link">Magni Dolores</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div><!-- End Service Item -->
@@ -284,7 +284,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
+              <h4><a href="#" class="stretched-link">Nemo Enim</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div><!-- End Service Item -->
@@ -438,11 +438,11 @@
     </section><!-- /Portfolio Section -->
 
     <!-- Team Section -->
-    <section id="team" class="team section">
+    <section id="calendar" class="team section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
+        <h2>Calendar</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
@@ -557,17 +557,18 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Portofolio</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Weeding</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Graduation</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Seminar</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Meeting</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Exhibition dll</a></li>
           </ul>
         </div>
 
