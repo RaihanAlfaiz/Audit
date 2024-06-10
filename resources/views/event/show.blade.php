@@ -50,7 +50,16 @@
                                 <strong>Event Date:</strong>
                                 <p>{{ date('d/m/Y', strtotime($event->event_date)) }}</p>
                             </div>
-                            
+                            @if ($booking->receipt_full)
+                            <div class="mb-3">
+                                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                                    <strong>Receipt Ful:</strong><br>
+                                    <a href="{{ asset('storage/' . $booking->receipt_full) }}" class="gallery-lightbox">
+                                    <img src="{{ asset('storage/' . $booking->receipt_full) }}" class="img-fluid" alt="Receipt DP">
+                                </a>
+                                </div>
+                            </div>
+                        @endif
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -71,7 +80,11 @@
                             </div>
                             <div class="mb-3">
                                 <strong>Remaining Payment:</strong>
+                                @if($booking->receipt_full)
+                                    <p>Lunas</p>
+                                @else
                                 <p>{{ 'Rp ' . number_format($event->remaining_payment, 0, ',', '.') }}</p>
+                                @endif
                             </div>
                             @if ($event->receipt_dp)
                             <div class="mb-3">
@@ -83,6 +96,8 @@
                                 </div>
                             </div>
                         @endif
+
+                      
                             <div class="mb-3">
                                <a href="{{ route('event') }}" class="btn btn-primary">Kembali</a>
                             </div>

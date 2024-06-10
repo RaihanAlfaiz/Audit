@@ -1,10 +1,28 @@
 @extends('layouts.master')
+@section('css')
+<style>
+      .table {
+        font-size: 12px;
+    }
 
+    .table th, .table td {
+        padding: 5px;
+    }
+
+    .table th {
+        white-space: nowrap;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+</style>
+@endsection
 @section('content')
 
-<div class="container">
+<div class="card app-calendar-wrapper">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                
                 <div class="card-body">

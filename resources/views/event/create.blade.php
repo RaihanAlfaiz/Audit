@@ -109,7 +109,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="package_id" class="form-label">Choose Package</label>
-                                    <select id="package_id" name="package_id" class="form-select">
+                                    <select id="package_id" name="package_id" class="selectpicker w-100" data-style="btn-default" data-live-search="true">
                                         <option value="">Pilih package</option>
                                         @foreach($packages as $package)
                                         <option value="{{ $package->id }}" data-price="{{ $package->price }}">{{ $package->Name }}</option>

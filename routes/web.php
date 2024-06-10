@@ -10,8 +10,12 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
+<<<<<<< HEAD
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\SettingController;
+=======
+use App\Http\Controllers\ToolsController;
+>>>>>>> 18de48b085bccfa42faece1c0dcac6194edfed9e
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +30,7 @@ use App\Http\Controllers\SettingController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
@@ -57,6 +61,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/event/{id}/edit', [EventController::class, 'edit'])->name('event.edit');
     Route::put('/event/{id}/update', [EventController::class, 'update'])->name('event.update');
     Route::delete('/event/{id}', [EventController::class, 'destroy'])->name('event.destroy');
+    Route::get('/events', [EventController::class, 'index'])->name('event.index');
 
     // Rute untuk mendapatkan harga paket berdasarkan package_id
     Route::get('/get-package-price/{packageId}', [EventController::class, 'getPackagePrice']);
@@ -64,12 +69,13 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/booking', [BookingController::class, 'index'])->name('booking');
-    Route::get('/booking/create/{event}', [BookingController::class, 'create'])->name('booking.create');
+    Route::get('/booking/create/{eventId}', [BookingController::class, 'create'])->name('booking.create');
     Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
     Route::get('/booking/{id}/show', [BookingController::class, 'show'])->name('booking.show');
     Route::get('/booking/{id}/edit', [BookingController::class, 'edit'])->name('booking.edit');
     Route::put('/booking/{id}/update', [BookingController::class, 'update'])->name('booking.update');
     Route::delete('/booking/{id}', [BookingController::class, 'destroy'])->name('booking.destroy');
+    Route::get('/booking/print/{id}', [BookingController::class, 'print'])->name('booking.print');
 });
 
 Route::middleware(['auth'])->group(function () {
@@ -94,10 +100,11 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar');
-    Route::get('/events', [EventController::class, 'getEvents'])->name('events');
+    // Route::get('/events', [EventController::class, 'getEvents'])->name('events');
 });
 
 Route::middleware(['auth'])->group(function () {
+<<<<<<< HEAD
     Route::get('/myprofile', [MyProfileController::class, 'myprofile'])->name('myprofile');
     Route::post('/myprofile/upload', [MyProfileController::class, 'upload'])->name('myprofile.upload');
     Route::patch('/profile/update/{id}', [MyProfileController::class, 'update'])->name('profile.update');
@@ -107,5 +114,11 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');   
+=======
+    Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
+    Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
+    Route::post('/tools/{eventId}', [ToolsController::class, 'submitChecklist'])->name('tools.submit');
+    Route::post('/tools/updateStatus', [ToolsController::class, 'updateStatus'])->name('tools.updateStatus');
+>>>>>>> 18de48b085bccfa42faece1c0dcac6194edfed9e
 });
 
