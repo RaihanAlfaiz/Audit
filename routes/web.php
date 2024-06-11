@@ -101,3 +101,19 @@ Route::middleware(['auth'])->group(function () {
     // Route::get('/events', [EventController::class, 'getEvents'])->name('events');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
+    Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
+    Route::post('/tools/{eventId}', [ToolsController::class, 'submitChecklist'])->name('tools.submit');
+    Route::post('/tools/updateStatus', [ToolsController::class, 'updateStatus'])->name('tools.updateStatus');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/myprofile', [MyProfileController::class, 'myprofile'])->name('myprofile');
+    // Route::get('/events', [EventController::class, 'getEvents'])->name('events');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings.update');
+    // Route::get('/events', [EventController::class, 'getEvents'])->name('events');
+});
