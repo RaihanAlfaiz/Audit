@@ -9,14 +9,7 @@ use App\Models\Package;
 use App\Models\Addition;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateBookingRequest;
-use Endroid\QrCode\Color\Color;
-use Endroid\QrCode\Encoding\Encoding;
-use Endroid\QrCode\ErrorCorrectionLevel;
-use Endroid\QrCode\QrCode;
-use Endroid\QrCode\Label\Label;
-use Endroid\QrCode\Logo\Logo;
-use Endroid\QrCode\RoundBlockSizeMode;
-use Endroid\QrCode\Writer\PngWriter;
+use Illuminate\Support\Facades\Crypt;
 
 
 class BookingController extends Controller
@@ -141,16 +134,15 @@ class BookingController extends Controller
         return redirect()->route('event', $request->event_id)->with('success', 'Booking created successfully.');
     }
 
-    public function print($id)
+    public function print($encryptedId)
     {
+        $id = Crypt::decryptString($encryptedId);
         $booking = Booking::find($id);
         $event = Event::find($booking->event_id);
         $package = Package::find($event->package_id);
-        $additions = Addition::where('booking_id', $booking->id)->get();
+        $additions = Addition::where('booking_id', $id)->get();
 
-
-
-        return view('booking.booking_print', compact('booking', 'event', 'package', 'additions'));
+        return view('booking.booking_print', compact('booking', 'event', 'package', 'additions', 'encryptedId'));
     }
 
     /**

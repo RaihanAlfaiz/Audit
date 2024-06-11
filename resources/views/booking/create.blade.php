@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css') }}" />
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css')}}" />
 <link rel="stylesheet" href="{{ asset('assets/vendor/libs/tagify/tagify.css') }}" />
 @endsection
 
@@ -87,7 +87,7 @@
                                                 @foreach(old('service_id') as $key => $serviceId)
                                                     <div class="row mb-3">
                                                         <div class="col-sm-3">
-                                                            <select class="form-control" name="service_id[]" onchange="updateServiceDetails(this)">
+                                                            <select class="selectpicker w-100" data-style="btn-default" data-live-search="true" name="service_id[]" onchange="updateServiceDetails(this)">
                                                                 <option value="">Select Service</option>
                                                                 @foreach($services as $service)
                                                                     <option value="{{ $service->id }}" data-price="{{ $service->price }}" {{ $serviceId == $service->id ? 'selected' : '' }}>
@@ -113,7 +113,7 @@
                                             @else
                                                 <div class="row mb-3">
                                                     <div class="col-sm-3">
-                                                        <select class="form-control" name="service_id[]" onchange="updateServiceDetails(this)">
+                                                        <select class="selectpicker w-100" data-style="btn-default" data-live-search="true" name="service_id[]" onchange="updateServiceDetails(this)">
                                                             <option value="">Select Service</option>
                                                             @foreach($services as $service)
                                                                 <option value="{{ $service->id }}" data-price="{{ $service->price }}">
@@ -152,7 +152,11 @@
         </div>
     </div>
 </div>
+@endsection
 
+@section('script')
+<script src="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.js')}}">
+</script> 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         updateRemainingPayment();
@@ -211,7 +215,7 @@
         var rdiv = 'removeclass' + room;
         divtest.innerHTML = `
             <div class="col-sm-3">
-                <select class="form-control" name="service_id[]" onchange="updateServiceDetails(this)">
+                <select class="selectpicker w-100"  data-style="btn-default" data-live-search="true" name="service_id[]" onchange="updateServiceDetails(this)">
                     <option value="">Select Service</option>
                     @foreach($services as $service)
                         <option value="{{ $service->id }}" data-price="{{ $service->price }}">{{ $service->item }}</option>
@@ -232,6 +236,8 @@
             </div>
         `;
         objTo.appendChild(divtest);
+    $(".selectpicker").selectpicker();
+
     }
 
     function remove_addition_fields(rid) {
@@ -259,5 +265,6 @@
             imgPreview.src = oFREvent.target.result;
         }
     }
+    $(".selectpicker").selectpicker();
 </script>
 @endsection

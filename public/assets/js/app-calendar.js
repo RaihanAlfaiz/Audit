@@ -1,6 +1,13 @@
 "use strict";
+
+// Define the isRtl variable
+let isRtl = false; // or true, depending on your requirement
+
 let direction = "ltr";
-isRtl && (direction = "rtl"),
+if (isRtl) {
+  direction = "rtl";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const v = document.getElementById("calendar"),
         m = document.querySelector(".app-calendar-sidebar"),
@@ -138,8 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $('#addEventModal').on('hidden.bs.modal', function () {
         u();
     });
-
-   
 
     A && A.addEventListener("click", e => {
         e.currentTarget.checked ? document.querySelectorAll(".input-filter").forEach(e => e.checked = 1) : document.querySelectorAll(".input-filter").forEach(e => e.checked = 0), i.refetchEvents();

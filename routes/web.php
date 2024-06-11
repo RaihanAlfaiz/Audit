@@ -72,7 +72,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/booking/{id}/edit', [BookingController::class, 'edit'])->name('booking.edit');
     Route::put('/booking/{id}/update', [BookingController::class, 'update'])->name('booking.update');
     Route::delete('/booking/{id}', [BookingController::class, 'destroy'])->name('booking.destroy');
-    Route::get('/booking/print/{id}', [BookingController::class, 'print'])->name('booking.print');
+    // Route::get('/booking/print/{id}', [BookingController::class, 'print'])->name('booking.print');
+    Route::get('/booking/print/{encryptedId}', [BookingController::class, 'print'])->name('booking.print');
 });
 
 Route::middleware(['auth'])->group(function () {
