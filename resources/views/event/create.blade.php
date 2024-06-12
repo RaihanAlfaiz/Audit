@@ -32,6 +32,28 @@
                                 </div>
 
                                 <div class="mb-3">
+                                    <label for="event_name" class="form-label">Event Name</label>
+                                    <input type="text" name="event_name" class="form-control @error('event_name') is-invalid @enderror" id="event_name" placeholder="Enter the tenant's name" value="{{ old('event_name') }}">
+                                    @error('event_name')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Enter the tenant's name" value="{{ old('email') }}">
+                                    
+                                    @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                    <small class="form-text text-primary">* Email is optional.</small>
+                                </div>
+
+                                <div class="mb-3">
                                     <label for="institution_origin" class="form-label">Institution Origin</label>
                                     <input type="text" name="institution_origin" class="form-control @error('institution_origin') is-invalid @enderror" id="institution_origin" placeholder="Enter the Institution origin" value="{{ old('institution_origin') }}">
                                     @error('institution_origin')
@@ -70,9 +92,19 @@
                                         {{ $message }}
                                     </div>
                                     @enderror
+                                    <small class="form-text text-primary">* Rehearsal date is optional.</small>
                                 </div>
                               
-                                <div class="mb-3">
+                               
+
+                                
+
+                              
+                                
+                            </div>
+
+                            <div class="col-md-6">
+                                 <div class="mb-3">
                                     <label for="event_date" class="form-label">Event date</label>
                                     <input type="date" name="event_date" class="form-control @error('event_date') is-invalid @enderror" id="event_date" placeholder="Enter the event_date" value="{{ old('event_date') }}">
                                     @error('event_date')
@@ -81,7 +113,6 @@
                                     </div>
                                     @enderror
                                 </div>
-
                                 <div class="mb-3">
                                     <label for="start_time" class="form-label">Start Time Event</label>
                                     <input type="time" name="start_time" class="form-control @error('start_time') is-invalid @enderror" id="start_time" placeholder="Enter the start time event" value="{{ old('start_time') }}">
@@ -101,12 +132,6 @@
                                     </div>
                                     @enderror
                                 </div>
-
-                              
-                                
-                            </div>
-
-                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="package_id" class="form-label">Choose Package</label>
                                     <select id="package_id" name="package_id" class="selectpicker w-100" data-style="btn-default" data-live-search="true">

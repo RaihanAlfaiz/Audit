@@ -161,8 +161,6 @@ h3{
 <script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
 <script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
 <script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
-<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('assets/js/datatable/datatable-extension/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('assets/js/datepicker/daterange-picker/moment.min.js')}}"></script>
 
 @endsection

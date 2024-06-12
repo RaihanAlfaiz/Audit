@@ -125,7 +125,7 @@
                                     <td>{{ $ev->package->Name }}</td>
                                     <td><i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>
                                     <td>
-                                        <a href="{{ route('event.show', $ev->id) }}" class="btn btn-sm btn-success">Detail</a>
+                                        <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success">Detail</a>
                                         <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning">Edit</a>
                                         <form action="{{ route('event.destroy', $ev->id) }}" method="POST" style="display: inline;">
                                             @csrf

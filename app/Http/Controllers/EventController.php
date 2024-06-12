@@ -63,6 +63,8 @@ class EventController extends Controller
     {
         $validatedData = $request->validate([
             'tenant_name' => 'required',
+            'event_name' => 'required',
+            'email' => 'email',
             'institution_origin' => 'required',
             'phone' => 'required',
             'package_id' => 'required|exists:packages,id',
@@ -103,8 +105,8 @@ class EventController extends Controller
     public function show(string $id)
     {
         $event = Event::findOrFail($id);
-        $booking = Booking::findOrFail($id);
-        $package = Package::findOrFail($event->package_id); // Ambil paket berdasarkan package_id dari event
+        $booking = Booking::find($id); // Mengganti findOrFail dengan find
+        $package = Package::findOrFail($event->package_id);
         return view('event.show', compact('event', 'package', 'booking'));
     }
 
@@ -114,8 +116,8 @@ class EventController extends Controller
     public function edit(string $id)
     {
         $event = Event::findOrFail($id);
-        $packages = Package::all(); // Mengambil semua paket dari database
-        return view('event.edit', compact('event', 'packages')); // Kirim data peran ke tampilan
+        $packages = Package::all();
+        return view('event.edit', compact('event', 'packages'));
     }
 
     /**
@@ -127,6 +129,8 @@ class EventController extends Controller
 
         $validatedData = $request->validate([
             'tenant_name' => 'required',
+            'event_name' => 'required',
+            'email' => 'email',
             'institution_origin' => 'required',
             'phone' => 'required',
             'package_id' => 'required|exists:packages,id',
