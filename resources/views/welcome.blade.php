@@ -137,7 +137,7 @@
 
                 <h3><span>01</span> Weeding</h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                  <p>Kami  layanan pernikahan profesional yang berdedikasi untuk menciptakan momen-momen tak terlupakan pada hari istimewa Anda. Dengan tim ahli yang berpengalaman dan kreatif, kami menawarkan berbagai layanan pernikahan yang dirancang untuk memenuhi kebutuhan dan keinginan Anda.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
