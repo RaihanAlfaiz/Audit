@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Package;
+use App\Mail\sendEmail;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
+
 
 class EventController extends Controller
 {
@@ -182,4 +185,10 @@ class EventController extends Controller
         $package = Package::findOrFail($packageId);
         return response()->json(['price' => $package->price]);
     }
+
+    // public function email()
+    // {
+    //     Mail::to("raihanalfaiz80@gmail.com")->send(new sendEmail());
+    //     return '<h1>sukses masukan email</h1>';
+    // }
 }
