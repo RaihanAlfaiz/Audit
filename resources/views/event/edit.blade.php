@@ -35,6 +35,26 @@
                                 </div>
 
                                 <div class="mb-3">
+                                    <label for="event_name" class="form-label">Event Name</label>
+                                    <input type="text" name="event_name" class="form-control @error('event_name') is-invalid @enderror" id="event_name" placeholder="Enter the tenant's name" value="{{ old('event_name', $event->event_name) }}">
+                                    @error('event_name')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Enter the tenant's name" value="{{ old('email', $event->email) }}">
+                                    @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
                                     <label for="institution_origin" class="form-label">Institution Origin</label>
                                     <input type="text" name="institution_origin" class="form-control @error('institution_origin') is-invalid @enderror" id="institution_origin" placeholder="Enter the Institution origin" value="{{ old('institution_origin', $event->Institution_origin) }}">
 

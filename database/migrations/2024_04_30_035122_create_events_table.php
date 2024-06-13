@@ -16,6 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('package_id');
             $table->foreign('package_id')->references('id')->on('packages');
             $table->string('Institution_origin');
+            $table->string('email')->nullable();
+            $table->string('event_name');
             $table->string('phone');
             $table->string('capacity');
             $table->date('event_date');
@@ -25,7 +27,7 @@ return new class extends Migration
             $table->string('receipt_dp')->nullable();
             $table->string('start_time');
             $table->string('end_time');
-            $table->float('dp_amount', 10);
+            $table->float('dp_amount', 10)->nullable();
             $table->float('remaining_payment', 10);
             $table->timestamps();
         });

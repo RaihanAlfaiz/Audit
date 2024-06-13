@@ -217,7 +217,8 @@
       </div>
         <div class="w-100 text-center">
           <div class="w-50 float-right">
-            <img src="https://s.jgu.ac.id/qrcode?data={{ route('booking.print', $booking->id) }}&label=" alt="" class="ml-3" width="190px">
+            <img src="https://s.jgu.ac.id/qrcode?data={{ route('booking.print', $encryptedId) }}&label=" alt="" class="ml-3" width="190px">
+
 
           
           </div>
