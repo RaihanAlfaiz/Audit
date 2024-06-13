@@ -145,7 +145,7 @@
               <div class="faq-item">
                 <h3><span>02</span> Graduation</h3>
                 <div class="faq-content">
-                <p> Kami menyedikan layanan perayaan kelulusan profesional yang berdedikasi untuk menciptakan momen-momen berkesan pada hari penting Anda. Dengan tim ahli yang berpengalaman dan kreatif, kami menawarkan berbagai layanan perayaan kelulusan yang dirancang untuk memenuhi kebutuhan dan keinginan Anda.</p>
+                <p>Kami menyedikan layanan perayaan kelulusan profesional yang berdedikasi untuk menciptakan momen-momen berkesan pada hari penting Anda. Dengan tim ahli yang berpengalaman dan kreatif, kami menawarkan berbagai layanan perayaan kelulusan yang dirancang untuk memenuhi kebutuhan dan keinginan Anda.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -153,7 +153,7 @@
               <div class="faq-item">
                 <h3><span>03</span>Seminar</h3>
                 <div class="faq-content">
-                <p>Penjelasan mengenai Seminar</p>
+                <p>Kami menyediakan layanan penyelenggaran acara seminar terkemuka yang siap membantu Anda mengatur acara seminar yang informatif dan berkesan. Kami mengerti bahwa seminar adalah kesempatan untuk berbagi pengetahuan, memperluas jaringan, dan menginspirasi audiens Anda. Dengan pengalaman kami yang luas dalam industri acara, kami menawarkan berbagai layanan yang dirancang untuk memenuhi kebutuhan unik dari setiap seminar. </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
