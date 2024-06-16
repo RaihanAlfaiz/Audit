@@ -53,12 +53,16 @@ h3{
 }
 .greeting-container {
     display: flex;
-    gap: 250px; /* Atur jarak antar elemen jika diperlukan */
+    gap: 370px; /* Atur jarak antar elemen jika diperlukan */
 }
 
 .f-w-600 {
     margin-right: 10px; /* Atur jarak sesuai kebutuhan */
 }
+
+.profile-greeting .card-body {
+    padding: 40px 20px
+}   
 
 
 

@@ -120,6 +120,7 @@ class BookingController extends Controller
 
             $emailData = [
                 'tenant_name' => $event->tenant_name,
+                'event_date' => $event->event_date,
                 'event_name' => $event->event_name,
                 'institution_origin' => $event->Institution_origin,
                 'phone' => $event->phone,

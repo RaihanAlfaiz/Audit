@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
+    protected $dates = ['event_date'];
     protected $fillable = [
         'tenant_name',
         'event_name',
@@ -55,6 +56,8 @@ class Event extends Model
             $x = "info";
         } else if ($this->status == "Success") {
             $x = "success";
+        } else if ($this->status == "rehearsal") {
+            $x = "gray";
         } else if ($this->status == "ready") {
             $x = "info";
         } else {

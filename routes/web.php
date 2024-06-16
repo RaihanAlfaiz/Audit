@@ -117,9 +117,14 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
+    Route::get('/tools/rehearsal', [ToolsController::class, 'rehearsal'])->name('tools.rehearsal');
     Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
     Route::post('/tools/{eventId}', [ToolsController::class, 'submitChecklist'])->name('tools.submit');
     Route::post('/tools/updateStatus', [ToolsController::class, 'updateStatus'])->name('tools.updateStatus');
+    Route::get('/tools/rehearsal/{eventId}', [ToolsController::class, 'showChecklistRehearsal'])->name('tools.checklist.rehearsal');
+    Route::post('/tools/rehearsal/{eventId}', [ToolsController::class, 'submitChecklistRehearsal'])->name('tools.submit.rehearsal');
+
+
 });
 
 Route::middleware(['auth'])->group(function () {

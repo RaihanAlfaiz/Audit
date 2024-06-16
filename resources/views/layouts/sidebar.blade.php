@@ -20,7 +20,7 @@
         <li class="menu-item  {{ Request::is('home') ? 'active' : '' }}">
             <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Dashboards">home</div>
+                <div data-i18n="Dashboards">Home</div>
             </a>
 
         

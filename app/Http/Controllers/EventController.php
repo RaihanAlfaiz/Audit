@@ -9,7 +9,7 @@ use App\Mail\sendEmail;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Support\Carbon;
 
 class EventController extends Controller
 {
@@ -54,8 +54,21 @@ class EventController extends Controller
     public function create()
     {
         $packages = Package::all(); // Mengambil semua paket dari database
+        $events = Event::all(); // Mengambil semua event dari database
+
+        // Format the event dates
+        $disabledDates = $events->map(function ($event) {
+            $eventDate = Carbon::parse($event->event_date);
+            return [
+                'from' => $eventDate->format('Y-m-d'),
+                'to' => $eventDate->format('Y-m-d') // Assuming the event date range is only one day
+            ];
+        });
+
         return view('event.create', [
-            'packages' => $packages, // Mengirim data paket ke tampilan dengan nama variabel $packages
+            'packages' => $packages,
+            'events' => $events,
+            'disabledDates' => $disabledDates // Pass the formatted dates to the view
         ]);
     }
 
