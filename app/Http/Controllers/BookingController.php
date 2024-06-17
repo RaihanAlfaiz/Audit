@@ -23,14 +23,17 @@ class BookingController extends Controller
     {
         $query = Booking::query();
 
-        // Filter by date range
+     
+
         if ($request->has('range') && !empty($request->input('range'))) {
-            $dates = explode(' - ', $request->input('range'));
-            $start_date = $dates[0];
-            $end_date = $dates[1];
-            $query->whereHas('event', function ($q) use ($start_date, $end_date) {
-                $q->whereBetween('event_date', [$start_date, $end_date]);
-            });
+            $dates = explode(' to ', $request->input('range'));
+            if (count($dates) == 2) {
+                $start_date = $dates[0];
+                $end_date = $dates[1];
+                $query->whereHas('event', function ($q) use ($start_date, $end_date) {
+                    $q->whereBetween('event_date', [$start_date, $end_date]);
+                });
+            }
         }
 
         // Filter by package

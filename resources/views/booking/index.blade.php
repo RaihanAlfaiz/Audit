@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/date-picker.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/daterange-picker.css') }}">
 <link rel="stylesheet" href="assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+<link rel="stylesheet" href="{{ asset('assets/vendor/libs/flatpickr/flatpickr.css') }}" />
 
 <style>
     .project-list .row {
@@ -73,7 +74,7 @@
     <div class="card">
         <div class="row">
             <div class="col-md-3">
-                <input class="form-control" id="select_range" type="text" placeholder="Select Date" autocomplete="off" value="{{ request('range') }}">
+                <input type="text" class="form-control" placeholder="YYYY-MM-DD to YYYY-MM-DD" id="flatpickr-range" value="{{ request('range') ? request('range') : '' }}"/>
             </div>
             <div class="col-md-3">
                 <select id="Select_1" class="selectpicker w-100" data-style="btn-default" data-live-search="true">
@@ -93,6 +94,9 @@
                     <option value="Success" {{ request('status') == 'Success' ? 'selected' : '' }}>Success</option>
                     <option value="Ready" {{ request('status') == 'Ready' ? 'selected' : '' }}>Ready</option>
                 </select>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" id="resetFilters">Reset</button>
             </div>
         </div>
     </div>
@@ -141,6 +145,8 @@
 @parent
 <script src="{{ asset('assets/js/datepicker/daterange-picker/moment.min.js') }}"></script>
 <script src="{{ asset('assets/js/datepicker/daterange-picker/daterangepicker.js') }}"></script>
+<script src="{{ asset('assets/vendor/libs/flatpickr/flatpickr.js') }}"></script>
+
 <script src="{{ asset('assets/js/datepicker/date-picker/datepicker.js') }}"></script>
 <script src="{{ asset('assets/js/datepicker/date-picker/datepicker.en.js') }}"></script>
 <script src="assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
@@ -181,46 +187,7 @@
             });
         }
 
-        // DateRange Picker
-        var start = null;
-        var end = null;
-        var start_prev = null;
-        var end_prev = null;
-
-        if (moment().format('M') >= 3 && moment().format('M') <= 8) { //genap
-            start = moment().month(2).startOf('month'); //1 mar
-            end = moment().month(7).endOf('month'); //31 aug
-            start_prev = moment().month(8).subtract(1, 'year').startOf('month');
-            end_prev = moment().month(1).endOf('month');
-        } else { // ganjil
-            if (moment().format('M') > 8) {
-                start = moment().month(8).startOf('month'); //1 Sep
-                end = moment().month(1).add(1, 'Y').endOf('month'); //28 feb
-                start_prev = moment().month(2).startOf('month'); //1 mar
-                end_prev = moment().month(7).endOf('month'); //31 aug
-            } else {
-                start = moment().month(8).subtract(1, 'year').startOf('month'); //1 Sep
-                end = moment().month(1).endOf('month'); //28 feb
-                start_prev = moment().month(2).subtract(1, 'year').startOf('month'); //1 mar
-                end_prev = moment().month(7).subtract(1, 'year').endOf('month'); //31 aug
-            }
-        }
-
-        $('#select_range').daterangepicker({
-            startDate: start,
-            endDate: end,
-            locale: {
-                format: 'YYYY-MM-DD'
-            },
-            ranges: {
-                'Today': [moment(), moment()],
-                'This Semester': [start, end],
-                'Previous semester': [start_prev, end_prev],
-                'All': [moment("2020-01-01T00:00:00"), end],
-            }
-        }, function(start, end) {
-            updateUrlParameter('range', start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
-        });
+      
 
         $('#Select_1').on('change', function() {
             updateUrlParameter('package', $(this).val());
@@ -243,8 +210,38 @@
             currentUrl.search = searchParams.toString();
             window.location.href = currentUrl.toString();
         }
-
-        $(".selectpicker").selectpicker();
+        flatpickr("#flatpickr-range", {
+        mode: "range",
+        onChange: function(selectedDates, dateStr, instance) {
+            if (selectedDates.length === 2) {
+                var startDate = moment(selectedDates[0]).format('YYYY-MM-DD');
+                var endDate = moment(selectedDates[1]).format('YYYY-MM-DD');
+                updateUrlParameter('range', startDate + ' to ' + endDate);
+            }
+        }
     });
+    
+
+    $(".selectpicker").selectpicker();
+});
+</script>
+<script>
+    $('#resetFilters').on('click', function() {
+    // Reset select options
+    $('#Select_1').val('');
+    $('#Select_1').selectpicker('refresh');
+    $('#Select_2').val('');
+    $('#Select_2').selectpicker('refresh');
+
+    // Reset date range picker
+    $('#flatpickr-range').flatpickr().clear();
+
+    // Remove URL parameters and reload page
+    var currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.delete('package');
+    currentUrl.searchParams.delete('status');
+    currentUrl.searchParams.delete('range');
+    window.location.href = currentUrl.toString();
+});
 </script>
 @endsection
