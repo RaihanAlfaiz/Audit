@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         S = document.querySelector(".btn-delete-event"),
         L = document.querySelector(".btn-cancel"),
         E = document.querySelector("#eventTitle"),
+        X = document.querySelector("#eventTenant"),
         k = document.querySelector("#eventStartDate"),
         w = document.querySelector("#eventEndDate"),
         x = document.querySelector("#eventURL"),
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         eventClick: function (e) {
             e = e, (a = e.event).url && (e.jsEvent.preventDefault(), window.open(a.url, "_blank")),
-            $('#addEventModal').modal('show'), b && (b.innerHTML = "Event Detail"), y.innerHTML = "Update", y.classList.add("btn-update-event"), y.classList.remove("btn-add-event"), S.classList.remove("d-none"), E.value = a.title, d.setDate(a.start, !0, "Y-m-d"), !0 === a.allDay ? T.checked = !0 : T.checked = !1, null !== a.end ? o.setDate(a.end, !0, "Y-m-d") : o.setDate(a.start, !0, "Y-m-d"), q.val(a.extendedProps.calendar).trigger("change"), void 0 !== a.extendedProps.location && (P.value = a.extendedProps.location), void 0 !== a.extendedProps.guests && D.val(a.extendedProps.guests).trigger("change"), void 0 !== a.extendedProps.phone && (z.value = a.extendedProps.phone), void 0 !== a.extendedProps.capacity && (Z.value = a.extendedProps.capacity);
+            $('#addEventModal').modal('show'), b && (b.innerHTML = "Event Detail"), y.innerHTML = "Update", y.classList.add("btn-update-event"), y.classList.remove("btn-add-event"), S.classList.remove("d-none"), E.value = a.title, d.setDate(a.start, !0, "Y-m-d"), !0 === a.allDay ? T.checked = !0 : T.checked = !1, null !== a.end ? o.setDate(a.end, !0, "Y-m-d") : o.setDate(a.start, !0, "Y-m-d"), q.val(a.extendedProps.calendar).trigger("change"), void 0 !== a.extendedProps.location && (P.value = a.extendedProps.location), void 0 !== a.extendedProps.guests && D.val(a.extendedProps.guests).trigger("change"), void 0 !== a.extendedProps.phone && (z.value = a.extendedProps.phone), void 0 !== a.extendedProps.capacity && (Z.value = a.extendedProps.capacity), void 0 !== a.extendedProps.capacity && (X.value = a.extendedProps.tenant_name);
         },
         datesSet: function () { s() },
         viewDidMount: function () { s() }
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var c = document.getElementById("eventForm");
 
     function u() {
-        w.value = "", x.value = "", k.value = "", E.value = "", P.value = "", T.checked = !1, D.val("").trigger("change"), M.value = "",  z.value = "",  Z.value = "";
+        w.value = "", x.value = "", k.value = "", E.value = "", P.value = "", T.checked = !1, D.val("").trigger("change"), M.value = "",  z.value = "",  Z.value = "", X.value = "";
     }
 
     FormValidation.formValidation(c, {
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: P.value,
             phone: z.value,
             capacity: Z.value,
+            tenant_name: X.value,
             display: "block",
             extendedProps: {  guests: D.val(), calendar: q.val(), description: M.value }
         }, x.value && (n.url = x.value), T.checked && (n.allDay = !0), n = n, l.push(n), i.refetchEvents(), $('#addEventModal').modal('hide')) :
@@ -126,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: P.value,
             phone: z.value,
             capacity: Z.value,
+            tenant_name: X.value,
             extendedProps: {  guests: D.val(), calendar: q.val(), description: M.value },
             display: "block",
             allDay: !!T.checked

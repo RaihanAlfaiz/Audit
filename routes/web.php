@@ -13,7 +13,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ToolsController;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,17 @@ use App\Http\Controllers\ToolsController;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
+Route::get('/send-email', function () {
+    $data = [
+        'name' => 'Muhammad Raihan',
+        'body' => 'Testing Kirim Email di Santri Koding'
+    ];
+
+    Mail::to('raihanalfaiz80@gmail.com')->send(new SendEmail($data));
+
+    dd("Email Berhasil dikirim.");
+});
 
 Auth::routes();
 
@@ -59,6 +71,8 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/event/{id}/update', [EventController::class, 'update'])->name('event.update');
     Route::delete('/event/{id}', [EventController::class, 'destroy'])->name('event.destroy');
     Route::get('/events', [EventController::class, 'index'])->name('event.index');
+    Route::get('/email', [EventController::class, 'email'])->name('event.email');
+
 
     // Rute untuk mendapatkan harga paket berdasarkan package_id
     Route::get('/get-package-price/{packageId}', [EventController::class, 'getPackagePrice']);
@@ -103,9 +117,14 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
+    Route::get('/tools/rehearsal', [ToolsController::class, 'rehearsal'])->name('tools.rehearsal');
     Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
     Route::post('/tools/{eventId}', [ToolsController::class, 'submitChecklist'])->name('tools.submit');
     Route::post('/tools/updateStatus', [ToolsController::class, 'updateStatus'])->name('tools.updateStatus');
+    Route::get('/tools/rehearsal/{eventId}', [ToolsController::class, 'showChecklistRehearsal'])->name('tools.checklist.rehearsal');
+    Route::post('/tools/rehearsal/{eventId}', [ToolsController::class, 'submitChecklistRehearsal'])->name('tools.submit.rehearsal');
+
+
 });
 
 Route::middleware(['auth'])->group(function () {

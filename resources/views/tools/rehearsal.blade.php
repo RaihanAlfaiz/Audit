@@ -21,9 +21,9 @@
 @section('content')
 <div class="col-md-12">
     <ul class="nav nav-pills flex-column flex-sm-row mb-4">
-        <li class="nav-item"><a class="nav-link active" href="{{ route('tools') }}"><i class='bx bxs-buildings'></i>
+        <li class="nav-item"><a class="nav-link " href="{{ route('tools') }}"><i class='bx bxs-buildings'></i>
                 Event Preparation</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('tools.rehearsal') }}"><i class='bx bxs-building' ></i>
+        <li class="nav-item"><a class="nav-link active" href="{{ route('tools') }}"><i class='bx bxs-building' ></i>
             Rehearsals Preparation</a></li>
     </ul>
 </div>
@@ -38,7 +38,7 @@
                                 <th>No</th>
                                 <th>Tenant Name</th>
                                 <th>Package</th>
-                                <th>Event Date</th>
+                                <th>Rehearsal Date</th>
                                 <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
@@ -49,15 +49,15 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $booking->event->tenant_name }}</td>
                                 <td>{{ $booking->event->package->Name }}</td>
-                                <td>{{ date('d F Y', strtotime($booking->event->event_date)) }}</td>
+                                <td>{{ date('d F Y', strtotime($booking->event->rehearsal_date)) }}</td>
                                 <td>
                                     <i class="badge rounded-pill bg-{{ $booking->event->color }}" style="font-size:10pt;">{{ $booking->event->status }}</i>
                                 </td>
                                 <td>
-                                    @if ($booking->event->status == 'ready' || $booking->event->status == 'Complete')
+                                    @if ($booking->event->status == 'rehearsal' || $booking->event->status == 'Complete')
                                         <i class="bx bx-check-circle" style="color: green; font-size: 1.5em;"></i>
                                     @else
-                                        <a href="{{ route('tools.checklist', $booking->event->id) }}" class="btn btn-sm btn-primary">
+                                        <a href="{{ route('tools.checklist.rehearsal', $booking->event->id) }}" class="btn btn-sm btn-primary">
                                             <i class='bx bx-chair'></i>
                                         </a>
                                     @endif

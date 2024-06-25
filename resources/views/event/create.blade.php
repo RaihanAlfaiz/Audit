@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('css') 
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
 <style>
     /* CSS untuk membuat input field mirip dengan input field yang dinonaktifkan */
     .readonly-input {
@@ -86,7 +87,7 @@
 
                                 <div class="mb-3">
                                     <label for="rehearsal_date" class="form-label">Rehearsal Date</label>
-                                    <input type="date" name="rehearsal_date" class="form-control @error('rehearsal_date') is-invalid @enderror" id="rehearsal_date" placeholder="Enter the rehearsal date" value="{{ old('rehearsal_date') }}">
+                                    <input type="text" name="rehearsal_date" class="form-control @error('rehearsal_date') is-invalid @enderror" id="flatpickr-date" placeholder="YYYY-MM-DD" value="{{ old('rehearsal_date') }}">
                                     @error('rehearsal_date')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -106,7 +107,7 @@
                             <div class="col-md-6">
                                  <div class="mb-3">
                                     <label for="event_date" class="form-label">Event date</label>
-                                    <input type="date" name="event_date" class="form-control @error('event_date') is-invalid @enderror" id="event_date" placeholder="Enter the event_date" value="{{ old('event_date') }}">
+                                    <input type="text" id="flatpickr-disabled-range" name="event_date" class="form-control @error('event_date') is-invalieved @enderror" id="event_date"  placeholder="YYYY-MM-DD" value="{{ old('event_date') }}">
                                     @error('event_date')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -174,8 +175,8 @@
                                     </div>
                                     @enderror
                                 </div>
-
-
+                               
+                                
 
                                 
                             </div>
@@ -195,7 +196,25 @@
 @section('script')
 
 <script src="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.js')}}"></script> 
+<script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script> 
+<script>
+    var flatpickrDate = document.querySelector("#flatpickr-date");
 
+flatpickrDate.flatpickr({
+  monthSelectorType: "static"
+});
+
+    // Pass the PHP variable to JavaScript
+    var disabledDates = @json($disabledDates);
+
+    var flatpickrDisabledRange = document.querySelector("#flatpickr-disabled-range");
+
+    flatpickrDisabledRange.flatpickr({
+        dateFormat: "Y-m-d",
+        disable: disabledDates // Use the passed data to disable dates
+    });
+</script>
+</script>
 <script>
      function previewImage(){
       const image = document.querySelector('#receipt_dp');
@@ -211,13 +230,7 @@
       }
     }
 
-const myDropzone = new Dropzone('#dropzone-basic', {
-  previewTemplate: previewTemplate,
-  parallelUploads: 1,
-  maxFilesize: 5,
-  addRemoveLinks: true,
-  maxFiles: 1
-});
+
 
 $(".selectpicker").selectpicker();
 </script>
