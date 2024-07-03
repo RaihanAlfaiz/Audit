@@ -3,7 +3,7 @@
     <div class="app-brand demo ">
         <a href="" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="{{asset('assets/img/logo-jgu.png')}}" height="44">
+                <img src="{{asset('assets/img/jgu-audit1.png')}}" height="80">
             </span>
         </a>
 
@@ -20,7 +20,7 @@
         <li class="menu-item  {{ Request::is('home') ? 'active' : '' }}">
             <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Dashboards">home</div>
+                <div data-i18n="Dashboards">Home</div>
             </a>
 
         

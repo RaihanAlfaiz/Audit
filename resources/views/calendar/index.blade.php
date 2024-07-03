@@ -57,18 +57,18 @@
                         <div class="form-check mb-2">
                             <input class="form-check-input input-filter" type="checkbox" id="select-business"
                                 data-value="business" checked>
-                            <label class="form-check-label" for="select-business">engagement and enrollment</label>
+                            <label class="form-check-label" for="select-business">Event</label>
                         </div>
                         <div class="form-check form-check-warning mb-2">
                             <input class="form-check-input input-filter" type="checkbox" id="select-family"
                                 data-value="family" checked>
-                            <label class="form-check-label" for="select-family">Building Management</label>
+                            <label class="form-check-label" for="select-family">Gehearsals Date</label>
                         </div>
-                        <div class="form-check form-check-success mb-2">
+                        {{-- <div class="form-check form-check-success mb-2">
                             <input class="form-check-input input-filter" type="checkbox" id="select-holiday"
                                 data-value="holiday" checked>
                             <label class="form-check-label" for="select-holiday">Moon Event</label>
-                        </div>
+                        </div> --}}
                       
                     </div>
                 </div>
@@ -98,6 +98,11 @@
                                     <div class="mb-3">
                                         <label class="form-label" for="eventTitle">Title</label>
                                         <input type="text" class="form-control" id="eventTitle" name="eventTitle"
+                                            placeholder="Event Title" readonly disabled/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="eventTenant">Tenant name</label>
+                                        <input type="text" class="form-control" id="eventTenant" name="eventTenant"
                                             placeholder="Event Title" readonly disabled/>
                                     </div>
                                     <div class="mb-3 none">
@@ -197,6 +202,7 @@
      id:  "{{ $event->id }}",
      url:  "",
      title:  "{{ $event->title }}",
+     tenant_name:  "{{ $event->tenant_name }}",
      start:  "{{ $event->start }}",
      end:  "{{ $event->end }}",
      location:  "{{ $event->location }}",
@@ -207,48 +213,40 @@
          calendar:  "{{ $event->type }}"
     }
 }, @endforeach
+@foreach($rehearsals as $rh){
+     id:  "{{ $rh->id }}",
+     url:  "",
+     title:  "{{ $rh->title }}",
+     tenant_name:  "{{ $rh->tenant_name }}",
+     start:  "{{ $rh->start }}",
+     end:  "{{ $rh->end }}",
+     location:  "{{ $rh->location }}",
+     phone:  "{{ $rh->phone }}",
+     capacity:  "{{ $rh->capacity }}",
+     allDay:  ! 1,
+     extendedProps:  {
+         calendar:  "{{ $rh->type }}"
+    }
+}, @endforeach
         ];
 
-        // Initialize the modal
-        $(document).ready(function () {
-            $('#addEventModal').on('show.bs.modal', function (event) {
-                var button = $(event.relatedTarget); // Button that triggered the modal
-                var modal = $(this);
+       
 
-                // If editing an event, populate the fields
-                var eventId = button.data('event-id');
-                if (eventId) {
-                    var event = window.events.find(e => e.id == eventId);
-                    if (event) {
-                        modal.find('#eventTitle').val(event.title);
-                        modal.find('#eventLabel').val(event.extendedProps.calendar).trigger('change');
-                        modal.find('#eventStartDate').val(event.start);
-                        modal.find('#eventEndDate').val(event.end);
-                        modal.find('.allDay-switch').prop('checked', event.allDay);
-                        modal.find('#eventURL').val(event.url);
-                        modal.find('#eventDescription').val(event.description);
-                        // Set guests and location if applicable
-                    }
-                } else {
-                    modal.find('form')[0].reset();
-                }
-            });
-
-            // Initialize FullCalendar
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                events: window.events,
-                dateClick: function(info) {
-                    // Show the modal for creating new event
-                    $('#addEventModal').modal('show');
-                },
-                eventClick: function(info) {
-                    // Show the modal for editing existing event
-                    $('#addEventModal').modal('show');
-                }
-            });
-            calendar.render();
-        });
+            // // Initialize FullCalendar
+            // var calendarEl = document.getElementById('calendar');
+            // var calendar = new FullCalendar.Calendar(calendarEl, {
+            //     initialView: 'dayGridMonth',
+            //     events: window.events,
+            //     dateClick: function(info) {
+            //         // Show the modal for creating new event
+            //         $('#addEventModal').modal('show');
+            //     },
+            //     eventClick: function(info) {
+            //         // Show the modal for editing existing event
+            //         $('#addEventModal').modal('show');
+            //     }
+            // });
+            // calendar.render();
+      
     </script>
 @endsection

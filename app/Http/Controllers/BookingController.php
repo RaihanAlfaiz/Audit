@@ -10,6 +10,8 @@ use App\Models\Addition;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateBookingRequest;
 use Illuminate\Support\Facades\Crypt;
+use App\Mail\sendEmail;
+use Illuminate\Support\Facades\Mail;
 
 
 class BookingController extends Controller
@@ -21,14 +23,17 @@ class BookingController extends Controller
     {
         $query = Booking::query();
 
-        // Filter by date range
+     
+
         if ($request->has('range') && !empty($request->input('range'))) {
-            $dates = explode(' - ', $request->input('range'));
-            $start_date = $dates[0];
-            $end_date = $dates[1];
-            $query->whereHas('event', function ($q) use ($start_date, $end_date) {
-                $q->whereBetween('event_date', [$start_date, $end_date]);
-            });
+            $dates = explode(' to ', $request->input('range'));
+            if (count($dates) == 2) {
+                $start_date = $dates[0];
+                $end_date = $dates[1];
+                $query->whereHas('event', function ($q) use ($start_date, $end_date) {
+                    $q->whereBetween('event_date', [$start_date, $end_date]);
+                });
+            }
         }
 
         // Filter by package
@@ -110,6 +115,25 @@ class BookingController extends Controller
         if ($booking->receipt_full) {
             // If receipt_full is uploaded, set status to 'Success'
             $event->status = 'Success';
+            // Send email notification
+            // Generate QR code URL
+            $encryptedId = Crypt::encryptString($booking->id);
+            $qrCodeUrl = 'https://s.jgu.ac.id/qrcode?data=' . route('booking.print', $encryptedId) . '&label=';
+            $recipientEmail = $event->email;
+
+            $emailData = [
+                'tenant_name' => $event->tenant_name,
+                'event_date' => $event->event_date,
+                'event_name' => $event->event_name,
+                'institution_origin' => $event->Institution_origin,
+                'phone' => $event->phone,
+                'package_name' => $event->package->Name, // Assuming 'name' is the field you want
+                'total_payment' => $booking->total_payment,
+                'qr_code_url' => $qrCodeUrl, // Include the QR code URL
+                'encryptedId' => $encryptedId, // Include encrypted ID for printing
+                'encryptedId' => $encryptedId, // Include encrypted ID for printing
+            ];
+            Mail::to($recipientEmail)->send(new sendEmail($emailData)); // Replace 'recipient@example.com' with the actual recipient email
         } else {
             // If receipt_full is not uploaded, set status to 'Process'
             $event->status = 'Process';

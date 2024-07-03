@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Package;
+use App\Mail\sendEmail;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Carbon;
 
 class EventController extends Controller
 {
@@ -19,10 +22,12 @@ class EventController extends Controller
 
         // Filter by date range
         if ($request->has('range') && !empty($request->input('range'))) {
-            $dates = explode(' - ', $request->input('range'));
-            $start_date = $dates[0];
-            $end_date = $dates[1];
-            $query->whereBetween('event_date', [$start_date, $end_date]);
+            $dates = explode(' to ', $request->input('range'));
+            if (count($dates) == 2) {
+                $start_date = $dates[0];
+                $end_date = $dates[1];
+                $query->whereBetween('event_date', [$start_date, $end_date]);
+            }
         }
 
         // Filter by package
@@ -51,8 +56,21 @@ class EventController extends Controller
     public function create()
     {
         $packages = Package::all(); // Mengambil semua paket dari database
+        $events = Event::all(); // Mengambil semua event dari database
+
+        // Format the event dates
+        $disabledDates = $events->map(function ($event) {
+            $eventDate = Carbon::parse($event->event_date);
+            return [
+                'from' => $eventDate->format('Y-m-d'),
+                'to' => $eventDate->format('Y-m-d') // Assuming the event date range is only one day
+            ];
+        });
+
         return view('event.create', [
-            'packages' => $packages, // Mengirim data paket ke tampilan dengan nama variabel $packages
+            'packages' => $packages,
+            'events' => $events,
+            'disabledDates' => $disabledDates // Pass the formatted dates to the view
         ]);
     }
 
@@ -182,4 +200,10 @@ class EventController extends Controller
         $package = Package::findOrFail($packageId);
         return response()->json(['price' => $package->price]);
     }
+
+    // public function email()
+    // {
+    //     Mail::to("raihanalfaiz80@gmail.com")->send(new sendEmail());
+    //     return '<h1>sukses masukan email</h1>';
+    // }
 }

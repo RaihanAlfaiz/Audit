@@ -15,7 +15,7 @@
               </a>
             </div>
             <!-- /Logo -->
-            <img src="assets/img/logo2-.png" height="129" >
+            <img src="assets/img/jgu-audit2.png" height="90" >
             <p class="mb-4">Welcome Back!</p>
   
             <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('login') }}">
