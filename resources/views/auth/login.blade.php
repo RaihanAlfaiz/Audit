@@ -1,6 +1,15 @@
 @extends('layouts.authentication.master')
 
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Auditorium | JGU  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
 <div class="container-xxl">
     <div class="authentication-wrapper authentication-basic container-p-y">
       <div class="authentication-inner">
@@ -74,4 +83,3 @@
     </div>
   </div>
   </div>
-@endsection
