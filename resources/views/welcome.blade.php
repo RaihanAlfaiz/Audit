@@ -243,7 +243,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Package</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Berikut adalah package yang tersedia di Ballroom Jakarta Global University</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -253,7 +253,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
+              <h4><a class="stretched-link">Weeding</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div><!-- End Service Item -->
@@ -261,7 +261,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="#" class="stretched-link">Sed ut perspici</a></h4>
+              <h4><a class="stretched-link">Graduation</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div><!-- End Service Item -->
@@ -269,7 +269,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="#" class="stretched-link">Magni Dolores</a></h4>
+              <h4><a  class="stretched-link">Seminar</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div><!-- End Service Item -->
@@ -277,7 +277,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="#" class="stretched-link">Nemo Enim</a></h4>
+              <h4><a  class="stretched-link">Exhibition dll</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div><!-- End Service Item -->
@@ -316,7 +316,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Berikut adalah dokumentasi mengenai beberapa acara yang terdapat pada Ballroom Jakarta Global University</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -336,89 +336,80 @@
               <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Wedding</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Kursi Audiens</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4>Graduation</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Kajian</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4>Seminar</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4>Weeding 2</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4>Graduation 2</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4> Seminar 2</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4>Weeding 3</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4>Graduation 3</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
+                <h4>Seminar 3</h4>
+                <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
