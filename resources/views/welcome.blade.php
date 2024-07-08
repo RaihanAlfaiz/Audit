@@ -47,6 +47,8 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#calendar">Calendar</a></li>
+          <li><a href="#contact">Contact us</a></li>
+  
           <li class="dropdown"><a href="#"><span>Login/Register</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               @if (Route::has('login'))
@@ -66,7 +68,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Get Started </a>
+      <a class="btn-getstarted" href="#home">Get Started </a>
 
     </div>
   </header>
@@ -154,7 +156,7 @@
               <div class="faq-item">
                 <h3><span>04</span>Meeting</h3>
                 <div class="faq-content">
-                  <p>Penjelasan mengenai meeting</p>
+                  <p>Kami menyediakan layanan penyelenggaraan acara meeting  yang siap membantu Anda mengatur acara meeting yang profesional dan berkesan. Kami mengerti bahwa meeting adalah kesempatan untuk berdiskusi, membuat keputusan penting, dan membangun kolaborasi yang kuat. Dengan pengalaman kami yang luas dalam industri acara, kami menawarkan berbagai layanan yang dirancang untuk memenuhi kebutuhan untuk meeting yang nyaman dan aman.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -162,7 +164,7 @@
               <div class="faq-item">
                 <h3><span>05</span>Exhibition dll</h3>
                 <div class="faq-content">
-                <p>Penjelasan mengenai Exhibition dll</p>
+                <p>Kami juga menyediakan Berbagai Macam Layanan yang tidak bisa kami lampirkan semuanya disini silahkan hubungi nomor whatsapp kami atau bisa melalui akun instagram kami!</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -419,6 +421,17 @@
       </div>
     </div>
 
+        
+    <!-- Team Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact us</h2>
+        <p>Hubungi Kami Melalui Whatsapp atau Instagram yang tertera Di bawah ini jika anda tertarik untuk melakukan Reservasi Atau Booking Auditorium-JGU Ballroom </p>
+        <p> Jangan Lupa Follow Instagram Kami Untuk Mendaptakan Informasi Terbaru!</P>
+      </div><!-- End Section Title -->
+      
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
@@ -434,12 +447,12 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4>About Auditorium</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Portofolio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#service">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#portofolio">Portofolio</a></li>
           </ul>
         </div>
 
@@ -453,18 +466,18 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#about">Exhibition dll</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>For More Information</p>
+        
+        <div class="col-lg-2 col-md-12">
+          <h4>Contact Us</h4>
           <div class="social-links d-flex">
             <a href="https://www.instagram.com/jgu_ballroom/"><i class="bi bi-instagram"></i></a> 
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp">1</i></a>
+            <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp">2</i></a>
+            <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp">3</i></a>
           </div>
         </div>
 
-      </div>
-    </div>
+        
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">2024 |</strong> <span>Jakarta Global University</span></p>
