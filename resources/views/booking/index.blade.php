@@ -126,10 +126,11 @@
                                 <td>{{ date('d F Y', strtotime($bk->event->event_date)) }}</td>
                                 <td><i class="badge rounded-pill bg-{{ $bk->event->color }}" style="font-size:10pt;">{{ $bk->event->status }}</i></td>
                                 <td>
-                                    <a href="{{ route('booking.print', Crypt::encryptString($bk->id)) }}" class="btn btn-sm btn-primary">
+                                    <a href="{{ route('booking.print', Crypt::encryptString($bk->id)) }}" class="btn btn-sm btn-primary" target="_blank">
                                         <i class='bx bxs-printer'></i>
                                     </a>
                                 </td>
+                            </tr>
                             </tr>
                             @endforeach
                         </tbody>

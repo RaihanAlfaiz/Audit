@@ -13,6 +13,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         $schedule->command('event:update-status')->everyMinute();
+        $schedule->command('event:check-status')->everyMinute();
     }
 
     /**

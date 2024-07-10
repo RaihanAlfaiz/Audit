@@ -48,8 +48,8 @@
                                      @if(Auth::user()->hasRole('ME'))
                                       <option value="ME">Moon Event</option>
                                       @endif
-                                      @if(Auth::user()->hasRole('BW'))
-                                         <option value="BW">Bu Widia</option>
+                                      @if(Auth::user()->hasRole('BM'))
+                                         <option value="BM">Building Management</option>
                                      @endif
                                 </select>
                               </div>

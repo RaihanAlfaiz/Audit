@@ -23,7 +23,7 @@ class BookingController extends Controller
     {
         $query = Booking::query();
 
-     
+
 
         if ($request->has('range') && !empty($request->input('range'))) {
             $dates = explode(' to ', $request->input('range'));

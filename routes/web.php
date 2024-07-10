@@ -72,6 +72,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/event/{id}', [EventController::class, 'destroy'])->name('event.destroy');
     Route::get('/events', [EventController::class, 'index'])->name('event.index');
     Route::get('/email', [EventController::class, 'email'])->name('event.email');
+    // routes/web.php
+    Route::get('/event/print/{id}', [EventController::class, 'print'])->name('event.print');
 
 
     // Rute untuk mendapatkan harga paket berdasarkan package_id
