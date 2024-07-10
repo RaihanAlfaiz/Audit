@@ -13,6 +13,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ToolsController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 /*
@@ -26,21 +27,15 @@ use App\Mail\SendEmail;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+// Route::get('/', function () {
+//     return view('welcomeafasz');
+// })->name('welcome');
 
-Route::get('/send-email', function () {
-    $data = [
-        'name' => 'Muhammad Raihan',
-        'body' => 'Testing Kirim Email di Santri Koding'
-    ];
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
-    Mail::to('raihanalfaiz80@gmail.com')->send(new SendEmail($data));
 
-    dd("Email Berhasil dikirim.");
-});
 
+// 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

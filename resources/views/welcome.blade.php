@@ -47,7 +47,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#calendar">Calendar</a></li>
-          <li><a href="#contact">Contact us</a></li>
+          <li><a href="#footer">Contact us</a></li>
   
           <li class="dropdown"><a href="#"><span>Login/Register</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -197,38 +197,16 @@
       <div class="container">
 
         <div class="row gy-4">
-
+          @foreach($package as $pck)
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a class="stretched-link">Weeding</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a class="stretched-link">{{ $pck->Name }}</a></h4>
+              <p>{!! $pck->service !!}{!! $pck->item !!}</p>
             </div>
           </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a class="stretched-link">Graduation</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a  class="stretched-link">Seminar</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a  class="stretched-link">Exhibition dll</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div><!-- End Service Item -->
+          @endforeach
+      
 
         </div>
 
@@ -384,28 +362,7 @@
 
       <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member d-flex align-items-start">
-              <div class="member-info">
-                <h4>CALENDAR</h4>
-                <span>CALENDAR</span>
-                <p>CALENDAR</p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member d-flex align-items-start">
-              <div class="member-info">
-                <h4>CALENDAR</h4>
-                <span>CALENDAR</span>
-                <p>CALENDAR</p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
+       
     </section><!-- /Team Section -->
 
   <footer id="footer" class="footer">
