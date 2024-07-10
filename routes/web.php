@@ -118,14 +118,12 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/myprofile', [MyProfileController::class, 'myprofile'])->name('myprofile');
-    Route::post('/myprofile/upload', [MyProfileController::class, 'upload'])->name('myprofile.upload');
-    Route::patch('/profile/update/{id}', [MyProfileController::class, 'update'])->name('profile.update');
-
+    Route::put('/myprofile/{id}', [MyProfileController::class, 'update'])->name('myprofile.update');
 });
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
-    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');   
+    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
     Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
     Route::get('/tools/rehearsal', [ToolsController::class, 'rehearsal'])->name('tools.rehearsal');
     Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
@@ -134,5 +132,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tools/rehearsal/{eventId}', [ToolsController::class, 'showChecklistRehearsal'])->name('tools.checklist.rehearsal');
     Route::post('/tools/rehearsal/{eventId}', [ToolsController::class, 'submitChecklistRehearsal'])->name('tools.submit.rehearsal');
 });
-
-

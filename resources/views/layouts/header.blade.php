@@ -26,10 +26,11 @@
               <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                 <div class="avatar avatar-online">
                 @if(Auth::user()->photo)
-    <img src="{{ asset('storage/photos/'.Auth::user()->photo) }}" class="img-thumbnail rounded mx-auto d-block">
-@else
-    <img src="{{ asset('img/profile.png') }}" class="img-thumbnail rounded mx-auto d-block">
-@endif
+                    <img src="{{ asset('storage/' . Auth::user()->photo) }}" class="img-thumbnail rounded mx-auto d-block">
+                @else
+                    <img src="{{asset('assets/img/avatars/profile.png')}}" class="img-thumbnail rounded mx-auto d-block">
+
+                @endif
                 </div>
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
@@ -39,10 +40,11 @@
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar avatar-online">
                         @if(Auth::user()->photo)
-    <img src="{{ asset('storage/photos/'.Auth::user()->photo) }}" class="img-thumbnail rounded mx-auto d-block">
-@else
-    <img src="{{ asset('img/profile.png') }}" class="img-thumbnail rounded mx-auto d-block">
-@endif
+                                <img src="{{ asset('storage/' . Auth::user()->photo) }}" class="img-thumbnail rounded mx-auto d-block">
+                                
+                            @else
+                                <img src="{{asset('assets/img/avatars/profile.png')}}" class="img-thumbnail rounded mx-auto d-block">
+                            @endif
                         </div>
                       </div>
                       <div class="flex-grow-1">

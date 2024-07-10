@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+
+use Illuminate\Validation\Rule;
 
 class MyProfileController extends Controller
 {
@@ -18,60 +20,38 @@ class MyProfileController extends Controller
 
     public function update(Request $request, $id)
     {
-        request()->validate([
-            'name'       => 'required|string|min:2|max:100',
-            'email'      => 'required|email|unique:users,email,' . $id,
-            'old_password' => 'nullable|string',
-            'password' => 'nullable|required_with:old_password|string|confirmed|min:6'
+        $user = Auth::user();
+
+        // Validasi input
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'old_password' => 'nullable|required_with:password',
+            'password' => 'nullable|string|min:8|confirmed',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $user = User::find($id);
-
+        // Update data user
         $user->name = $request->name;
         $user->email = $request->email;
 
-        if ($request->filled('old_password')) {
-            if (Hash::check($request->old_password, $user->password)) {
-                $user->update([
-                    'password' => Hash::make($request->password)
-                ]);
-            } else {
-                return back()
-                    ->withErrors(['old_password' => __('Please enter the correct password')])
-                    ->withInput();
-            }
+        // Update password jika ada input password baru
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->password);
         }
 
+        // Check if receipt_dp is uploaded
         if ($request->hasFile('photo')) {
-            if ($user->photo && file_exists(storage_path('app/public/photos/' . $user->photo))) {
-                Storage::delete('public/photos/' . $user->photo);
+            // Delete old image if exists
+            if ($user->photo) {
+                Storage::delete($user->photo);
             }
 
-            $file = $request->file('photo');
-            $fileName = $file->hashName();
-            $file->storeAs('public/photos', $fileName);
-            $user->photo = $fileName;
+            $user->photo = $request->file('photo')->store('photo-images');
         }
 
         $user->save();
 
-        return back()->with('status', 'Profile updated!');
-    }
-
-    public function upload(Request $request)
-    {
-        $request->validate([
-            'profile_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
-        $user = Auth::user();
-
-        if ($request->file('profile_image')) {
-            $imagePath = $request->file('profile_image')->store('photos', 'public');
-            $user->photo = basename($imagePath);
-            $user->save();
-        }
-
-        return back()->with('status', 'Profile image updated!');
+        return redirect()->route('myprofile')->with('status', 'Profile updated successfully');
     }
 }

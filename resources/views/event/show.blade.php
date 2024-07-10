@@ -119,7 +119,7 @@
     <div class="col-xl-3 col-md-4 col-12 invoice-actions">
       <div class="card">
         <div class="card-body">
-          <a href="javascript:void(0)" class="btn btn-label-secondary d-grid w-100 mb-3" onclick="printDiv('printableArea')" target="_blank">Print</a>
+          <a href="javascript:void(0)" class="btn btn-label-secondary d-grid w-100 mb-3" onclick="printDiv('printableArea')">Print</a>
           <a href="{{ route('event') }}" class="btn btn-primary d-grid w-100 mb-3">Kembali</a>
         </div>
       </div>
