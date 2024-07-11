@@ -1,325 +1,130 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
-    xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
-
+<!--
+* This email was built using Tabular.
+* For more information, visit https://tabular.email
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
 <head>
-    <meta name=x-apple-disable-message-reformatting>
-    <meta http-equiv=X-UA-Compatible>
-    <meta charset=utf-8>
-    <meta name=viewport content=target-densitydpi=device-dpi>
-    <meta content=true name=HandheldFriendly>
-    <meta content=width=device-width name=viewport>
-    <style type="text/css">
-        table {
-            border-collapse: separate;
-            table-layout: fixed;
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt
-        }
-
-        table td {
-            border-collapse: collapse
-        }
-
-        .ExternalClass {
-            width: 100%
-        }
-
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-            line-height: 100%
-        }
-
-        * {
-            line-height: inherit;
-            text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-            -moz-text-size-adjust: 100%;
-            -o-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        html {
-            -webkit-text-size-adjust: none !important
-        }
-
-        #innerTable img+div {
-            display: none;
-            display: none !important
-        }
-
-        img {
-            Margin: 0;
-            padding: 0;
-            -ms-interpolation-mode: bicubic
-        }
-
-        h1,
-        h2,
-        h3,
-        p,
-        a {
-            line-height: 1;
-            overflow-wrap: normal;
-            white-space: normal;
-            word-break: break-word
-        }
-
-        a {
-            text-decoration: none
-        }
-
-        h1,
-        h2,
-        h3,
-        p {
-            min-width: 100% !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            display: inline-block !important;
-            border: 0;
-            padding: 0;
-            margin: 0
-        }
-
-        a[x-apple-data-detectors] {
-            color: inherit !important;
-            text-decoration: none !important;
-            font-size: inherit !important;
-            font-family: inherit !important;
-            font-weight: inherit !important;
-            line-height: inherit !important
-        }
-
-        a[href^="mailto"],
-        a[href^="tel"],
-        a[href^="sms"] {
-            color: inherit;
-            text-decoration: none
-        }
-
-        @media (min-width: 481px) {
-            .hd {
-                display: none !important
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hm {
-                display: none !important
-            }
-        }
-
-        [style*="Albert Sans"] {
-            font-family: 'Albert Sans', BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif !important;
-        }
-
-        @media only screen and (min-width: 481px) {
-            .t3 {
-                mso-line-height-alt: 45px !important;
-                line-height: 45px !important;
-                display: block !important
-            }
-
-            .t9 {
-                padding-left: 50px !important;
-                padding-bottom: 60px !important;
-                padding-right: 50px !important
-            }
-
-            .t11 {
-                padding-left: 50px !important;
-                padding-bottom: 60px !important;
-                padding-right: 50px !important;
-                width: 500px !important
-            }
-
-            .t15,
-            .t20 {
-                padding-bottom: 15px !important
-            }
-
-            .t21 {
-                line-height: 26px !important;
-                font-size: 24px !important;
-                letter-spacing: -1.56px !important
-            }
-
-            .t28 {
-                padding: 48px 50px !important
-            }
-
-            .t30 {
-                padding: 48px 50px !important;
-                width: 500px !important
-            }
-
-            .t44,
-            .t49 {
-                padding-bottom: 44px !important
-            }
-
-            .t157 {
-                padding-bottom: 60px !important
-            }
-
-            .t159 {
-                width: 22.91667% !important;
-                max-width: 110px !important
-            }
-
-            .t162 {
-                padding-bottom: 60px !important
-            }
-
-            .t167 {
-                width: 77.08333% !important
-            }
-
-            .t217,
-            .t225 {
-                width: 248px !important
-            }
-
-            .t238 {
-                padding-left: 10px !important;
-                width: 590px !important
-            }
-
-            .t243 {
-                padding-left: 10px !important
-            }
-
-            .t248 {
-                padding-left: 10px !important;
-                width: 590px !important
-            }
-
-            .t253 {
-                padding-left: 10px !important
-            }
-
-            .t258 {
-                padding-left: 10px !important;
-                width: 590px !important
-            }
-
-            .t263 {
-                padding-left: 10px !important
-            }
-        }
-    </style>
-    <style media="screen and (min-width:481px)">
-        .moz-text-html .t3 {
-            mso-line-height-alt: 45px !important;
-            line-height: 45px !important;
-            display: block !important
-        }
-
-        .moz-text-html .t9 {
-            padding-left: 50px !important;
-            padding-bottom: 60px !important;
-            padding-right: 50px !important
-        }
-
-        .moz-text-html .t11 {
-            padding-left: 50px !important;
-            padding-bottom: 60px !important;
-            padding-right: 50px !important;
-            width: 500px !important
-        }
-
-        .moz-text-html .t15,
-        .moz-text-html .t20 {
-            padding-bottom: 15px !important
-        }
-
-        .moz-text-html .t21 {
-            line-height: 26px !important;
-            font-size: 24px !important;
-            letter-spacing: -1.56px !important
-        }
-
-        .moz-text-html .t28 {
-            padding: 48px 50px !important
-        }
-
-        .moz-text-html .t30 {
-            padding: 48px 50px !important;
-            width: 500px !important
-        }
-
-        .moz-text-html .t44,
-        .moz-text-html .t49 {
-            padding-bottom: 44px !important
-        }
-
-        .moz-text-html .t157 {
-            padding-bottom: 60px !important
-        }
-
-        .moz-text-html .t159 {
-            width: 22.91667% !important;
-            max-width: 110px !important
-        }
-
-        .moz-text-html .t162 {
-            padding-bottom: 60px !important
-        }
-
-        .moz-text-html .t167 {
-            width: 77.08333% !important
-        }
-
-        .moz-text-html .t217,
-        .moz-text-html .t225 {
-            width: 248px !important
-        }
-
-        .moz-text-html .t238 {
-            padding-left: 10px !important;
-            width: 590px !important
-        }
-
-        .moz-text-html .t243 {
-            padding-left: 10px !important
-        }
-
-        .moz-text-html .t248 {
-            padding-left: 10px !important;
-            width: 590px !important
-        }
-
-        .moz-text-html .t253 {
-            padding-left: 10px !important
-        }
-
-        .moz-text-html .t258 {
-            padding-left: 10px !important;
-            width: 590px !important
-        }
-
-        .moz-text-html .t263 {
-            padding-left: 10px !important
-        }
-    </style>
-    <!--[if !mso]><!-->
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"
-        type="text/css">
-    <!--<![endif]-->
-    <!--[if mso]>
+<title></title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if !mso]>-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<![endif]-->
+<meta name="x-apple-disable-message-reformatting" content="" />
+<meta content="target-densitydpi=device-dpi" name="viewport" />
+<meta content="true" name="HandheldFriendly" />
+<meta content="width=device-width" name="viewport" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no" />
 <style type="text/css">
-div.t3{mso-line-height-alt:45px !important;line-height:45px !important;display:block !important}td.t11,td.t9{padding-left:50px !important;padding-bottom:60px !important;padding-right:50px !important}td.t15,td.t20{padding-bottom:15px !important}h1.t21{line-height:26px !important;font-size:24px !important;letter-spacing:-1.56px !important}td.t28,td.t30{padding:48px 50px !important}td.t44,td.t49{padding-bottom:44px !important}td.t157{padding-bottom:60px !important;width:110px !important}div.t159{width:22.91667% !important;max-width:110px !important}td.t162{padding-bottom:60px !important}div.t167{width:77.08333% !important}td.t217{width:250px !important}td.t225{width:248px !important}td.t238,td.t243,td.t248,td.t253,td.t258,td.t263{padding-left:10px !important}
+table {
+border-collapse: separate;
+table-layout: fixed;
+mso-table-lspace: 0pt;
+mso-table-rspace: 0pt
+}
+table td {
+border-collapse: collapse
+}
+.ExternalClass {
+width: 100%
+}
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+line-height: 100%
+}
+body, a, li, p, h1, h2, h3 {
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+html {
+-webkit-text-size-adjust: none !important
+}
+body, #innerTable {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale
+}
+#innerTable img+div {
+display: none;
+display: none !important
+}
+img {
+Margin: 0;
+padding: 0;
+-ms-interpolation-mode: bicubic
+}
+h1, h2, h3, p, a {
+line-height: inherit;
+overflow-wrap: normal;
+white-space: normal;
+word-break: break-word
+}
+a {
+text-decoration: none
+}
+h1, h2, h3, p {
+min-width: 100%!important;
+width: 100%!important;
+max-width: 100%!important;
+display: inline-block!important;
+border: 0;
+padding: 0;
+margin: 0
+}
+a[x-apple-data-detectors] {
+color: inherit !important;
+text-decoration: none !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important
+}
+u + #body a {
+color: inherit;
+text-decoration: none;
+font-size: inherit;
+font-family: inherit;
+font-weight: inherit;
+line-height: inherit;
+}
+a[href^="mailto"],
+a[href^="tel"],
+a[href^="sms"] {
+color: inherit;
+text-decoration: none
+}
+img,p{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-.56px;direction:ltr;color:#333;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px}h1{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:41px;font-weight:800;font-style:normal;font-size:39px;text-decoration:none;text-transform:none;letter-spacing:-1.56px;direction:ltr;color:#191919;text-align:center;mso-line-height-rule:exactly;mso-text-raise:1px}h2{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:30px;font-weight:400;font-style:normal;font-size:24px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}h3{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:26px;font-weight:400;font-style:normal;font-size:20px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}
+</style>
+<style type="text/css">
+@media (min-width: 481px) {
+.hd { display: none!important }
+}
+</style>
+<style type="text/css">
+@media (max-width: 480px) {
+.hm { display: none!important }
+}
+</style>
+<style type="text/css">
+@media (min-width: 481px) {
+h1,img,p{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;text-align:center}img,p{line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-.56px;direction:ltr;color:#333;mso-line-height-rule:exactly;mso-text-raise:2px}h1{line-height:41px;font-weight:800;font-style:normal;font-size:39px;text-decoration:none;text-transform:none;letter-spacing:-1.56px;direction:ltr;color:#191919;mso-line-height-rule:exactly;mso-text-raise:1px}h2,h3{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;font-weight:400;font-style:normal;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}h2{line-height:30px;font-size:24px}h3{line-height:26px;font-size:20px}.t1{padding-top:48px!important;width:600px!important}.t10,.t14,.t17,.t19,.t22,.t26,.t28,.t4,.t7{width:500px!important}.t19{padding:60px 50px!important}.t7{padding-bottom:25px!important}.t6{line-height:41px!important;font-size:39px!important;letter-spacing:-1.56px!important}.t28{padding:48px 50px!important}.t17{padding-top:48px!important}
+}
+</style>
+<style type="text/css">@media (min-width: 481px) {[class~="x_t1"]{padding-top:48px!important;width:600px!important;} [class~="x_t19"]{padding-left:50px!important;padding-top:60px!important;padding-bottom:60px!important;padding-right:50px!important;width:500px!important;} [class~="x_t4"]{width:500px!important;} [class~="x_t14"]{width:500px!important;} [class~="x_t10"]{width:500px!important;} [class~="x_t7"]{padding-bottom:25px!important;width:500px!important;} [class~="x_t6"]{line-height:41px!important;font-size:39px!important;letter-spacing:-1.56px!important;} [class~="x_t28"]{padding-left:50px!important;padding-top:48px!important;padding-bottom:48px!important;padding-right:50px!important;width:500px!important;} [class~="x_t26"]{width:500px!important;} [class~="x_t22"]{width:500px!important;} [class~="x_t17"]{padding-top:48px!important;width:500px!important;}}</style>
+<style type="text/css" media="screen and (min-width:481px)">.moz-text-html img,.moz-text-html p{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-.56px;direction:ltr;color:#333;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px}.moz-text-html h1{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:41px;font-weight:800;font-style:normal;font-size:39px;text-decoration:none;text-transform:none;letter-spacing:-1.56px;direction:ltr;color:#191919;text-align:center;mso-line-height-rule:exactly;mso-text-raise:1px}.moz-text-html h2{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:30px;font-weight:400;font-style:normal;font-size:24px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}.moz-text-html h3{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:26px;font-weight:400;font-style:normal;font-size:20px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}.moz-text-html .t1{padding-top:48px!important;width:600px!important}.moz-text-html .t19{padding:60px 50px!important;width:500px!important}.moz-text-html .t10,.moz-text-html .t14,.moz-text-html .t4{width:500px!important}.moz-text-html .t7{padding-bottom:25px!important;width:500px!important}.moz-text-html .t6{line-height:41px!important;font-size:39px!important;letter-spacing:-1.56px!important}.moz-text-html .t28{padding:48px 50px!important;width:500px!important}.moz-text-html .t22,.moz-text-html .t26{width:500px!important}.moz-text-html .t17{padding-top:48px!important;width:500px!important}</style>
+<!--[if !mso]>-->
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500;700;800&amp;display=swap" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+<!--[if mso]>
+<style type="text/css">
+img,p{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-.56px;direction:ltr;color:#333;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px}h1{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:41px;font-weight:800;font-style:normal;font-size:39px;text-decoration:none;text-transform:none;letter-spacing:-1.56px;direction:ltr;color:#191919;text-align:center;mso-line-height-rule:exactly;mso-text-raise:1px}h2{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:30px;font-weight:400;font-style:normal;font-size:24px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}h3{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:26px;font-weight:400;font-style:normal;font-size:20px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}td.t1{padding-top:48px !important}td.t19{padding:60px 50px !important}td.t7{padding-bottom:25px !important}h1.t6{line-height:41px !important;font-size:39px !important;letter-spacing:-1.56px !important}td.t28{padding:48px 50px !important}td.t17{padding-top:48px !important}
 </style>
 <![endif]-->
-    <!--[if mso]>
+<!--[if mso]>
 <xml>
 <o:OfficeDocumentSettings>
 <o:AllowPNG/>
@@ -328,393 +133,121 @@ div.t3{mso-line-height-alt:45px !important;line-height:45px !important;display:b
 </xml>
 <![endif]-->
 </head>
-
-<body class=t0 style="min-width:100%;Margin:0px;padding:0px;background-color:#242424;">
-    <div class=t1 style="background-color:#242424;">
-        <table role=presentation width=100% cellpadding=0 cellspacing=0 border=0 align=center>
-            <tr>
-                <td class=t268 style="background-color:#242424;font-size:0;line-height:0;mso-line-height-rule:exactly;"
-                    valign=top align=center>
-                    <!--[if mso]>
+<body id="body" class="t32" style="min-width:100%;Margin:0px;padding:0px;background-color:#242424;"><div class="t31" style="background-color:#242424;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td class="t30" style="font-size:0;line-height:0;mso-line-height-rule:exactly;background-color:#242424;" valign="top" align="center">
+<!--[if mso]>
 <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false">
-<v:fill color=#242424 />
+<v:fill color="#242424"/>
 </v:background>
 <![endif]-->
-                    <table role=presentation width=100% cellpadding=0 cellspacing=0 border=0 align=center id=innerTable>
-                        <tr>
-                            <td>
-                                <div class=t3 style="mso-line-height-rule:exactly;font-size:1px;display:none;">&nbsp;
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class=t10 role=presentation cellpadding=0 cellspacing=0 align=center>
-                                    <tr>
-                                        <!--[if !mso]><!-->
-                                        <td class=t11
-                                            style="background-color:#F8F8F8;width:540px;padding:0 30px 40px 30px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><td class=t11 style="background-color:#F8F8F8;width:600px;padding:0 30px 40px 30px;"><![endif]-->
-                                            <table role=presentation width=100% cellpadding=0 cellspacing=0>
-                                                <tr>
-                                                    <td>
-                                                        <table class=t146 role=presentation cellpadding=0 cellspacing=0
-                                                            align=center>
-                                                            <tr>
-                                                                <!--[if !mso]><!-->
-                                                                <td class=t147 style="width:800px;">
-                                                                    <!--<![endif]-->
-                                                                    <!--[if mso]><td class=t147 style="width:800px;"><![endif]-->
-                                                                    <div class=t153
-                                                                        style="display:inline-table;width:100%;text-align:right;vertical-align:top;">
-                                                                        <!--[if mso]>
-<table role=presentation cellpadding=0 cellspacing=0 align=right valign=top width=480><tr><td width=370 valign=top><![endif]-->
-                                                                        <div class=t167
-                                                                            style="display:inline-table;text-align:initial;vertical-align:inherit;width:82.22222%;max-width:370px;">
-                                                                            <table role=presentation width=100%
-                                                                                cellpadding=0 cellspacing=0 class=t169>
-                                                                                <tr>
-                                                                                    <td class=t170
-                                                                                        style="padding:35px 0 0 0;">
-                                                                                        <table role=presentation
-                                                                                            width=100% cellpadding=0
-                                                                                            cellspacing=0>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <table class=t195
-                                                                                                        role=presentation
-                                                                                                        cellpadding=0
-                                                                                                        cellspacing=0
-                                                                                                        align=center>
-                                                                                                        <tr>
-                                                                                                            <!--[if !mso]><!-->
-                                                                                                            <td class=t196
-                                                                                                                style="width:600px;">
-                                                                                                                <!--<![endif]-->
-                                                                                                                <!--[if mso]><td class=t196 style="width:600px;"><![endif]-->
-                                                                                                                <p class=t202
-                                                                                                                    style="margin-bottom:0;Margin-bottom:0;font-family:BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,'Albert Sans';line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-0.56px;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">
-                                                                                                                    <span
-                                                                                                                        class=t203
-                                                                                                                        style="margin-bottom:0;Margin-bottom:0;font-weight:bold;mso-line-height-rule:exactly;">Bukti Peminjaman Auditiorium</span>
-                                                                                                                </p>
-                                                                                                            </td>
-                                                                                                        </tr>
-                                                                                                    </table>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <table class=t185
-                                                                                                        role=presentation
-                                                                                                        cellpadding=0
-                                                                                                        cellspacing=0
-                                                                                                        align=center>
-                                                                                                        <tr>
-                                                                                                            <!--[if !mso]><!-->
-                                                                                                           
-                                                                                                        </tr>
-                                                                                                    </table>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </div>
-                                                                        <!--[if mso]>
-</td><td width=110 valign=top><![endif]-->
-                                                                        <div class=t159
-                                                                            style="display:inline-table;text-align:initial;vertical-align:inherit;width:17.77778%;max-width:80px;">
-                                                                            <table role=presentation width=100%
-                                                                                cellpadding=0 cellspacing=0 class=t161>
-                                                                                <tr>
-                                                                                    <td class=t162
-                                                                                        style="padding:20px 0 50px 0;">
-                                                                                        <div style="font-size:0px;"><img
-                                                                                                class=t163
-                                                                                                style="display:block;border:0;height:auto;width:100%;Margin:0;max-width:100%;"
-                                                                                                width=110
-                                                                                                height=102.953125
-                                                                                                src=https://jgu.ac.id/images/logo-jgu.png />
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </div>
-                                                                        <!--[if mso]>
-</td>
-</tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" id="innerTable"><tr><td align="center">
+<table class="t2" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="600" class="t1">
 <![endif]-->
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <table class=t14 role=presentation cellpadding=0 cellspacing=0
-                                                            align=center>
-                                                            <tr>
-                                                                <!--[if !mso]><!-->
-                                                                <td class=t15 style="width:600px;padding:0 0 20px 0;">
-                                                                    <!--<![endif]-->
-                                                                    <!--[if mso]><td class=t15 style="width:600px;padding:0 0 20px 0;"><![endif]-->
-                                                                    <h1 class=t21
-                                                                        style="margin-bottom:0;Margin-bottom:0;font-family:BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,'Albert Sans';line-height:28px;font-weight:800;font-style:normal;font-size:26px;text-decoration:none;text-transform:none;letter-spacing:-1.04px;direction:ltr;color:#191919;text-align:left;mso-line-height-rule:exactly;mso-text-raise:1px;">
-                                                                        Halo {{ $data['tenant_name'] }},</h1>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <table class=t206 role=presentation cellpadding=0 cellspacing=0
-                                                            align=center>
-                                                            <tr>
-                                                                <!--[if !mso]><!-->
-                                                                <td class=t207 style="width:600px;padding:0 0 22px 0;">
-                                                                    <!--<![endif]-->
-                                                                    <!--[if mso]><td class=t207 style="width:600px;padding:0 0 22px 0;"><![endif]-->
-                                                                    <p class=t213
-                                                                        style="margin-bottom:0;Margin-bottom:0;font-family:BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,'Albert Sans';line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-0.56px;direction:ltr;color:#333333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px;">
-                                                                        Kami senang menginformasikan bahwa reservasi
-                                                                        Anda telah disetujui oleh admin <span class=t266
-                                                                            style="margin-bottom:0;Margin-bottom:0;font-weight:700;mso-line-height-rule:exactly;">Auditorium Jakarta Global University</span> untuk tanggal <span class=t265
-                                                                            style="margin-bottom:0;Margin-bottom:0;font-weight:700;mso-line-height-rule:exactly;">{{ $data['event_date'] }}</span>.
-                                                                        Mohon datang ke lokasi sesuai jadwal dan kami
-                                                                        akan berusaha
-                                                                        semaksimal mungkin untuk memastikan acara Anda
-                                                                        berjalan lancar.</p>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                               
-                                               
-                                                <tr>
-                                                    <td>
-                                                        <div class=t215
-                                                            style="mso-line-height-rule:exactly;mso-line-height-alt:40px;line-height:40px;font-size:1px;display:block;">
-                                                            &nbsp;</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <table class=t126 role=presentation cellpadding=0 cellspacing=0
-                                                            align=center>
-
-                                                           
-                                                                <tr>
-                                                                    <!--[if !mso]><!-->
-                                                                    <td class=t127
-                                                                        style="background-color:#F0F0F0;width:760px;padding:20px 20px 20px 20px;">
-                                                                        <!--<![endif]-->
-                                                                        <!--[if mso]><td class=t127 style="background-color:#F0F0F0;width:800px;padding:20px 20px 20px 20px;"><![endif]-->
-                                                                        <div class=t133
-                                                                            style="display:inline-table;width:100%;text-align:left;vertical-align:middle;">
-                                                                            <!--[if mso]>
-<table role=presentation cellpadding=0 cellspacing=0 align=left valign=middle width=460><tr><td class=t138 style="width:10px;" width=10></td><td width=84.33566 valign=middle><![endif]-->
-                                                                            {{-- <div class=t139
-                                                                                style="display:inline-table;text-align:initial;vertical-align:inherit;width:21.22959%;max-width:221px;">
-                                                                                <div class=t140
-                                                                                    style="padding:0 10px 0 10px;">
-                                                                                    <table role=presentation width=100%
-                                                                                        cellpadding=0 cellspacing=0
-                                                                                        class=t141>
-                                                                                        <tr>
-                                                                                            <td class=t142>
-                                                                                                <div
-                                                                                                    style="font-size:0px;">
-                                                                                                    <img class=t143
-                                                                                                        style="display:block;border:0;height:auto;width:100%;Margin:0;max-width:100%;"
-                                                                                                        width=84.33566433566433
-                                                                                                        height=110.734375
-                                                                                                        src="{{ asset($reservation->room->thumbnail) }}"" />
-                                                                                                </div>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div> --}}
-                                                                            <!--[if mso]>
-</td><td class=t138 style="width:10px;" width=10></td><td class=t228 style="width:10px;" width=10></td><td width=335.66434 valign=middle><![endif]-->
-    <div class=t139
-                                                                                style="display:inline-table;text-align:initial;vertical-align:inherit;width:21.22959%;max-width:221px;">
-                                                                                <div class=t140
-                                                                                    style="padding:0 10px 0 10px;">
-                                                                                    <table role=presentation width=100%
-                                                                                        cellpadding=0 cellspacing=0
-                                                                                        class=t141>
-                                                                                        <tr>
-                                                                                            <td class=t142>
-                                                                                                <div
-                                                                                                    style="font-size:0px;">
-                                                                                                    <img class=t143
-                                                                                                        style="display:block;border:0;height:auto;width:100%;Margin:0;max-width:100%;"
-                                                                                                        width=84.33566433566433
-                                                                                                        height=110.734375
-                                                                                                        src="{{ $data['qr_code_url'] }}"/>
-                                                                                                </div>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class=t229
-                                                                                style="display:inline-table;text-align:initial;vertical-align:inherit;width:78.77041%;max-width:820px;">
-                                                                                <div class=t230
-                                                                                    style="padding:0 10px 0 10px;">
-                                                                                    <table role=presentation width=100%
-                                                                                        cellpadding=0 cellspacing=0
-                                                                                        class=t231>
-                                                                                        <tr>
-                                                                                            <td class=t232>
-                                                                                                <table role=presentation
-                                                                                                    width=100%
-                                                                                                    cellpadding=0
-                                                                                                    cellspacing=0>
-                                                                                                    <tr>
-                                                                                                        <td>
-                                                                                                            <table
-                                                                                                                class=t257
-                                                                                                                role=presentation
-                                                                                                                cellpadding=0
-                                                                                                                cellspacing=0
-                                                                                                                align=center>
-                                                                                                                <tr>
-                                                                                                                    <!--[if !mso]><!-->
-                                                                                                                    <td class=t258
-                                                                                                                        style="width:600px;">
-                                                                                                                        <!--<![endif]-->
-                                                                                                                        <!--[if mso]><td class=t258 style="width:600px;"><![endif]-->
-                                                                                                                        <h1 class=t264
-                                                                                                                            style="margin-bottom:0;Margin-bottom:0;font-family:BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,'Albert Sans';line-height:16px;font-weight:700;font-style:normal;font-size:14px;text-decoration:none;text-transform:uppercase;direction:ltr;color:#1A1A1A;text-align:left;mso-line-height-rule:exactly;mso-text-raise:1px;">Nama Acara : 
-                                                                                                                            {{ $data['event_name'] }}
-                                                                                                                        </h1>
-                                                                                                                    </td>
-                                                                                                                </tr>
-                                                                                                            </table>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <td>
-                                                                                                            <div class=t256
-                                                                                                                style="mso-line-height-rule:exactly;mso-line-height-alt:10px;line-height:10px;font-size:1px;display:block;">
-                                                                                                                &nbsp;
-                                                                                                            </div>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <td>
-                                                                                                            <table
-                                                                                                                class=t247
-                                                                                                                role=presentation
-                                                                                                                cellpadding=0
-                                                                                                                cellspacing=0
-                                                                                                                align=center>
-                                                                                                                <tr>
-                                                                                                                    <!--[if !mso]><!-->
-                                                                                                                    <td class=t248
-                                                                                                                        style="width:600px;">
-                                                                                                                        <!--<![endif]-->
-                                                                                                                        <!--[if mso]><td class=t248 style="width:600px;"><![endif]-->
-                                                                                                                        <h1 class=t254
-                                                                                                                            style="margin-bottom:0;Margin-bottom:0;font-family:BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,'Albert Sans';line-height:16px;font-weight:500;font-style:normal;font-size:12px;text-decoration:none;text-transform:uppercase;direction:ltr;color:#1A1A1A;text-align:left;mso-line-height-rule:exactly;mso-text-raise:1px;">Nama Institusi :
-                                                                                                                            {{ $data['institution_origin'] }} <br> Nomor Telp :
-                                                                                                                            {{ 
-                                                                                                                            $data['phone'] }} <br>
-
-                                                                                                                        </h1>
-                                                                                                                    </td>
-                                                                                                                </tr>
-                                                                                                            </table>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <td>
-                                                                                                            <div class=t235
-                                                                                                                style="mso-line-height-rule:exactly;mso-line-height-alt:15px;line-height:15px;font-size:1px;display:block;">
-                                                                                                                &nbsp;
-                                                                                                            </div>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <td>
-                                                                                                            <table
-                                                                                                                class=t237
-                                                                                                                role=presentation
-                                                                                                                cellpadding=0
-                                                                                                                cellspacing=0
-                                                                                                                align=center>
-                                                                                                                <tr>
-                                                                                                                    <!--[if !mso]><!-->
-                                                                                                                    <td class=t238
-                                                                                                                        style="border-top:1px solid #CCCCCC;width:600px;padding:15px 0 0 0;">
-                                                                                                                        <!--<![endif]-->
-                                                                                                                        <!--[if mso]><td class=t238 style="border-top:1px solid #CCCCCC;width:600px;padding:15px 0 0 0;"><![endif]-->
-                                                                                                                        <h1 class=t244
-                                                                                                                            style="margin-bottom:0;Margin-bottom:0;font-family:BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,'Albert Sans';line-height:16px;font-weight:500;font-style:normal;font-size:12px;text-decoration:none;text-transform:uppercase;direction:ltr;color:#1A1A1A;text-align:left;mso-line-height-rule:exactly;mso-text-raise:1px;">
-                                                                                                                            {{ $data['package_name'] }}
-                                                                                                                        </h1>
-                                                                                                                    </td>
-                                                                                                                </tr>
-                                                                                                            </table>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                </table>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!--[if mso]>
-</td><td class=t228 style="width:10px;" width=10></td>
+<!--[if !mso]>-->
+<td class="t1" style="width:480px;">
+<!--<![endif]-->
+<div style="font-size:0px;"><img class="t0" style="display:block;border:0;height:auto;width:100%;Margin:0;max-width:100%;" width="600" height="356.25" alt="" src="https://media.istockphoto.com/id/1178127891/id/vektor/ilustrasi-vektor-datar-ruang-konferensi-kosong.jpg?s=612x612&w=0&k=20&c=oUakSVyHknj14IT6w0cwr24fGycU-wfImOjASJmk4-A="/></div></td>
 </tr></table>
+</td></tr><tr><td align="center">
+<table class="t20" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="600" class="t19" style="background-color:#F8F8F8;padding:40px 30px 40px 30px;">
 <![endif]-->
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                        
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class=t125
-                                                            style="mso-line-height-rule:exactly;mso-line-height-alt:30px;line-height:30px;font-size:1px;display:block;">
-                                                            &nbsp;</div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class=t29 role=presentation cellpadding=0 cellspacing=0 align=center>
-                                    <tr>
-                                        <!--[if !mso]><!-->
-                                        <td class=t30
-                                            style="background-color:#242424;width:540px;padding:40px 30px 40px 30px;">
-                                            <!--<![endif]-->
-                                            <!--[if mso]><td class=t30 style="background-color:#242424;width:600px;padding:40px 30px 40px 30px;"><![endif]-->
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
-</body>
-
+<!--[if !mso]>-->
+<td class="t19" style="background-color:#F8F8F8;width:420px;padding:40px 30px 40px 30px;">
+<!--<![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%!important;"><tr><td align="center">
+<table class="t5" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="500" class="t4" style="padding:0 0 6px 0;">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t4" style="width:420px;padding:0 0 6px 0;">
+<!--<![endif]-->
+<h1 class="t3" style="margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:16px;font-weight:800;font-style:normal;font-size:14px;text-decoration:none;text-transform:uppercase;letter-spacing:3px;direction:ltr;color:#191919;text-align:center;mso-line-height-rule:exactly;mso-text-raise:1px;">{{ $data['package_name'] }}</h1></td>
+</tr></table>
+</td></tr><tr><td align="center">
+<table class="t8" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="500" class="t7" style="padding:0 0 20px 0;">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t7" style="width:420px;padding:0 0 20px 0;">
+<!--<![endif]-->
+<h1 class="t6" style="margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:28px;font-weight:800;font-style:normal;font-size:26px;text-decoration:none;text-transform:none;letter-spacing:-1.04px;direction:ltr;color:#191919;text-align:center;mso-line-height-rule:exactly;mso-text-raise:1px;">Hi, {{ $data['tenant_name'] }}</h1></td>
+</tr></table>
+</td></tr><tr><td align="center">
+<table class="t11" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="500" class="t10" style="padding:0 0 22px 0;">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t10" style="width:420px;padding:0 0 22px 0;">
+<!--<![endif]-->
+<p class="t9" style="margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-0.56px;direction:ltr;color:#333333;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px;">Kami senang menginformasikan bahwa reservasi Anda dalam acara {{ $data['event_name'] }} telah disetujui oleh admin Auditorium Jakarta Global University untuk tanggal {{ date('d F Y', strtotime($data['event_date'])) }}. Mohon datang ke lokasi sesuai jadwal dan kami akan berusaha semaksimal mungkin untuk memastikan acara Anda berjalan lancar.</p></td>
+</tr></table>
+</td></tr><tr><td align="center">
+<table class="t15" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="500" class="t14" style="padding:0 0 40px 0;">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t14" style="width:420px;padding:0 0 40px 0;">
+<!--<![endif]-->
+<p class="t13" style="margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:500;font-style:normal;font-size:14px;text-decoration:none;text-transform:none;letter-spacing:-0.56px;direction:ltr;color:#333333;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px;"><span class="t12" style="margin:0;Margin:0;font-style:italic;mso-line-height-rule:exactly;">*Scan Barcode untuk melihat bukti pemesanan</span></p></td>
+</tr></table>
+</td></tr><tr><td align="center">
+<table class="t18" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="500" class="t17">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t17" style="width:420px;">
+<!--<![endif]-->
+<div style="font-size:0px;"><img class="t16" style="display:block;border:0;height:auto;width:100%;Margin:0;max-width:100%;" width="500" height="500" alt="" src="{{ $data['qr_code_url'] }}"/></div></td>
+</tr></table>
+</td></tr></table></td>
+</tr></table>
+</td></tr><tr><td align="center">
+<table class="t29" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="600" class="t28" style="padding:40px 30px 40px 30px;">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t28" style="width:420px;padding:40px 30px 40px 30px;">
+<!--<![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%!important;"><tr><td align="center">
+<table class="t23" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="500" class="t22">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t22" style="width:420px;">
+<!--<![endif]-->
+<p class="t21" style="margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:500;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#888888;text-align:center;mso-line-height-rule:exactly;mso-text-raise:3px;">Jl. Boulevard Grand Depok City, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412</p></td>
+</tr></table>
+</td></tr><tr><td align="center">
+<table class="t27" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;">
+<tr>
+<!--[if mso]>
+<td width="500" class="t26">
+<![endif]-->
+<!--[if !mso]>-->
+<td class="t26" style="width:420px;">
+<!--<![endif]-->
+<p class="t25" style="margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:500;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#888888;text-align:center;mso-line-height-rule:exactly;mso-text-raise:3px;"><a class="t24" href="https://tabular.email" style="margin:0;Margin:0;font-weight:700;font-style:normal;text-decoration:none;direction:ltr;color:#888888;mso-line-height-rule:exactly;" target="_blank">Jakarta Global University</a></p></td>
+</tr></table>
+</td></tr></table></td>
+</tr></table>
+</td></tr></table></td></tr></table></div></body>
 </html>

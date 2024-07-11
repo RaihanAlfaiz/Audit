@@ -6,6 +6,7 @@ use App\Models\Package;
 use App\Http\Requests\StorePackageRequest;
 use App\Http\Requests\UpdatePackageRequest;
 use Illuminate\Http\Request;
+use App\Models\UserRole;
 
 class PackageController extends Controller
 {
@@ -14,7 +15,16 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $package = Package::all();
+        $userId = auth()->id(); // Mengambil ID user yang sedang login
+
+        // Mengambil roles user
+        $userRoles = UserRole::where('user_id', $userId)
+            ->join('roles', 'user_roles.role_id', '=', 'roles.id')
+            ->pluck('roles.id'); // Mengambil semua role titles sebagai array
+
+        // Mengambil packages sesuai dengan role user
+        $package = Package::whereIn('type', $userRoles)->get();
+        // $package = Package::all();
         return view('pack.index', [
             'package' => $package
         ]);

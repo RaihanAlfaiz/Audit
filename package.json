@@ -12,5 +12,9 @@
         "laravel-vite-plugin": "^1.0.0",
         "sass": "^1.56.1",
         "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "@fullcalendar/core": "^6.1.14",
+        "@fullcalendar/daygrid": "^6.1.14"
     }
 }

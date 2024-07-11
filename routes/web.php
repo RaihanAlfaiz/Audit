@@ -13,6 +13,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ToolsController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 /*
@@ -26,21 +27,15 @@ use App\Mail\SendEmail;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+// Route::get('/', function () {
+//     return view('welcomeafasz');
+// })->name('welcome');
 
-Route::get('/send-email', function () {
-    $data = [
-        'name' => 'Muhammad Raihan',
-        'body' => 'Testing Kirim Email di Santri Koding'
-    ];
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
-    Mail::to('raihanalfaiz80@gmail.com')->send(new SendEmail($data));
 
-    dd("Email Berhasil dikirim.");
-});
 
+// 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -72,6 +67,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/event/{id}', [EventController::class, 'destroy'])->name('event.destroy');
     Route::get('/events', [EventController::class, 'index'])->name('event.index');
     Route::get('/email', [EventController::class, 'email'])->name('event.email');
+    // routes/web.php
+    Route::get('/event/print/{id}', [EventController::class, 'print'])->name('event.print');
 
 
     // Rute untuk mendapatkan harga paket berdasarkan package_id
@@ -116,14 +113,12 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/myprofile', [MyProfileController::class, 'myprofile'])->name('myprofile');
-    Route::post('/myprofile/upload', [MyProfileController::class, 'upload'])->name('myprofile.upload');
-    Route::patch('/profile/update/{id}', [MyProfileController::class, 'update'])->name('profile.update');
-
+    Route::put('/myprofile/{id}', [MyProfileController::class, 'update'])->name('myprofile.update');
 });
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
-    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');   
+    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
     Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
     Route::get('/tools/rehearsal', [ToolsController::class, 'rehearsal'])->name('tools.rehearsal');
     Route::get('/tools/{eventId}', [ToolsController::class, 'showChecklist'])->name('tools.checklist');
@@ -132,5 +127,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tools/rehearsal/{eventId}', [ToolsController::class, 'showChecklistRehearsal'])->name('tools.checklist.rehearsal');
     Route::post('/tools/rehearsal/{eventId}', [ToolsController::class, 'submitChecklistRehearsal'])->name('tools.submit.rehearsal');
 });
-
-

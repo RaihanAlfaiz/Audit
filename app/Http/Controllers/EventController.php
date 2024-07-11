@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Package;
+use App\Models\UserRole;
 use App\Mail\sendEmail;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Storage;
@@ -55,8 +56,18 @@ class EventController extends Controller
      */
     public function create()
     {
-        $packages = Package::all(); // Mengambil semua paket dari database
-        $events = Event::all(); // Mengambil semua event dari database
+        $userId = auth()->id(); // Mengambil ID user yang sedang login
+
+        // Mengambil roles user
+        $userRoles = UserRole::where('user_id', $userId)
+            ->join('roles', 'user_roles.role_id', '=', 'roles.id')
+            ->pluck('roles.id'); // Mengambil semua role titles sebagai array
+
+        // Mengambil packages sesuai dengan role user
+        $packages = Package::whereIn('type', $userRoles)->get();
+
+        // Mengambil semua event dari database
+        $events = Event::all();
 
         // Format the event dates
         $disabledDates = $events->map(function ($event) {
@@ -73,6 +84,8 @@ class EventController extends Controller
             'disabledDates' => $disabledDates // Pass the formatted dates to the view
         ]);
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -127,6 +140,16 @@ class EventController extends Controller
         $package = Package::findOrFail($event->package_id);
         return view('event.show', compact('event', 'package', 'booking'));
     }
+
+    public function print(string $id)
+    {
+        $event = Event::findOrFail($id);
+        $booking = Booking::find($id); // Mengganti findOrFail dengan find
+        $package = Package::findOrFail($event->package_id);
+        return view('event.print', compact('event', 'package', 'booking'));
+    }
+
+
 
     /**
      * Show the form for editing the specified resource.
