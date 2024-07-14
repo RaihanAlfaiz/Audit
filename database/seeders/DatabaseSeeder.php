@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Http\Middleware\Role;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PackageSeeder::class,
             AdminSeeder::class,
+            RoleSeeder::class,
             UserRoleSeeder::class,
 
         ]);
