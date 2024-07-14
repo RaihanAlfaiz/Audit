@@ -24,7 +24,10 @@ class ServiceSeeder extends Seeder
             ["id" => "7", "item" => "Sofa Single", "unit" => "1", "unit_name" => "Buah", "price" => "30000.00"],
             ["id" => "8", "item" => "Kabel Jack Akai", "unit" => "1", "unit_name" => "Buah", "price" => "20000.00"],
             ["id" => "9", "item" => "Meja Panjang + Taplak", "unit" => "1", "unit_name" => "Buah", "price" => "20000.00"],
-         
+            ["id" => "10", "item" => "Over Time Auditroium", "unit" => "1", "unit_name" => "Buah", "price" => "500000.00"],
+            ["id" => "11", "item" => "Over Time Lecture Theatre", "unit" => "1", "unit_name" => "Buah", "price" => "200000.00"],
+            ["id" => "12", "item" => "Penambahan Kelas", "unit" => "1", "unit_name" => "Buah", "price" => "3000000.00"],
+
         ];
 
         foreach ($data as $x) {
