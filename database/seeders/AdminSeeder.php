@@ -14,12 +14,12 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         //
-        if (!User::where('username', 'admin')->first()) {
+        if (!User::where('username', 'admin_auditorium')->first()) {
             User::create([
-                'name' => 'admin',
-                'username' => 'admin',
-                'email' => 'no-reply@jgu.ac.id',
-                'password' => bcrypt('adminadmin'),
+                'name' => 'Admin Auditorium',
+                'username' => 'Admin Auditorium',
+                'email' => 'adminauditorium@jgu.ac.id',
+                'password' => bcrypt('adminauditoriumjgu2024'),
             ]);
         }
     }
