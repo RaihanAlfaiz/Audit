@@ -21,6 +21,9 @@ class ServiceSeeder extends Seeder
             ["id" => "4", "item" => "Panggung Portable (3x2M)", "unit" => "1", "unit_name" => "Buah", "price" => "50000.00"],
             ["id" => "5", "item" => "Panggung Portable (1,5x2M)", "unit" => "1", "unit_name" => "Buah", "price" => "20000.00"],
             ["id" => "6", "item" => "Partisi Merah", "unit" => "1", "unit_name" => "Buah", "price" => "10000.00"],
+            ["id" => "7", "item" => "Sofa Single", "unit" => "1", "unit_name" => "Buah", "price" => "30000.00"],
+            ["id" => "8", "item" => "Kabel Jack Akai", "unit" => "1", "unit_name" => "Buah", "price" => "20000.00"],
+            ["id" => "9", "item" => "Meja Panjang + Taplak", "unit" => "1", "unit_name" => "Buah", "price" => "20000.00"],
          
         ];
 
