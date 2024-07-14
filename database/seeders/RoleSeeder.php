@@ -17,9 +17,10 @@ class RoleSeeder extends Seeder
         $data = [
             ["id" => "AD", "title" => "Admin"],
             ["id" => "ME", "title" => "Moon Event"],
+            ["id" => "BM", "title" => "Building Managment"],
             ["id" => "EE", "title" => "Engagement and enrollment"],
             ["id" => "BW", "title" => "Bu Widia"],
-            ["id" => "BM", "title" => "Building Managment"],
+
         ];
         foreach ($data as $x) {
             if (!Role::where('id', $x['id'])->first()) {
