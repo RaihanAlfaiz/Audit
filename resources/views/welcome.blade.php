@@ -16,7 +16,18 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet"
+        href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/flatpickr/flatpickr.css">
+    <link rel="stylesheet"
+        href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/select2/select2.css">
+    <link rel="stylesheet"
+        href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/@form-validation/form-validation.css">
 
+    {{-- page --}}
+    <link rel="stylesheet"
+        href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/css/pages/app-calendar.css">
   <!-- Vendor CSS Files -->
   <link href="landingpage/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="landingpage/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -26,7 +37,11 @@
 
   <!-- Main CSS File -->
   <link href="landingpage/main.css" rel="stylesheet">
-
+  <style>
+    .hidden-checkbox {
+    display: none;
+}
+  </style>
 </head>
 
 <body class="index-page">
@@ -46,7 +61,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#calendar">Calendar</a></li>
           <li><a href="#footer">Contact us</a></li>
   
           <li class="dropdown"><a href="#"><span>Login/Register</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -352,31 +366,85 @@
     </section><!-- /Portfolio Section -->
 
     <!-- Team Section -->
-    <section id="calendar" class="team section">
+    {{-- <section id="calendar" class="team section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Calendar</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      </div><!-- End Section Title --> --}}
 
-      <div class="container">
-
+      {{-- <div class="container"> --}}
        
-    </section><!-- /Team Section -->
+        <div class="card app-calendar-wrapper">
+          <div class="row g-0">
+              <!-- Calendar Sidebar -->
+              <div class="col app-calendar-sidebar" id="app-calendar-sidebar">
+                  <div class="border-bottom p-4 my-sm-0 mb-3">
+                      <div class="d-grid">
+                          <h3 class="text-center">Calendar Event</h3>
+                      </div>
+                  </div>
+                  <div class="p-4">
+                      <!-- inline calendar (flatpicker) -->
+                      <div class="ms-n2">
+                          <div class="inline-calendar"></div>
+                      </div>
+  
+                      <hr class="container-m-nx my-4">
+  
+                      <!-- Filter -->
+                      <div class="hidden-checkbox">
+          
+                        <div class="mb-4">
+                            <small class="text-small text-muted text-uppercase align-middle">Filter</small>
+                        </div>
+    
+                        <div class="form-check mb-2">
+                            <input class="form-check-input select-all" type="checkbox" id="selectAll" data-value="all" checked>
+                            <label class="form-check-label" for="selectAll">View All</label>
+                        </div>
+    
+                        <div class="app-calendar-events-filter">
+                            
+                            <div class="form-check mb-2">
+                                <input class="form-check-input input-filter" type="checkbox" id="select-business"
+                                    data-value="business" checked>
+                                <label class="form-check-label" for="select-business">Event</label>
+                            </div>
+                            <div class="form-check form-check-warning mb-2">
+                                <input class="form-check-input input-filter" type="checkbox" id="select-family"
+                                    data-value="family" checked>
+                                <label class="form-check-label" for="select-family">Gehearsals Date</label>
+                            </div>
+                        
+                          
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- /Calendar Sidebar -->
+  
+              <!-- Calendar & Modal -->
+              <div class="col app-calendar-content">
+                  <div class="card shadow-none border-0">
+                      <div class="card-body pb-0">
+                          <!-- FullCalendar -->
+                          <div id="calendar"></div>
+                      </div>
+                  </div>
+                  <div class="app-overlay"></div>
+                 
+              </div>
+              <!-- /Calendar & Modal -->
+          </div>
+      </div>
+       
+    {{-- </section><!-- /Team Section --> --}}
 
   <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-   
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
         
     <!-- Team Section -->
@@ -450,10 +518,10 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
   <!-- Vendor JS Files -->
   <script src="landingpage/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="landingpage/php-email-form/validate.js"></script>
   <script src="landingpage/aos/aos.js"></script>
   <script src="landingpage/glightbox/js/glightbox.min.js"></script>
   <script src="landingpage/swiper/swiper-bundle.min.js"></script>
@@ -463,7 +531,42 @@
 
   <!-- Main JS File -->
   <script src="landingpage/main.js"></script>
+  <script
+  src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/fullcalendar/fullcalendar.js">
+</script>
+<script
+  src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/select2/select2.js">
+</script>
+<script src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/moment/moment.js">
+</script>
+<script
+  src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/vendor/libs/flatpickr/flatpickr.js">
+</script>
 
+{{-- page --}}
+<script src="{{ asset('') }}assets/js/app-calendar-events.js"></script>
+<script src="{{ asset('') }}assets/js/appcalendar.js"></script>
+<script>
+  window.events =  [
+      @foreach($events as $event){
+id:  "{{ $event->id }}",
+url:  "",
+title:  "BOOKED",
+tenant_name:  "{{ $event->tenant_name }}",
+start:  "{{ $event->start }}",
+end:  "{{ $event->end }}",
+location:  "{{ $event->location }}",
+phone:  "{{ $event->phone }}",
+capacity:  "{{ $event->capacity }}",
+allDay:  ! 1,
+extendedProps:  {
+   calendar:  "{{ $event->type }}"
+}
+}, @endforeach
+
+  ];
+
+</script>
 </body>
 
 </html>
