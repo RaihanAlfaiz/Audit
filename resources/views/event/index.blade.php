@@ -136,17 +136,17 @@
                                             <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
                                         </form>
                                         @if($ev->receipt_dp && $ev->bookings->isEmpty())
-        <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Actions
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
-                <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"><i class='bx bx-envelope'></i> EMAIL REMINDER</a></li>
-                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}"><i class='bx bx-envelope'></i> WHATSAPP REMINDER</a></li>
-            </ul>
-        </div>
-        @endif
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Actions
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"><i class='bx bx-envelope'></i> EMAIL REMINDER</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}"><i class='bx bx-envelope'></i> WHATSAPP REMINDER</a></li>
+                                            </ul>
+                                        </div>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach
