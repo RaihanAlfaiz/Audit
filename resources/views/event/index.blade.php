@@ -146,7 +146,8 @@
                                                 <i class='bx bx-dots-horizontal-rounded' ></i>
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
+                                                <li><a class="dropdown-item popup-link" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
+
                                                 <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"> EMAIL REMINDER</a></li>
                                                 <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}" target="_blank"> WHATSAPP REMINDER</a></li>
                                             </ul>
@@ -267,5 +268,18 @@ $(document).ready(function() {
     currentUrl.searchParams.delete('range');
     window.location.href = currentUrl.toString();
 });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const popupLinks = document.querySelectorAll('.popup-link');
+        
+        popupLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const url = this.href;
+                window.open(url, '_blank', 'width=900,height=600,scrollbars=yes,resizable=yes');
+            });
+        });
+    });
 </script>
 @endsection
