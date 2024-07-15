@@ -3,7 +3,7 @@
     <div class="app-brand demo ">
         <a href="" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="{{asset('assets/img/jgu-audit1.png')}}" height="80">
+                <img src="{{asset('assets/img/ballroom-login.png')}}" height="100">
             </span>
         </a>
 

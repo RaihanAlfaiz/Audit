@@ -17,16 +17,31 @@
         <div class="card">
           <div class="card-body">
             <!-- Logo -->
-            <div class="app-brand justify-content-center">
-              <a href="{{url('/')}}" class="app-brand-link gap-2">
-                <span class="app-brand-logo demo"></span>
-                <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
-              </a>
-            </div>
-            <!-- /Logo -->
-            <img src="assets/img/jgu-audit2.png" height="90" >
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Right Align Image Example</title>
+                <style>
+                    .container-right {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+
+                    .img-resize {
+                        width: 350px; /* Contoh pengaturan lebar */
+                        height: auto; /* Menjaga rasio aspek */
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container-right">
+                    <img src="assets/img/ballroom-login.png" alt="Ballroom" class="img-resize">
+                </div>
+            </body>
+            </html>
             <p class="mb-4">Welcome Back!</p>
-  
+
             <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('login') }}">
                 @csrf
               <div class="mb-3">
