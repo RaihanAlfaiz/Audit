@@ -48,7 +48,7 @@
                               <td>{{ $srv->item }}</td>
                               <td>{{ $srv->unit }} {{ $srv->unit_name }}</td>
                               <td>Rp.{{ $srv->price }}</td>
-                              <td>
+                              <td class="text-center">
                               
                                 <a href="{{ route('service.edit', $srv->id) }}" class="btn btn-sm btn-warning mb-3"><i class='bx bx-edit-alt' ></i></a>
                                 <form action="{{ route('service.destroy', $srv->id) }}" method="POST" style="display: inline;">
