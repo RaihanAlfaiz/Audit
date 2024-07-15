@@ -224,9 +224,37 @@ class EventController extends Controller
         return response()->json(['price' => $package->price]);
     }
 
-    // public function email()
-    // {
-    //     Mail::to("raihanalfaiz80@gmail.com")->send(new sendEmail());
-    //     return '<h1>sukses masukan email</h1>';
-    // }
+    public function email($id)
+    {
+        // Find the event by ID
+        $event = Event::findOrFail($id);
+
+        // Define the email data
+        $emailData = [
+            'tenant_name' => $event->tenant_name,
+            'event_date' => $event->event_date,
+            'event_name' => $event->event_name
+        ];
+
+        // Send the email
+        Mail::send('mail.reminder', $emailData, function ($message) use ($event) {
+            $message->to($event->email)
+                ->subject('Event Reminder');
+        });
+
+        // Redirect back with a success message
+        return redirect()->route('event.index')->with('success', 'Reminder email sent successfully!');
+    }
+
+    public function whatsappReminder($id)
+    {
+        // Find the event by ID
+        $event = Event::findOrFail($id);
+
+        // Create the message
+        $message = urlencode('Hello, ' . $event->tenant_name . '. This is a reminder for your event on ' . date('d F Y', strtotime($event->event_date)) . '.');
+
+        // Redirect to WhatsApp URL
+        return redirect()->away('https://wa.me/+62' . $event->phone . '?text=' . $message);
+    }
 }

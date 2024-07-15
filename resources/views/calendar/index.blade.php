@@ -62,7 +62,7 @@
                         <div class="form-check form-check-warning mb-2">
                             <input class="form-check-input input-filter" type="checkbox" id="select-family"
                                 data-value="family" checked>
-                            <label class="form-check-label" for="select-family">Gehearsals Date</label>
+                            <label class="form-check-label" for="select-family">Rehearsals Date</label>
                         </div>
                         {{-- <div class="form-check form-check-success mb-2">
                             <input class="form-check-input input-filter" type="checkbox" id="select-holiday"

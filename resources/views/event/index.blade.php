@@ -63,6 +63,11 @@
     .table-responsive {
         overflow-x: auto;
     }
+
+    .action-column {
+        width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+        white-space: nowrap; /* Mencegah teks melompat ke baris baru */
+    }
 </style>
 @endsection
 
@@ -115,7 +120,7 @@
                                     <th>Event Date</th>
                                     <th>Package</th>
                                     <th>Status</th>
-                                    <th>Aksi</th>
+                                    <th class="action-column">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -127,16 +132,26 @@
                                     <td>{{ date('d F Y', strtotime($ev->event_date)) }}</td>
                                     <td>{{ $ev->package->Name }}</td>
                                     <td><i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>
-                                    <td>
-                                        <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success">Detail</a>
-                                        <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <td class="action-column">
+                                        <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success"><i class='bx bxs-user-detail' ></i></a>
+                                        <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning"><i class='bx bx-edit-alt'></i></a>
                                         <form action="{{ route('event.destroy', $ev->id) }}" method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
+                                            <button type="submit" class="btn btn-sm btn-danger delete-btn"><i class='bx bx-trash' ></i></button>
                                         </form>
                                         @if($ev->receipt_dp && $ev->bookings->isEmpty())
-                                        <a href="{{ route('booking.create', $ev->id) }}" class="btn btn-sm btn-primary">BOOKING</a>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class='bx bx-dots-horizontal-rounded' ></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item popup-link" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
+
+                                                <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"> EMAIL REMINDER</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}" target="_blank"> WHATSAPP REMINDER</a></li>
+                                            </ul>
+                                        </div>
                                         @endif
                                     </td>
                                 </tr>
@@ -253,5 +268,18 @@ $(document).ready(function() {
     currentUrl.searchParams.delete('range');
     window.location.href = currentUrl.toString();
 });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const popupLinks = document.querySelectorAll('.popup-link');
+        
+        popupLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const url = this.href;
+                window.open(url, '_blank', 'width=900,height=600,scrollbars=yes,resizable=yes');
+            });
+        });
+    });
 </script>
 @endsection
