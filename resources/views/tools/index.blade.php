@@ -50,10 +50,10 @@
                                 <td>{{ $booking->event->tenant_name }}</td>
                                 <td>{{ $booking->event->package->Name }}</td>
                                 <td>{{ date('d F Y', strtotime($booking->event->event_date)) }}</td>
-                                <td>
+                                <td class="text-center">
                                     <i class="badge rounded-pill bg-{{ $booking->event->color }}" style="font-size:10pt;">{{ $booking->event->status }}</i>
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     @if ($booking->event->status == 'ready' || $booking->event->status == 'Complete')
                                         <i class="bx bx-check-circle" style="color: green; font-size: 1.5em;"></i>
                                     @else
