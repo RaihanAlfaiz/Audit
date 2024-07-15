@@ -128,17 +128,17 @@
                                     <td>{{ $ev->package->Name }}</td>
                                     <td><i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>
                                     <td>
-                                        <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success">Detail</a>
-                                        <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                        <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success"><i class='bx bxs-user-detail' ></i></a>
+                                        <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning"><i class='bx bx-edit-alt'></i></a>
                                         <form action="{{ route('event.destroy', $ev->id) }}" method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
+                                            <button type="submit" class="btn btn-sm btn-danger delete-btn"><i class='bx bx-trash' ></i></button>
                                         </form>
                                         @if($ev->receipt_dp && $ev->bookings->isEmpty())
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Actions
+                                                <i class='bx bx-dots-horizontal-rounded' ></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
