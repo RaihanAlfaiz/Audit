@@ -73,6 +73,10 @@ Route::middleware(['auth'])->group(function () {
 
     // Rute untuk mendapatkan harga paket berdasarkan package_id
     Route::get('/get-package-price/{packageId}', [EventController::class, 'getPackagePrice']);
+
+    Route::get('/event/{id}/email', [EventController::class, 'email'])->name('event.email');
+    Route::get('/event/{id}/whatsapp-reminder', [EventController::class, 'whatsappReminder'])->name('event.whatsappReminder');
+
 });
 
 Route::middleware(['auth'])->group(function () {
