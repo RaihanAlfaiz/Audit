@@ -63,6 +63,11 @@
     .table-responsive {
         overflow-x: auto;
     }
+
+    .action-column {
+        width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+        white-space: nowrap; /* Mencegah teks melompat ke baris baru */
+    }
 </style>
 @endsection
 
@@ -115,7 +120,7 @@
                                     <th>Event Date</th>
                                     <th>Package</th>
                                     <th>Status</th>
-                                    <th>Aksi</th>
+                                    <th class="action-column">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -127,7 +132,7 @@
                                     <td>{{ date('d F Y', strtotime($ev->event_date)) }}</td>
                                     <td>{{ $ev->package->Name }}</td>
                                     <td><i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>
-                                    <td>
+                                    <td class="action-column">
                                         <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success"><i class='bx bxs-user-detail' ></i></a>
                                         <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning"><i class='bx bx-edit-alt'></i></a>
                                         <form action="{{ route('event.destroy', $ev->id) }}" method="POST" style="display: inline;">
@@ -142,8 +147,8 @@
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
-                                                <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"><i class='bx bx-envelope'></i> EMAIL REMINDER</a></li>
-                                                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}"><i class='bx bx-envelope'></i> WHATSAPP REMINDER</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"> EMAIL REMINDER</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}"> WHATSAPP REMINDER</a></li>
                                             </ul>
                                         </div>
                                         @endif
