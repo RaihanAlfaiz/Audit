@@ -49,13 +49,13 @@
                               <td>{!! $pck->service !!}</td>
                               <td>{!! $pck->item !!}</td>
                               <td>{{ 'Rp ' . number_format($pck->price, 0, ',', '.') }}</td>
-                              <td>
-                                <a href="{{ route('package.show', $pck->id) }}" class="btn btn-sm btn-success ">Detail</a>
-                                <a href="{{ route('package.edit', $pck->id) }}" class="btn btn-sm btn-warning ">Edit</a>
+                              <td class="text-center">
+                                <a href="{{ route('package.show', $pck->id) }}" class="btn btn-sm btn-success "><i class='bx bx-detail' ></i></a>
+                                <a href="{{ route('package.edit', $pck->id) }}" class="btn btn-sm btn-warning "><i class='bx bx-edit-alt' ></i></a>
                                 <form action="{{ route('package.destroy', $pck->id) }}" method="POST" style="display: inline;">
                                   @csrf
                                   @method('DELETE')
-                                  <button type="submit" class="btn btn-sm btn-danger delete-btn ">Hapus</button>
+                                  <button type="submit" class="btn btn-sm btn-danger delete-btn "><i class='bx bx-trash' ></i></button>
                                 </form>
                               </td>
                              </tr>

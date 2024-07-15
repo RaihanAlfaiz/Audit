@@ -16,6 +16,10 @@
     .table-responsive {
         overflow-x: auto;
     }
+    .action-column {
+        width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+        white-space: nowrap; /* Mencegah teks melompat ke baris baru */
+    }
 </style>
 @endsection
 @section('content')
@@ -34,7 +38,7 @@
                                     <th>Item</th>
                                     <th>Unit</th>
                                     <th>Price</th>
-                                    <th>Action</th>
+                                    <th class="action-column">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -44,13 +48,13 @@
                               <td>{{ $srv->item }}</td>
                               <td>{{ $srv->unit }} {{ $srv->unit_name }}</td>
                               <td>Rp.{{ $srv->price }}</td>
-                              <td>
+                              <td class="text-center">
                               
-                                <a href="{{ route('service.edit', $srv->id) }}" class="btn btn-sm btn-warning mb-3">Edit</a>
+                                <a href="{{ route('service.edit', $srv->id) }}" class="btn btn-sm btn-warning mb-3"><i class='bx bx-edit-alt' ></i></a>
                                 <form action="{{ route('service.destroy', $srv->id) }}" method="POST" style="display: inline;">
                                   @csrf
                                   @method('DELETE')
-                                  <button type="submit" class="btn btn-sm btn-danger delete-btn mb-3">Hapus</button>
+                                  <button type="submit" class="btn btn-sm btn-danger delete-btn mb-3"><i class='bx bx-trash' ></i></button>
                                 </form>
                               </td>
                              </tr>

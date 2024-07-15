@@ -212,7 +212,7 @@ img,p{margin:0;Margin:0;font-family:Albert Sans,BlinkMacSystemFont,Segoe UI,Helv
 <!--[if !mso]>-->
 <td class="t17" style="width:420px;">
 <!--<![endif]-->
-<div style="font-size:0px;"><img class="t16" style="display:block;border:0;height:auto;width:100%;Margin:0;max-width:100%;" width="500" height="500" alt="" src="{{ $data['qr_code_url'] }}"/></div></td>
+<div style="font-size:0px;"><img class="t16" style="display:block;border:0;height:auto;width:50%;Margin:0;max-width:100%;" width="500" height="500" alt="" src="{{ $data['qr_code_url'] }}"/></div></td>
 </tr></table>
 </td></tr></table></td>
 </tr></table>
