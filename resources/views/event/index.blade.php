@@ -148,7 +148,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
                                                 <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"> EMAIL REMINDER</a></li>
-                                                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}"> WHATSAPP REMINDER</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}" target="_blank"> WHATSAPP REMINDER</a></li>
                                             </ul>
                                         </div>
                                         @endif
