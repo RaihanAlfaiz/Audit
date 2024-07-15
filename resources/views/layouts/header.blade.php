@@ -64,12 +64,7 @@
                     <span class="align-middle">My Profile</span>
                   </a>
                 </li>
-                <a class="dropdown-item {{ Route::currentRouteName()=='settings.update' ? 'active' : '' }}"
-                    href="{{ route('settings.update') }}">
-                    <i class='bx bx-cog me-2'></i>
-                    <span class="align-middle">Settings</span>
-                  </a>
-                </li>
+
                 
                   <div class="dropdown-divider"></div>
                 </li>

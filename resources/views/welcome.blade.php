@@ -36,7 +36,7 @@
 
       <a href="{{route('welcome')}}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo-jgu-white.png" alt="">
+        <img src="assets/img/ballroom.png" alt="">
         <h1 class="sitename">ballroom</h1>
       </a>
 
@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/illustrations/man-with-laptop-light.png" class="img-fluid animated" alt="">
+            <img src="assets/img/illustrations/ballroom.png" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@
 
                 <h3><span>01</span> Weeding</h3>
                 <div class="faq-content">
-                  <p>Kami layanan pernikahan profesional yang berdedikasi untuk menciptakan momen-momen tak terlupakan pada hari istimewa Anda. Dengan tim ahli yang berpengalaman dan kreatif, kami menawarkan berbagai layanan pernikahan yang dirancang untuk memenuhi kebutuhan dan keinginan Anda.</p>
+                  <p>layanan pernikahan profesional yang berdedikasi untuk menciptakan momen-momen tak terlupakan pada hari istimewa Anda. Dengan tim ahli yang berpengalaman dan kreatif, kami menawarkan berbagai layanan pernikahan yang dirancang untuk memenuhi kebutuhan dan keinginan Anda.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -140,7 +140,7 @@
               <div class="faq-item">
                 <h3><span>02</span> Graduation</h3>
                 <div class="faq-content">
-                <p>Kami menyedikan layanan perayaan kelulusan profesional yang berdedikasi untuk menciptakan momen-momen berkesan pada hari penting Anda. Dengan tim ahli yang berpengalaman dan kreatif, kami menawarkan berbagai layanan perayaan kelulusan yang dirancang untuk memenuhi kebutuhan dan keinginan Anda.</p>
+                <p>perayaan kelulusan profesional yang berdedikasi untuk menciptakan momen-momen berkesan pada hari penting Anda. Dengan tim ahli yang berpengalaman dan kreatif, kami menawarkan berbagai layanan perayaan kelulusan yang dirancang untuk memenuhi kebutuhan dan keinginan Anda.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -148,7 +148,7 @@
               <div class="faq-item">
                 <h3><span>03</span> Seminar</h3>
                 <div class="faq-content">
-                <p>Kami menyediakan layanan penyelenggaran acara seminar terkemuka yang siap membantu Anda mengatur acara seminar yang informatif dan berkesan. Kami mengerti bahwa seminar adalah kesempatan untuk berbagi pengetahuan, memperluas jaringan, dan menginspirasi audiens Anda. Dengan pengalaman kami yang luas dalam industri acara, kami menawarkan berbagai layanan yang dirancang untuk memenuhi kebutuhan unik dari setiap seminar. </p>
+                <p>penyelenggaran acara seminar terkemuka yang siap membantu Anda mengatur acara seminar yang informatif dan berkesan. Kami mengerti bahwa seminar adalah kesempatan untuk berbagi pengetahuan, memperluas jaringan, dan menginspirasi audiens Anda. Dengan pengalaman kami yang luas dalam industri acara, kami menawarkan berbagai layanan yang dirancang untuk memenuhi kebutuhan unik dari setiap seminar. </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
