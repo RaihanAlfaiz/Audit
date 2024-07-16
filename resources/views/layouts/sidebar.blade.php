@@ -1,28 +1,16 @@
 <!-- Menu -->
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme no-print">
-<html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Right Align Image Example</title>
-                <style>
-                    .container-right {
-                        display: flex;
-                        justify-content: flex-end;
-                    }
+    <div class="app-brand demo ">
+        <a href="{{ route('home') }}" class="app-brand-link">
+            <span class="app-brand-logo demo">
+                <img src="{{asset('assets/img/nyoba1.png')}}" height="auto" width="250px">
+            </span>
+        </a>
 
-                    .img-resize {
-                        width: 250px; /* Contoh pengaturan lebar */
-                        height: auto; /* Menjaga rasio aspek */
-                    }
-                </style>
-            </head>
-            <body>
-                <div class="container-right">
-                    <img src="assets/img/ballroom-login.png" alt="Ballroom" class="img-resize">
-                </div>
-            </body>
-            </html>
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+        </a>
+    </div>
     <div class="menu-inner-shadow"></div>
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
