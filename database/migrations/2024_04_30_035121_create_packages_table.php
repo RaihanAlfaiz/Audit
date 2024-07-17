@@ -18,6 +18,7 @@ return new class extends Migration
             $table->longText('item');
             $table->float('price', 10);
             $table->string('type')->nullable();
+            $table->string('package');
             $table->timestamps();
         });
     }
