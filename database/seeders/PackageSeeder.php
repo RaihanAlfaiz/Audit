@@ -38,14 +38,5 @@ class PackageSeeder extends Seeder
             ],
 
         ];
-
-        foreach ($data as $x) {
-            if (!Package::where('id', $x['id'])->first()) {
-                $m = new Package();
-                $m->id = $x['id'];
-                $m->name = $x['name'];
-                $m->save();
-            }
-        }
     }
 }
