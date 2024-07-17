@@ -38,5 +38,9 @@ class PackageSeeder extends Seeder
             ],
 
         ];
+
+        foreach ($data as $package) {
+            Package::create($package);
+        }
     }
 }
