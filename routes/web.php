@@ -82,6 +82,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/event/audit', [EventController::class, 'audit'])->name('event.audit');
     Route::get('/event/lecture', [EventController::class, 'lecture'])->name('event.lecture');
     Route::get('/event/createlecture', [EventController::class, 'createlecture'])->name('event.create.lecture');
+    Route::post('/event/createlecture', [EventController::class, 'storelecture'])->name('event.store.lecture');
+    Route::get('/event/lecture/{id}/edit', [EventController::class, 'editlecture'])->name('event.edit.lecture');
+    Route::put('/event/lecture/{id}/update', [EventController::class, 'updatelecture'])->name('event.update.lecture');
 });
 
 Route::middleware(['auth'])->group(function () {

@@ -168,6 +168,46 @@ class EventController extends Controller
         return redirect()->route('event')->with('success', 'Event added successfully.');
     }
 
+    public function storelecture(Request $request)
+    {
+        $validatedData = $request->validate([
+            'tenant_name' => 'required',
+            'event_name' => 'required',
+            'email' => 'email',
+            'institution_origin' => 'required',
+            'phone' => 'required',
+            'package_id' => 'required|exists:packages,id',
+            'event_date' => 'required',
+            'rehearsal_date' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'capacity' => 'required|integer',
+            'payment_amount' => 'required|numeric',
+            'remaining_payment' => 'nullable|numeric',
+        ]);
+
+        // Check if receipt_dp is uploaded
+        if ($request->hasFile('receipt_dp')) {
+            $validatedData['receipt_dp'] = $request->file('receipt_dp')->store('receipt-dp');
+            // Set status to 'DP' since receipt_dp exists
+            $validatedData['status'] = 'DP';
+        } else {
+            // If receipt_dp is not uploaded, set status to 'Pending'
+            $validatedData['status'] = 'Pending';
+        }
+
+        // Check if the event date is already taken
+        $existingEvent = Event::where('event_date', $validatedData['event_date'])->first();
+        if ($existingEvent) {
+            return redirect()->back()->withInput()->withErrors(['event_date' => 'The event date is already taken.']);
+        }
+
+        // Create the event
+        Event::create($validatedData);
+
+        return redirect()->route('event')->with('success', 'Event added successfully.');
+    }
+
     /**
      * Display the specified resource.
      */
@@ -195,14 +235,83 @@ class EventController extends Controller
     public function edit(string $id)
     {
         $event = Event::findOrFail($id);
-        $packages = Package::all();
+        $userId = auth()->id(); // Mengambil ID user yang sedang login
+
+        // Mengambil roles user
+        $userRoles = UserRole::where('user_id', $userId)
+            ->join('roles', 'user_roles.role_id', '=', 'roles.id')
+            ->pluck('roles.id'); // Mengambil semua role titles sebagai array
+
+        // Mengambil packages sesuai dengan role user
+        $packages = Package::whereIn('type', $userRoles)
+            ->where('pack', 'audit')
+            ->get();
         return view('event.edit', compact('event', 'packages'));
+    }
+
+    public function editlecture(string $id)
+    {
+        $event = Event::findOrFail($id);
+        $userId = auth()->id(); // Mengambil ID user yang sedang login
+
+        // Mengambil roles user
+        $userRoles = UserRole::where('user_id', $userId)
+            ->join('roles', 'user_roles.role_id', '=', 'roles.id')
+            ->pluck('roles.id'); // Mengambil semua role titles sebagai array
+
+        // Mengambil packages sesuai dengan role user
+        $packages = Package::whereIn('type', $userRoles)
+            ->where('pack', 'lt')
+            ->get();
+        return view('event.editlecture', compact('event', 'packages'));
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
+    {
+        $event = Event::findOrFail($id);
+
+        $validatedData = $request->validate([
+            'tenant_name' => 'required',
+            'event_name' => 'required',
+            'email' => 'email',
+            'institution_origin' => 'required',
+            'phone' => 'required',
+            'package_id' => 'required|exists:packages,id',
+            'event_date' => 'required',
+            'rehearsal_date' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'capacity' => 'required|integer',
+            'payment_amount' => 'required|numeric',
+            'remaining_payment' => 'nullable|numeric',
+        ]);
+
+        // Check if receipt_dp is uploaded
+        if ($request->hasFile('receipt_dp')) {
+            // Delete old image if exists
+            if ($event->receipt_dp) {
+                Storage::delete($event->receipt_dp);
+            }
+
+            $validatedData['receipt_dp'] = $request->file('receipt_dp')->store('gallery-images');
+            // Set status to 'DP' since receipt_dp exists
+            $validatedData['status'] = 'DP';
+        } else {
+            // If receipt_dp is not uploaded, keep the previous status
+            $validatedData['status'] = $event->status;
+        }
+
+        // Update the event model with validated data
+        $event->fill($validatedData);
+        $event->save();
+
+        return redirect()->route('event')->with('success', 'Event updated successfully.');
+    }
+
+    public function updatelecture(Request $request, string $id)
     {
         $event = Event::findOrFail($id);
 
