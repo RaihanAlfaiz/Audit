@@ -41,6 +41,11 @@
             </body>
             </html>
             <p class="mb-4">Welcome Back!</p>
+            @if(session('status'))
+            <div class="alert alert-warning" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
 
             <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('login') }}">
                 @csrf

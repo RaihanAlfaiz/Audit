@@ -18,7 +18,7 @@ class AdminSeeder extends Seeder
             User::create([
                 'name' => 'Admin Auditorium',
                 'email' => 'adminauditorium@jgu.ac.id',
-                'status' => 'accept',
+                'status' => 'accepted',
                 'password' => bcrypt('adminauditoriumjgu2024'),
             ]);
         }
