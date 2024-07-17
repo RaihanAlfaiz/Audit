@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('css')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+
 @endsection
 @section('content')
 <div class="container">
@@ -39,7 +40,7 @@
                                             @endforeach
                                         </ul>
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @if($u->status == 'accepted')
                                             <i class="badge rounded-pill bg-success" style="font-size:8pt;">{{ $u->status }}</i>
                                         @elseif($u->status == 'rejected')
@@ -48,7 +49,7 @@
                                             <i class="badge rounded-pill bg-warning" style="font-size:8pt;">{{ $u->status }}</i>
                                         @endif
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @if($u->status == 'pending')
                                         <form action="{{ route('profile.accepted', $u->id) }}" method="POST">
                                             @csrf
