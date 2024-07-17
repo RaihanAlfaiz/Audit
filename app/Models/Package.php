@@ -13,6 +13,7 @@ class Package extends Model
         'service',
         'item',
         'price',
-        'type',
+        'type', 
+        'pack', 
     ];
 }
