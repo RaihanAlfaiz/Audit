@@ -411,7 +411,8 @@ class EventController extends Controller
         $event = Event::findOrFail($id);
 
         // Create the message
-        $message = urlencode('Hello, ' . $event->tenant_name . '. This is a reminder for your event on ' . date('d F Y', strtotime($event->event_date)) . '.');
+        $message = urlencode('Hello, ' . $event->tenant_name . '. This is a reminder for your event on ' . date('d F Y', strtotime($event->event_date)) . '. You must immediately pay in full before the day. If you don\'t pay, then the event will be canceled and there will be no refund of the deposit. Thank you.');
+
 
         // Redirect to WhatsApp URL
         return redirect()->away('https://wa.me/+62' . $event->phone . '?text=' . $message);
