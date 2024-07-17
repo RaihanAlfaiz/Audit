@@ -53,12 +53,12 @@
                         <div>Events</div>
                       </a>
                 </li>
-                <li class="menu-item  {{ Request::is('event/audit') ? 'active' : '' }}">
+                <li class="menu-item  {{ Request::is('event/audit','event/create') ? 'active' : '' }}">
                     <a href="{{ route('event.audit') }}" class="menu-link">
                         <div>Auditorium</div>
                       </a>
                 </li>
-                <li class="menu-item  {{ Request::is('event/lecture') ? 'active' : '' }}">
+                <li class="menu-item  {{ Request::is('event/lecture','event/createlecture') ? 'active' : '' }}">
                     <a href="{{ route('event.lecture') }}" class="menu-link">
                         <div>Lecture Theatre</div>
                       </a>

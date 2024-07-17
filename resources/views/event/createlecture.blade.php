@@ -17,6 +17,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">Add Data Lecture Theatre</h5> <small class="text-muted float-end">Lecture Theatre</small>
+                  </div>
                 <div class="card-body">
                     <form action="{{ route('event.store.lecture') }}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -51,7 +54,7 @@
                                         {{ $message }}
                                     </div>
                                     @enderror
-                                    <small class="form-text text-primary">* Email is optional.</small>
+                                 
                                 </div>
 
                                 <div class="mb-3">
@@ -183,6 +186,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block">Simpan Perubahan</button>
+                        <a href="{{ route('event.lecture') }}" class="btn btn-danger btn-block">Kembali</a>
                     </form>
 
                 </div>
