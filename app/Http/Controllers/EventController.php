@@ -43,10 +43,22 @@ class EventController extends Controller
 
         $event = $query->get();
         $packages = Package::all();
+        $allevent = Event::all()->count();
+        $completevent = Event::where('status', 'complete')->count();
+        $audit = Event::whereHas('package', function ($query) {
+            $query->where('pack', 'audit');
+        })->count();
+        $lecture = Event::whereHas('package', function ($query) {
+            $query->where('pack', 'lt');
+        })->count();
 
         return view('event.index', [
             'event' => $event,
             'packages' => $packages,
+            'allevent' => $allevent,
+            'completevent' => $completevent,
+            'audit' => $audit,
+            'lecture' => $lecture
         ]);
     }
 

@@ -80,7 +80,7 @@
                     <div class="content-left">
                         <span>Reservasi</span>
                         <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2"></h4>
+                            <h4 class="mb-0 me-2">{{ $allevent }}</h4>
                         </div>
                         <small>Total Reservasi</small>
                     </div>
@@ -96,13 +96,14 @@
             <div class="card-body">
                 <div class="d-flex align-items-start justify-content-between">
                     <div class="content-left">
-                        <span>Disetujui</span>
+                        <span>Diselesaikan</span>
                         <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2"></h4>
-                            <small
-                                class="text-success"></small>
+                            <h4 class="mb-0 me-2">{{ $completevent }}</h4>
+                            <small class="text-success">
+                                ({{ $allevent > 0 ? round(($completevent / $allevent) * 100) . '%' : '0%' }})
+                            </small>
                         </div>
-                        <small>Reservasi yang disetujui </small>
+                        <small>Reservasi yang Selesai </small>
                     </div>
                     <span class="badge bg-label-success rounded p-2">
                         <i class='bx bxs-calendar-check'></i>
@@ -111,21 +112,23 @@
             </div>
         </div>
     </div>
+    
     <div class="col-sm-6 col-xxl-3">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex align-items-start justify-content-between">
                     <div class="content-left">
-                        <span>Tidak Disetujui</span>
+                        <span>Auditorium</span>
                         <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2"></h4>
-                            <small
-                                class="text-danger"></small>
+                            <h4 class="mb-0 me-2">{{ $audit }}</h4>
+                            <small class="text-success">
+                                ({{ $allevent > 0 ? round(($audit / $allevent) * 100) . '%' : '0%' }})
+                            </small>
                         </div>
-                        <small>Reservasi tidak disetujui </small>
+                        <small>Reservasi Auditorium </small>
                     </div>
-                    <span class="badge bg-label-danger rounded p-2">
-                        <i class='bx bxs-calendar-x'></i>
+                    <span class="badge bg-label-primary rounded p-2">
+                        <i class='bx bx-buildings'></i>
                     </span>
                 </div>
             </div>
@@ -136,16 +139,17 @@
             <div class="card-body">
                 <div class="d-flex align-items-start justify-content-between">
                     <div class="content-left">
-                        <span>Dibatalkan</span>
+                        <span>Lecture Theatre</span>
                         <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2"></h4>
-                            <small
-                                class="text-danger"></small>
+                            <h4 class="mb-0 me-2">{{ $lecture }}</h4>
+                            <small class="text-success">
+                                ({{ $allevent > 0 ? round(($lecture / $allevent) * 100) . '%' : '0%' }})
+                            </small>
                         </div>
-                        <small>Reservasi yang dibatalkan </small>
+                        <small>Reservasi Lecture Theatre </small>
                     </div>
-                    <span class="badge bg-label-danger rounded p-2">
-                        <i class='bx bx-calendar-exclamation'></i>
+                    <span class="badge bg-label-success rounded p-2">
+                        <i class='bx bx-building' ></i>
                     </span>
                 </div>
             </div>
