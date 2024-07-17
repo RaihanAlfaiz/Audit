@@ -109,4 +109,12 @@ class UserController extends Controller
 
         return redirect()->route('profile')->with('success', 'User berhasil dihapus.');
     }
+    public function accepted(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        $user->status = $request->status;
+        $user->save();
+
+        return redirect()->back()->with('success', 'Status updated successfully.');
+    }
 }

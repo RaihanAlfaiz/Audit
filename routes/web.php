@@ -54,6 +54,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/{id}/edit', [UserController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/{id}/update', [UserController::class, 'update'])->name('profile.update');
     Route::delete('/profile/{id}', [UserController::class, 'destroy'])->name('profile.destroy');
+    Route::put('/profile/{id}', [UserController::class, 'accepted'])->name('profile.accepted');
 });
 
 Route::middleware(['auth'])->group(function () {
@@ -76,7 +77,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/event/{id}/email', [EventController::class, 'email'])->name('event.email');
     Route::get('/event/{id}/whatsapp-reminder', [EventController::class, 'whatsappReminder'])->name('event.whatsappReminder');
-
 });
 
 Route::middleware(['auth'])->group(function () {
