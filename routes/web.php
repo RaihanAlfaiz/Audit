@@ -77,6 +77,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/event/{id}/email', [EventController::class, 'email'])->name('event.email');
     Route::get('/event/{id}/whatsapp-reminder', [EventController::class, 'whatsappReminder'])->name('event.whatsappReminder');
+
+    // audit
+    Route::get('/event/audit', [EventController::class, 'audit'])->name('event.audit');
+    Route::get('/event/lecture', [EventController::class, 'lecture'])->name('event.lecture');
+    Route::get('/event/createlecture', [EventController::class, 'createlecture'])->name('event.create.lecture');
 });
 
 Route::middleware(['auth'])->group(function () {
