@@ -360,7 +360,16 @@
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-10.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->          
+            </div><!-- End Portfolio Item --> 
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-11.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Graduation Lacture</h4>
+                <p>Photo taken By Ballrom | JGU</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-11.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
 
           </div><!-- End Portfolio Container -->
 
