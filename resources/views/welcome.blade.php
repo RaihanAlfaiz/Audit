@@ -256,7 +256,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portofolio</h2>
-        <p>Berikut adalah dokumentasi mengenai beberapa acara yang terdapat pada Ballroom Jakarta Global University</p>
+        <p>Berikut adalah dokumentasi mengenai beberapa acara yang terdapat pada Ballroom dan Lacture Jakarta Global University</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -267,7 +267,7 @@
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">Weeding</li>
             <li data-filter=".filter-product">Graduation</li>
-            <li data-filter=".filter-branding">Dll</li>
+            <li data-filter=".filter-branding">Others</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
