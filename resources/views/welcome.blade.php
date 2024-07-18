@@ -453,7 +453,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact us</h2>
-        <p> Hubungi Kami Melalui Whatsapp atau Instagram yang tertera Di bawah ini jika anda tertarik untuk melakukan Reservasi Atau Booking Auditorium-JGU Ballroom </p>
+        <p> Jika Anda tertarik untuk melakukan reservasi atau booking Auditorium-JGU Ballroom, hubungi kami melalui WhatsApp atau Instagram yang tertera di bawah ini. </p>
         <p> Jangan Lupa Follow Instagram Kami Untuk Mendaptakan Informasi Terbaru!</P>
       </div><!-- End Section Title -->
       
