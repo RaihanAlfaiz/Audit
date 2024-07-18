@@ -354,11 +354,11 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-10.jpg" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-13.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Weeding Lecture</h4>
                 <p>Photo taken By Ballrom | JGU</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-10.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-13.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div><!-- End Portfolio Item --> 
             
@@ -379,6 +379,16 @@
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-12.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-10.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Weeding Lacture 2</h4>
+                <p>Photo taken By Ballrom | JGU</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-10.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div><!-- End Portfolio Item -->
+
+            
 
           </div><!-- End Portfolio Container -->
 
