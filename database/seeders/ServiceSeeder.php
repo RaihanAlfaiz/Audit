@@ -29,14 +29,8 @@ class ServiceSeeder extends Seeder
             ["id" => "12", "item" => "Penambahan Kelas", "unit" => "1", "unit_name" => "Buah", "price" => "3000000.00"],
 
         ];
-
-        foreach ($data as $x) {
-            if (!Service::where('id', $x['id'])->first()) {
-                $m = new Service();
-                $m->id = $x['id'];
-                $m->name = $x['name'];
-                $m->save();
-            }
+        foreach ($data as $package) {
+            Service::create($package);
         }
     }
 }

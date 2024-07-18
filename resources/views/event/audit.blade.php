@@ -72,172 +72,7 @@
 @endsection
 
 @section('content')
-<div class="row g-4 mb-4">
-    <div class="col-sm-6 col-xxl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex align-items-start justify-content-between">
-                    <div class="content-left">
-                        <span>Reservasi</span>
-                        <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2">{{ $allevent }}</h4>
-                        </div>
-                        <small>Total Reservasi</small>
-                    </div>
-                    <span class="badge bg-label-primary rounded p-2">
-                        <i class='bx bxs-calendar'></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-xxl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex align-items-start justify-content-between">
-                    <div class="content-left">
-                        <span>Diselesaikan</span>
-                        <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2">{{ $completevent }}</h4>
-                            <small class="text-success">
-                                ({{ $allevent > 0 ? round(($completevent / $allevent) * 100) . '%' : '0%' }})
-                            </small>
-                        </div>
-                        <small>Reservasi yang Selesai </small>
-                    </div>
-                    <span class="badge bg-label-success rounded p-2">
-                        <i class='bx bxs-calendar-check'></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-sm-6 col-xxl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex align-items-start justify-content-between">
-                    <div class="content-left">
-                        <span>Auditorium</span>
-                        <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2">{{ $audit }}</h4>
-                            <small class="text-success">
-                                ({{ $allevent > 0 ? round(($audit / $allevent) * 100) . '%' : '0%' }})
-                            </small>
-                        </div>
-                        <small>Reservasi Auditorium </small>
-                    </div>
-                    <span class="badge bg-label-primary rounded p-2">
-                        <i class='bx bx-buildings'></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-xxl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex align-items-start justify-content-between">
-                    <div class="content-left">
-                        <span>Lecture Theatre</span>
-                        <div class="d-flex align-items-end mt-2">
-                            <h4 class="mb-0 me-2">{{ $lecture }}</h4>
-                            <small class="text-success">
-                                ({{ $allevent > 0 ? round(($lecture / $allevent) * 100) . '%' : '0%' }})
-                            </small>
-                        </div>
-                        <small>Reservasi Lecture Theatre </small>
-                    </div>
-                    <span class="badge bg-label-success rounded p-2">
-                        <i class='bx bx-building' ></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-12 col-xl-6 col-md-6 mb-4">
-        <div class="card h-100">
-            <div class="card-body">
-              <div class="bg-label-primary rounded-3 text-center mb-4 pt-6">
-                <img class="img-fluid" src="{{asset('assets/img/masonry-portfolio/masonry-portfolio-2.jpg')}}" alt="Card girl image" style="width: 52%;" />
-              </div>
-              <h5 class="mb-2">Auditroium Jakarta Global University</h5>
-              <p>Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
-              <div class="row mb-4 g-3">
-                <div class="col-6">
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-calendar bx-lg"></i></span>
-                    </div>
-                    <div>
-                      <h6 class="mb-0 text-nowrap">17 Nov 23</h6>
-                      <small>Date</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-time-five bx-lg"></i></span>
-                    </div>
-                    <div>
-                      <h6 class="mb-0 text-nowrap">32 minutes</h6>
-                      <small>Duration</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 text-center">
-                <a href="javascript:void(0);" class="btn btn-primary w-100 d-grid">Join the event</a>
-              </div>
-            </div>
-          </div>
-    </div>
-  
-    <div class="col-12 col-xl-6 col-md-6 mb-4">
-        <div class="card h-100">
-            <div class="card-body">
-              <div class="bg-label-primary rounded-3 text-center mb-4 pt-6">
-                <img class="img-fluid" src="{{asset('assets/img/lt.jpg')}}" alt="Card girl image" style="width: 52%;" />
-              </div>
-              <h5 class="mb-2">Lecture Theatre Jakarta Global University</h5>
-              <p>Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
-              <div class="row mb-4 g-3">
-                <div class="col-6">
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-calendar bx-lg"></i></span>
-                    </div>
-                    <div>
-                      <h6 class="mb-0 text-nowrap">17 Nov 23</h6>
-                      <small>Date</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-time-five bx-lg"></i></span>
-                    </div>
-                    <div>
-                      <h6 class="mb-0 text-nowrap">32 minutes</h6>
-                      <small>Duration</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 text-center">
-                <a href="javascript:void(0);" class="btn btn-primary w-100 d-grid">Join the event</a>
-              </div>
-            </div>
-          </div>
-    </div>
-  </div>
-
-<div class="col-md-12 project-list mb-3">
+ <div class="col-md-12 project-list mb-3">
     <div class="card">
         <div class="row">
             <div class="col-md-3">
@@ -274,7 +109,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                   
+                    <a href="{{ route('event.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
                     <div class="table-responsive">
                         <table id="tbl_list" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
@@ -284,9 +119,8 @@
                                     <th>Phone</th>
                                     <th>Event Date</th>
                                     <th>Package</th>
-                                    <th>Type</th>
                                     <th>Status</th>
-                                   
+                                    <th class="action-column">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -297,13 +131,29 @@
                                     <td>{{ $ev->phone }}</td>
                                     <td>{{ date('d F Y', strtotime($ev->event_date)) }}</td>
                                     <td>{{ $ev->package->Name }}</td>
-                                    @if($ev->package->pack == 'audit')
-                                    <td>Auditroium</td>
-                                    @else
-                                    <td>LT Room</td>
-                                    @endif
                                     <td><i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>
-                                   
+                                    <td class="action-column">
+                                        <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success"><i class='bx bxs-user-detail' ></i></a>
+                                        <a href="{{ route('event.edit', $ev->id) }}" class="btn btn-sm btn-warning"><i class='bx bx-edit-alt'></i></a>
+                                        <form action="{{ route('event.destroy', $ev->id) }}" method="POST" style="display: inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger delete-btn"><i class='bx bx-trash' ></i></button>
+                                        </form>
+                                        @if($ev->receipt_dp && $ev->bookings->isEmpty())
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class='bx bx-dots-horizontal-rounded' ></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item popup-link" href="{{ route('booking.create', $ev->id) }}">BOOKING</a></li>
+
+                                                <li><a class="dropdown-item" href="{{ route('event.email', $ev->id) }}"> EMAIL REMINDER</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('event.whatsappReminder', $ev->id) }}" target="_blank"> WHATSAPP REMINDER</a></li>
+                                            </ul>
+                                        </div>
+                                        @endif
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

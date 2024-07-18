@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('css')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+
 @endsection
 @section('content')
 <div class="container">
@@ -19,6 +20,7 @@
                                 <th>Nama </th>
                                 <th>Email</th>
                                 <th>Role</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -38,13 +40,31 @@
                                             @endforeach
                                         </ul>
                                     </td>
-                                    <td>
+                                    <td class="text-center">
+                                        @if($u->status == 'accepted')
+                                            <i class="badge rounded-pill bg-success" style="font-size:8pt;">{{ $u->status }}</i>
+                                        @elseif($u->status == 'rejected')
+                                            <i class="badge rounded-pill bg-danger" style="font-size:8pt;">{{ $u->status }}</i>
+                                        @else
+                                            <i class="badge rounded-pill bg-warning" style="font-size:8pt;">{{ $u->status }}</i>
+                                        @endif
+                                    </td>
+                                    <td class="text-center">
+                                        @if($u->status == 'pending')
+                                        <form action="{{ route('profile.accepted', $u->id) }}" method="POST">
+                                            @csrf
+                                            @method('PUT')
+                                            <button type="submit" class="btn btn-sm btn-success" name="status" value="accepted"><i class='bx bx-check'></i></button>
+                                            <button type="submit" class="btn btn-sm btn-danger" name="status" value="rejected"><i class='bx bx-x'></i></button>
+                                        </form>
+                                        @else
                                         <a href="{{ route('profile.edit', $u->id) }}" class="btn btn-sm btn-success">Edit</a>
                                         <form action="{{ route('profile.destroy', $u->id) }}" method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
                                         </form>
+                                        @endif
                                     </td>
                             </tr>
                             @endforeach

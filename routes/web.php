@@ -54,6 +54,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/{id}/edit', [UserController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/{id}/update', [UserController::class, 'update'])->name('profile.update');
     Route::delete('/profile/{id}', [UserController::class, 'destroy'])->name('profile.destroy');
+    Route::put('/profile/{id}', [UserController::class, 'accepted'])->name('profile.accepted');
 });
 
 Route::middleware(['auth'])->group(function () {
@@ -77,6 +78,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/event/{id}/email', [EventController::class, 'email'])->name('event.email');
     Route::get('/event/{id}/whatsapp-reminder', [EventController::class, 'whatsappReminder'])->name('event.whatsappReminder');
 
+    // audit
+    Route::get('/event/audit', [EventController::class, 'audit'])->name('event.audit');
+    Route::get('/event/lecture', [EventController::class, 'lecture'])->name('event.lecture');
+    Route::get('/event/createlecture', [EventController::class, 'createlecture'])->name('event.create.lecture');
+    Route::post('/event/createlecture', [EventController::class, 'storelecture'])->name('event.store.lecture');
+    Route::get('/event/lecture/{id}/edit', [EventController::class, 'editlecture'])->name('event.edit.lecture');
+    Route::put('/event/lecture/{id}/update', [EventController::class, 'updatelecture'])->name('event.update.lecture');
 });
 
 Route::middleware(['auth'])->group(function () {

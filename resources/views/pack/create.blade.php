@@ -40,8 +40,8 @@
 
                             
                               <div class="mb-3">
-                                <label for="select2Basic" class="form-label">Type</label>
-                                <select id="select2Basic" class="select2 form-select form-select-lg" data-allow-clear="true" name="type">
+                                <label for="selectpickerBasic" class="form-label">Type</label>
+                                <select id="selectpickerBasic"class="selectpicker w-100" data-style="btn-default" name="type">
                                     @if(Auth::user()->hasRole('EE') || Auth::user()->hasRole('AD'))
                                      <option value="EE">Engagement and enrollment</option>
                                      @endif
@@ -79,6 +79,15 @@
                                 <trix-editor input="service"></trix-editor>
                               </div>
 
+                              <div class="mb-3">
+                                <label for="selectpickerBasic" class="form-label">Pack</label>
+                                <select id="selectpickerBasic" class="selectpicker w-100" data-style="btn-default" name="pack">
+                                    <option value="lt">Lecture Theatre</option>
+                                    <option value="audit">Auditorium</option>
+                                </select>
+                              </div>
+
+
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Simpan Perubahan</button>
@@ -95,7 +104,9 @@
 @section('script')
 <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 <script src="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.js')}}"></script> 
-
+<script>
+    $(".selectpicker").selectpicker();
+</script>
 <!-- Jika diperlukan script tambahan -->
 
 @endsection
