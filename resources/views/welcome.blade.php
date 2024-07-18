@@ -398,6 +398,15 @@
               </div>
             </div><!-- End Portfolio Item -->
 
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-15.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Meeting Lacture 2</h4>
+                <p>Photo taken By Ballrom | JGU</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-15.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
           </div><!-- End Portfolio Container -->
 
         </div>
