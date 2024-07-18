@@ -255,7 +255,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2>Portofolio</h2>
         <p>Berikut adalah dokumentasi mengenai beberapa acara yang terdapat pada Ballroom Jakarta Global University</p>
       </div><!-- End Section Title -->
 
@@ -267,7 +267,7 @@
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">Weeding</li>
             <li data-filter=".filter-product">Graduation</li>
-            <li data-filter=".filter-branding">Seminar</li>
+            <li data-filter=".filter-branding">Dll</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -275,7 +275,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Wedding</h4>
+                <h4>Wedding Auditorium</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -284,7 +284,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Graduation</h4>
+                <h4>Graduation Auditorium</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -293,7 +293,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Seminar</h4>
+                <h4>Seminar Auditorium</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -302,7 +302,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Weeding 2</h4>
+                <h4>Weeding Auditorium 2</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -311,7 +311,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Graduation 2</h4>
+                <h4>Graduation Auditorium 2</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -320,7 +320,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4> Seminar 2</h4>
+                <h4>Seminar Auditorium 2</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -329,7 +329,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Weeding 3</h4>
+                <h4>Weeding Auditorium 3</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -338,7 +338,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Graduation 3</h4>
+                <h4>Graduation Auditorium 3</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
@@ -347,15 +347,20 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Seminar 3</h4>
+                <h4>Seminar Auditorium 3</h4>
                 <p>Photo taken By Ballrom | JGU</p>
                 <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
-           
-
-           
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-10.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Weeding Lecture</h4>
+                <p>Photo taken By Ballrom | JGU</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-10.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->          
 
           </div><!-- End Portfolio Container -->
 
