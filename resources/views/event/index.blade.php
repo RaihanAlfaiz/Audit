@@ -165,33 +165,23 @@
                 <img class="img-fluid" src="{{asset('assets/img/masonry-portfolio/masonry-portfolio-2.jpg')}}" alt="Card girl image" style="width: 52%;" />
               </div>
               <h5 class="mb-2">Auditroium Jakarta Global University</h5>
-              <p>Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
+              <p>Dapatkan pengalaman tak terlupakan dengan fasilitas audio-visual terbaik di auditorium kami. Sempurna untuk konser, seminar, dan acara besar lainnya.</p>
               <div class="row mb-4 g-3">
                 <div class="col-6">
                   <div class="d-flex align-items-center">
                     <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-calendar bx-lg"></i></span>
+                      <span class="avatar-initial rounded bg-label-primary"><i class='bx bxs-user' ></i></i></span>
                     </div>
                     <div>
-                      <h6 class="mb-0 text-nowrap">17 Nov 23</h6>
-                      <small>Date</small>
+                        <h6 class="mb-0 text-nowrap">+1000 </h6>
+                        <small>Capacity</small>
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-time-five bx-lg"></i></span>
-                    </div>
-                    <div>
-                      <h6 class="mb-0 text-nowrap">32 minutes</h6>
-                      <small>Duration</small>
-                    </div>
-                  </div>
-                </div>
+              
               </div>
               <div class="col-12 text-center">
-                <a href="javascript:void(0);" class="btn btn-primary w-100 d-grid">Join the event</a>
+                <a href="{{ route('event.audit') }}" class="btn btn-primary w-100 d-grid">Join the event</a>
               </div>
             </div>
           </div>
@@ -204,33 +194,22 @@
                 <img class="img-fluid" src="{{asset('assets/img/lt.jpg')}}" alt="Card girl image" style="width: 52%;" />
               </div>
               <h5 class="mb-2">Lecture Theatre Jakarta Global University</h5>
-              <p>Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
+              <p>Dengan fasilitas canggih dan suasana yang nyaman, lecture theatre kami adalah tempat ideal untuk kuliah, seminar, dan diskusi ilmiah</p>
               <div class="row mb-4 g-3">
                 <div class="col-6">
                   <div class="d-flex align-items-center">
                     <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-calendar bx-lg"></i></span>
+                      <span class="avatar-initial rounded bg-label-primary"><i class='bx bxs-user' ></i></i></span>
                     </div>
                     <div>
-                      <h6 class="mb-0 text-nowrap">17 Nov 23</h6>
-                      <small>Date</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-time-five bx-lg"></i></span>
-                    </div>
-                    <div>
-                      <h6 class="mb-0 text-nowrap">32 minutes</h6>
-                      <small>Duration</small>
+                      <h6 class="mb-0 text-nowrap">+750 </h6>
+                      <small>Capacity</small>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-12 text-center">
-                <a href="javascript:void(0);" class="btn btn-primary w-100 d-grid">Join the event</a>
+                <a href="{{ route('event.lecture') }}" class="btn btn-primary w-100 d-grid">Join the event</a>
               </div>
             </div>
           </div>
