@@ -77,15 +77,9 @@
                         @endif
                     @endauth
                 </div>
-            @endif      
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="#home">Get Started </a>
-
-    </div>
-  </header>
+            @endif     
+          </div>
+        </header>
 
   <main class="main">
 
@@ -105,7 +99,7 @@
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/illustrations/ballroom.png" class="img-fluid animated" alt="">
+            <img src="assets/img/ballroom.png" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
