@@ -109,7 +109,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('event.create.lecture') }}" class="btn btn-primary mb-3">Tambah Data</a>
+                    <a href="{{ route('event.create.lecture') }}" class="btn btn-primary mb-3">Add Data</a>
                     <div class="table-responsive">
                         <table id="tbl_list" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
