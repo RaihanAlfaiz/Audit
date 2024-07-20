@@ -576,7 +576,7 @@
                 .social-link {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 10px; /* Atur jarak antar icon jika diperlukan */
+                    margin-bottom: 10px; /* untuk mengatrur jarak antar icon jika diperlukan */
                 }
 
                 .social-link a {
