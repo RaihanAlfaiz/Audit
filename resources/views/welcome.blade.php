@@ -563,17 +563,55 @@
           </ul>
         </div>
         
-        <div class="col-lg-2 col-md-12">
-          <h4>Contact Us</h4>
-          <div class="social-links d-flex">
-            <a href="https://www.instagram.com/jgu_ballroom/"><i class="bi bi-instagram"></i></a> 
-            <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp">1</i></a>
-            <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp">2</i></a>
-            <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp">3</i></a>
-          </div>
-        </div>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Contact Us</title>
+            <style>
+                .social-links {
+                    display: flex;
+                    flex-direction: column;
+                }
 
-        
+                .social-link {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px; /* Atur jarak antar icon jika diperlukan */
+                }
+
+                .social-link a {
+                    margin-right: 10px; /* Atur jarak antara icon dan label */
+                }
+
+                .social-link span {
+                    font-size: 14px; /* Atur ukuran teks label jika diperlukan */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="col-lg-2 col-md-12">
+                <h4>Contact Us</h4>
+                <div class="social-links d-flex flex-column">
+                    <div class="social-link">
+                        <a href="https://www.instagram.com/jgu_ballroom/"><i class="bi bi-instagram"></i></a>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="social-link">
+                        <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp"></i></a>
+                        <span>Admin 1</span>
+                    </div>
+                    <div class="social-link">
+                        <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp"></i></a>
+                        <span>Admin 2</span>
+                    </div>
+                    <div class="social-link">
+                        <a href="https://wa.me/6281573321581"><i class="bi bi-whatsapp"></i></a>
+                        <span>Admin 3</span>
+                    </div>
+                </div>
+            </div>
+        </body>
+
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">2024 |</strong> <span>Jakarta Global University</span></p>
