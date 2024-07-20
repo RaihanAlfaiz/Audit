@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Service / edit</span>
+@endsection
 @section('css') 
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
 
@@ -7,9 +10,9 @@
 @endsection
 @section('content')
 
-<div class="container">
+<div class="card app-calendar-wrapper">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                
                 <div class="card-body">

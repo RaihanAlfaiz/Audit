@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Package</span>
+@endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('assets/vendor/css/datatables.bootstrap5.css') }}">
 <style>
