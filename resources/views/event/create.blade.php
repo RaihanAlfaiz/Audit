@@ -13,7 +13,7 @@
 @endsection
 @section('content')
 
-<div class="container">
+<div class="card app-calendar-wrapper">
     <div class="row justify-content-center">
         <div class="col-md-12">
             
@@ -186,8 +186,8 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block">Simpan Perubahan</button>
-                        <a href="{{ route('event.audit') }}" class="btn btn-danger btn-block">Kembali</a>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        <a href="{{ route('event.audit') }}" class="btn btn-danger btn-block">Back</a>
                     </form>
 
                 </div>
