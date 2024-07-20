@@ -70,7 +70,7 @@
                     <option value="{{ $role->id }}">{{ $role->title }}</option>
                   @endforeach
                 </select>
-              </div>
+            </div>
 
 
               <div class="mb-3 form-password-toggle">

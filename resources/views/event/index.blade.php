@@ -162,7 +162,7 @@
         <div class="card h-100">
             <div class="card-body">
               <div class="bg-label-primary rounded-3 text-center mb-4 pt-6">
-                <img class="img-fluid" src="{{asset('assets/img/masonry-portfolio/masonry-portfolio-2.jpg')}}" alt="Card girl image" style="width: 52%;" />
+                <img class="img-fluid" src="{{asset('assets/img/auditlebar.png')}}" alt="Card girl image" style="width: 100%;" />
               </div>
               <h5 class="mb-2">Auditroium Jakarta Global University</h5>
               <p>Dapatkan pengalaman tak terlupakan dengan fasilitas audio-visual terbaik di auditorium kami. Sempurna untuk konser, seminar, dan acara besar lainnya.</p>
@@ -191,7 +191,7 @@
         <div class="card h-100">
             <div class="card-body">
               <div class="bg-label-primary rounded-3 text-center mb-4 pt-6">
-                <img class="img-fluid" src="{{asset('assets/img/lt.jpg')}}" alt="Card girl image" style="width: 52%;" />
+                <img class="img-fluid" src="{{asset('assets/img/ltlebar.png')}}" alt="Card girl image" style="width: 100%;" />
               </div>
               <h5 class="mb-2">Lecture Theatre Jakarta Global University</h5>
               <p>Dengan fasilitas canggih dan suasana yang nyaman, lecture theatre kami adalah tempat ideal untuk kuliah, seminar, dan diskusi ilmiah</p>

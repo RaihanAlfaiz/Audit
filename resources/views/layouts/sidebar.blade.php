@@ -108,7 +108,7 @@
                 <div data-i18n="Dashboards">Service</div>
             </a>
         </li>
-      
+      {{-- @if(auth()->user()->hasRole('admin')) --}}
         <li class="menu-item  {{ Request::is('roles','profile') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon bx bxs-lock-alt'></i>
@@ -127,7 +127,7 @@
                 </li>
             </ul>
         </li>
-
+        {{-- @endif --}}
 
     
     

@@ -40,7 +40,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'role:AD'])->group(function () {
     Route::get('/roles', [RoleController::class, 'index'])->name('roles');
     Route::post('/roles', [RoleController::class, 'store'])->name('roles.store');
     Route::get('/roles/{id}/edit', [RoleController::class, 'edit'])->name('roles.edit');
@@ -48,7 +48,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/roles/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'role:AD'])->group(function () {
     Route::get('/profile', [UserController::class, 'index'])->name('profile');
     Route::post('/profile', [UserController::class, 'store'])->name('profile.store');
     Route::get('/profile/{id}/edit', [UserController::class, 'edit'])->name('profile.edit');
@@ -95,9 +95,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/booking/{id}/edit', [BookingController::class, 'edit'])->name('booking.edit');
     Route::put('/booking/{id}/update', [BookingController::class, 'update'])->name('booking.update');
     Route::delete('/booking/{id}', [BookingController::class, 'destroy'])->name('booking.destroy');
-    Route::get('/booking/print/{id}', [BookingController::class, 'print'])->name('booking.print');
 });
-
+Route::get('/booking/print/{id}', [BookingController::class, 'print'])->name('booking.print');
 Route::middleware(['auth'])->group(function () {
     Route::get('/package', [PackageController::class, 'index'])->name('package');
     Route::get('/package/create', [PackageController::class, 'create'])->name('package.create');
@@ -128,7 +127,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/myprofile/{id}', [MyProfileController::class, 'update'])->name('myprofile.update');
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'role:BM'])->group(function () {
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
     Route::get('/tools', [ToolsController::class, 'index'])->name('tools');
