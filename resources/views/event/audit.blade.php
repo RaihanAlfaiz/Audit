@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Auditorium</span>
+@endsection
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/date-picker.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/daterange-picker.css') }}">

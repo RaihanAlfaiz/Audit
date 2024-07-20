@@ -1,5 +1,8 @@
 @extends('layouts.master')
 @section('css') 
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Lecture Theatre / Create</span>
+@endsection
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css')}}" />
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
 <style>

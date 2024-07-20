@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Home</span>
+@endsection
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">

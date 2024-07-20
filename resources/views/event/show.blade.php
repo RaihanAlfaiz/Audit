@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Auditorium / Show</span>
+@endsection
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
   <div class="row invoice-preview">

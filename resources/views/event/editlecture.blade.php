@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Lecture Theatre / Edit</span>
+@endsection
 @section('css') 
 <link rel="stylesheet" href="{{ asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css') }}" />
 <style>
@@ -14,7 +16,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="card app-calendar-wrapper">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
