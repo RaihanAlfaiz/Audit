@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Tools</span>
+@endsection
 @section('css')
 <style>
       .table {
