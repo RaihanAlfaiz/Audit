@@ -109,18 +109,18 @@
             </a>
         </li>
       {{-- @if(auth()->user()->hasRole('admin')) --}}
-        <li class="menu-item  {{ Request::is('roles','profile') ? 'active open' : '' }}">
+        <li class="menu-item  {{ Request::is('roles*','profile*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon bx bxs-lock-alt'></i>
                 <div data-i18n="Dashboards">Konfigurasi</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item  {{ Request::is('roles') ? 'active' : '' }}">
+                <li class="menu-item  {{ Request::is('roles','roles/edit/*') ? 'active' : '' }}">
                     <a href="/roles" class="menu-link">
                         <div>Roles</div>
                       </a>
                 </li>
-                <li class="menu-item  {{ Request::is('profile') ? 'active' : '' }}">
+                <li class="menu-item  {{ Request::is('profile*') ? 'active' : '' }}">
                     <a href="{{ url('profile') }}" class="menu-link">
                         <div>User</div>
                       </a>

@@ -1,5 +1,8 @@
 @extends('layouts.master')
 @section('css')
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Profile</span>
+@endsection
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
 
 @endsection

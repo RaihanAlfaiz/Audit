@@ -1,10 +1,13 @@
 @extends('layouts.master')
 
-
+@section('breadcrumb-items')
+<span class="text-muted fw-light">Roles / Edit</span>
+@endsection
 
 @section('content')
 
-<div class="container">
+<div class="card app-calendar-wrapper">
+
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">

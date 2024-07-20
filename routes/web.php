@@ -43,7 +43,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['auth', 'role:AD'])->group(function () {
     Route::get('/roles', [RoleController::class, 'index'])->name('roles');
     Route::post('/roles', [RoleController::class, 'store'])->name('roles.store');
-    Route::get('/roles/{id}/edit', [RoleController::class, 'edit'])->name('roles.edit');
+    Route::get('/roles/edit/{id}', [RoleController::class, 'edit'])->name('roles.edit');
     Route::put('/roles/{id}/update', [RoleController::class, 'update'])->name('roles.update');
     Route::delete('/roles/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
 });
