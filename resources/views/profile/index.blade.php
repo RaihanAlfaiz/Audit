@@ -62,7 +62,7 @@
                                         <form action="{{ route('profile.destroy', $u->id) }}" method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
+                                            <button type="submit" class="btn btn-sm btn-danger delete-btn">delete</button>
                                         </form>
                                         @endif
                                     </td>

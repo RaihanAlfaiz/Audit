@@ -36,7 +36,7 @@
                                 <form action="{{ route('roles.destroy', $role->id) }}" method="POST" style="display: inline;">
                                   @csrf
                                   @method('DELETE')
-                                  <button type="submit" class="btn btn-sm btn-danger delete-btn">Hapus</button>
+                                  <button type="submit" class="btn btn-sm btn-danger delete-btn">Delete</button>
                               </form>
                               </td>
                           </tr>
