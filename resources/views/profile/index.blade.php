@@ -4,14 +4,14 @@
 
 @endsection
 @section('content')
-<div class="container">
+<div class="card app-calendar-wrapper">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 
                 <div class="card-body">
                     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#basicModal">
-                        Tambah Data
+                        Add Data
                     </button>
                     <table id="tbl_list" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
