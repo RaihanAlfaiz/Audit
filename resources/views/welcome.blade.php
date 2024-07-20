@@ -584,7 +584,7 @@
                 }
 
                 .social-link span {
-                    font-size: 14px; /* Atur ukuran teks label jika diperlukan */
+                    font-size: 14px; /* untuk ukuran teks label jika diperlukan */
                 }
             </style>
         </head>
