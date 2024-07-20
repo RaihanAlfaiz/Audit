@@ -580,7 +580,7 @@
                 }
 
                 .social-link a {
-                    margin-right: 10px; /* Atur jarak antara icon dan label */
+                    margin-right: 10px; /* untuk mengatur jarak antara icon dan label */
                 }
 
                 .social-link span {
