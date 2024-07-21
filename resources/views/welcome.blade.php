@@ -546,7 +546,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="{{route('welcome')}}" class="d-flex align-items-center">
-            <span class="sitename">Auditorium | JGU</span>
+            <span class="sitename">Ballroom | JGU</span>
           </a>
           <div class="footer-contact pt-3">
             <p>Manage by PT.MOON EVENT</p>
@@ -557,7 +557,7 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>About Auditorium</h4>
+          <h4>About Ballroom</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
@@ -626,14 +626,18 @@
             </div>
         </body>
 
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Developed by :</h4>
+          <div class="col-lg-8" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/lolp.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">2024 |</strong> <span>Jakarta Global University</span></p>
       <div class="credits">
-       
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->

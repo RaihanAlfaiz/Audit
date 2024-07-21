@@ -33,6 +33,19 @@
                         height: auto; /* Menjaga rasio aspek */
                     }
                 </style>
+                <style>
+                body {
+                  background-image: url('assets/img/rorr.jpg');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  height: 100vh;
+                 width: 100vw;
+                 }
+                header {
+                background: rgba(255,255,225, 0.5);
+                 }
+            </style>
             </head>
             <body>
                 <div class="container-right">
