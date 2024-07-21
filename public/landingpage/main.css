@@ -41,7 +41,7 @@
   --nav-color: #ffffff;
 
   /* Nav Hover Color - This color is applied to main navmenu links when they are hovered over. */
-  --nav-hover-color: #db3232;
+  --nav-hover-color: #020202;
 
   /* Nav Dropdown Background Color - This color is used as the background for dropdown boxes that appear when hovering over primary navigation items. */
   --nav-dropdown-background-color: #ffffff;
@@ -55,8 +55,8 @@
 
 /* Template Custom Colors */
 :root {
-  --hero-background-color: #606061;
-  --hero-color: #ffffff;
+  --hero-background-image:url('assets/img/ballroom.back.jpg');
+  --hero-color: #e4d5d5;
 }
 
 /* Smooth scroll */

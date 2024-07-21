@@ -51,7 +51,7 @@
 
       <a href="{{route('welcome')}}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/ballroom.png" alt="">
+        <img src="assets/img/logo-jgu-white.png" alt="">
         <h1 class="sitename">ballroom</h1>
       </a>
 
@@ -63,14 +63,14 @@
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#footer">Contact us</a></li>
   
-          <li class="dropdown"><a href="#"><span>Login/Register</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>Sign In</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
                         <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
                     @else
-                        <li><a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a></li>
+                        <li><a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sign In</a></li>
 
                   @if (Route::has('register'))
                             <li><a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a></li>
@@ -85,6 +85,20 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero section">
+    <meta content="">
+    <style>
+      body {
+        background-image: url('assets/img/ball.back.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+      }
+      header {
+        background: rgba(255,255,225, 0.5);
+      }
+    </style>
 
       <div class="container">
         <div class="row gy-4">
@@ -94,7 +108,7 @@
                Dikelola Oleh PT. MOON EVENT.</span></p>
            
                <div class="d-flex">
-              <a href="#about" class="btn-get-started">Layanan Kami</a>
+              <a href="#about" class="btn-get-started">Services</a>
               <a href="https://youtu.be/rqhoknKEqEA?si=wQJVvYUTpbIBFMLM" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
             </div>
           </div>
@@ -181,8 +195,8 @@
 
           </div>
 
-          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-            <img src="assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-5 order-1">
+            <img src="assets/img/lol6.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
           </div>
         </div>
 
@@ -236,7 +250,7 @@
             <h3><b><i>| "Mengubah Hidup, Memperkaya Masa Depan"</i></b></h3>
           </div>
           <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Get Started</a>
+            <a class="cta-btn align-middle" href="#">ABOUT US</a>
           </div>
         </div>
 
