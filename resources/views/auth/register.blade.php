@@ -49,7 +49,7 @@
             </head>
             <body>
                 <div class="container-right">
-                    <img src="assets/img/ballroom-login.png" alt="Ballroom" class="img-resize">
+                    <img src="assets/img/login-ballroom.png" alt="Ballroom" class="img-resize">
                 </div>
             </body>
             </html>
