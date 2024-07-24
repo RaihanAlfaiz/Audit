@@ -196,7 +196,7 @@
           </div>
 
           <div class="col-lg-5 order-1">
-            <img src="assets/img/lol6-2.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/img/lol6.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
           </div>
         </div>
 
