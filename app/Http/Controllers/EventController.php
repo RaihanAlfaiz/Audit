@@ -51,14 +51,19 @@ class EventController extends Controller
         $lecture = Event::whereHas('package', function ($query) {
             $query->where('pack', 'lt');
         })->count();
-
+        $type_mapping = [
+            'ME' => 'Moon Event',
+            'BM' => 'Building Management',
+            'EE' => 'Engagement and Enrollment'
+        ];
         return view('event.index', [
             'event' => $event,
             'packages' => $packages,
             'allevent' => $allevent,
             'completevent' => $completevent,
             'audit' => $audit,
-            'lecture' => $lecture
+            'lecture' => $lecture,
+            'type_mapping' => $type_mapping, // Pass the mapping to the vie
         ]);
     }
 
@@ -442,12 +447,20 @@ class EventController extends Controller
             $query->where('status', $request->input('status'));
         }
 
-        $event = $query->get();
+        $events = $query->get();
         $packages = Package::where('pack', 'audit')->get(); // Select only packages with 'audit' pack
 
+        // Mapping of types
+        $type_mapping = [
+            'ME' => 'Moon Event',
+            'BM' => 'Building Management',
+            'EE' => 'Engagement and Enrollment'
+        ];
+
         return view('event.audit', [
-            'event' => $event,
+            'events' => $events,
             'packages' => $packages,
+            'type_mapping' => $type_mapping, // Pass the mapping to the view
         ]);
     }
 
@@ -477,10 +490,16 @@ class EventController extends Controller
 
         $event = $query->get();
         $packages = Package::where('pack', 'lt')->get(); // Select only packages with 'lt' pack
-
+        // Mapping of types
+        $type_mapping = [
+            'ME' => 'Moon Event',
+            'BM' => 'Building Management',
+            'EE' => 'Engagement and Enrollment'
+        ];
         return view('event.lecture', [
             'event' => $event,
             'packages' => $packages,
+            'type_mapping' => $type_mapping, // Pass the mapping to the vie
         ]);
     }
 }

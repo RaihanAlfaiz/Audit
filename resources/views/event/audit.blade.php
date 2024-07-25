@@ -122,18 +122,20 @@
                                     <th>Phone</th>
                                     <th>Event Date</th>
                                     <th>Package</th>
+                                    <th>Vendor</th>
                                     <th>Status</th>
                                     <th class="action-column">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($event as $ev)
+                                @foreach ($events as $ev)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $ev->tenant_name }}</td>
                                     <td>{{ $ev->phone }}</td>
                                     <td>{{ date('d F Y', strtotime($ev->event_date)) }}</td>
                                     <td>{{ $ev->package->Name }}</td>
+                                    <td>{{ $type_mapping[$ev->package->type] ?? $ev->package->type }}</td>
                                     <td><i class="badge rounded-pill bg-{{ $ev->color }}" style="font-size:10pt;">{{ $ev->status }}</i></td>
                                     <td class="action-column">
                                         <a href="{{ route('event.show' , $ev->id) }}" class="btn btn-sm btn-success"><i class='bx bxs-user-detail' ></i></a>

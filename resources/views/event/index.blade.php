@@ -266,6 +266,7 @@
                                     <th>Phone</th>
                                     <th>Event Date</th>
                                     <th>Package</th>
+                                    <th>Vendor</th>
                                     <th>Type</th>
                                     <th>Status</th>
                                    
@@ -279,6 +280,7 @@
                                     <td>{{ $ev->phone }}</td>
                                     <td>{{ date('d F Y', strtotime($ev->event_date)) }}</td>
                                     <td>{{ $ev->package->Name }}</td>
+                                    <td>{{ $type_mapping[$ev->package->type] ?? $ev->package->type }}</td>
                                     @if($ev->package->pack == 'audit')
                                     <td>Auditroium</td>
                                     @else
