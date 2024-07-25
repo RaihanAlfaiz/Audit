@@ -177,7 +177,7 @@ class EventController extends Controller
         // Create the event
         Event::create($validatedData);
 
-        return redirect()->route('event')->with('success', 'Event added successfully.');
+        return redirect()->route('event.audit')->with('success', 'Event added successfully.');
     }
 
     public function storelecture(Request $request)
@@ -217,7 +217,7 @@ class EventController extends Controller
         // Create the event
         Event::create($validatedData);
 
-        return redirect()->route('event')->with('success', 'Event added successfully.');
+        return redirect()->route('event.store.lecture')->with('success', 'Event added successfully.');
     }
 
     /**

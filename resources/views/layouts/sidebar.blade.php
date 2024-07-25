@@ -35,12 +35,7 @@
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Book</span>
         </li>
-        {{-- <li class="menu-item  {{ Request::is('event*') ? 'active' : '' }}">
-            <a href="{{ route('event') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Dashboards">Events</div>
-            </a>
-        </li> --}}
+   
 
         <li class="menu-item  {{ Request::is('event*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -108,11 +103,11 @@
                 <div data-i18n="Dashboards">Service</div>
             </a>
         </li>
-      {{-- @if(auth()->user()->hasRole('admin')) --}}
+        @if(Auth::user()->hasRole('AD'))
         <li class="menu-item  {{ Request::is('roles*','profile*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon bx bxs-lock-alt'></i>
-                <div data-i18n="Dashboards">Konfigurasi</div>
+                <div data-i18n="Dashboards">Configuration</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item  {{ Request::is('roles','roles/edit/*') ? 'active' : '' }}">
@@ -127,7 +122,7 @@
                 </li>
             </ul>
         </li>
-        {{-- @endif --}}
+        @endif
 
     
     
