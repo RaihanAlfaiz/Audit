@@ -11,6 +11,8 @@ use App\Models\Booking;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Carbon;
+use App\Exports\EventsExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class EventController extends Controller
 {
@@ -423,6 +425,8 @@ class EventController extends Controller
         return redirect()->away('https://wa.me/+62' . $event->phone . '?text=' . $message);
     }
 
+
+
     public function audit(Request $request)
     {
         $query = Event::query();
@@ -447,6 +451,13 @@ class EventController extends Controller
             $query->where('status', $request->input('status'));
         }
 
+        // Filter by package type
+        if ($request->has('package_type') && !empty($request->input('package_type'))) {
+            $query->whereHas('package', function ($query) use ($request) {
+                $query->where('type', $request->input('package_type'));
+            });
+        }
+
         $events = $query->get();
         $packages = Package::where('pack', 'audit')->get(); // Select only packages with 'audit' pack
 
@@ -457,12 +468,19 @@ class EventController extends Controller
             'EE' => 'Engagement and Enrollment'
         ];
 
+        // Export to Excel
+        if ($request->has('export') && $request->input('export') === 'excel') {
+            return Excel::download(new EventsExport($events), 'events.xlsx');
+        }
+
         return view('event.audit', [
             'events' => $events,
             'packages' => $packages,
             'type_mapping' => $type_mapping, // Pass the mapping to the view
         ]);
     }
+
+
 
     public function lecture(Request $request)
     {
