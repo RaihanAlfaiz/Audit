@@ -83,9 +83,9 @@
             </div>
             <div class="col-md-3">
                 <select id="Select_1" class="selectpicker w-100" data-style="btn-default" data-live-search="true">
-                    <option value="">Package</option>
-                    @foreach($packages as $package)
-                        <option value="{{ $package->id }}" {{ request('package') == $package->id ? 'selected' : '' }}>{{ $package->Name }}</option>
+                    <option value="">Select Type</option>
+                    @foreach ($type_mapping as $key => $value)
+                        <option value="{{ $key }}" {{ request('package_type') == $key ? 'selected' : '' }}>{{ $value }}</option>
                     @endforeach
                 </select>
             </div>
@@ -101,6 +101,7 @@
                 </select>
             </div>
             <div class="col-md-3">
+                <a href="{{ request()->fullUrlWithQuery(['export' => 'excel']) }}" class="btn btn-success">Export to Excel</a>
                 <button class="btn btn-primary" id="resetFilters">Reset</button>
             </div>
         </div>
@@ -257,23 +258,41 @@ $(document).ready(function() {
 });
 </script>
 <script>
-    $('#resetFilters').on('click', function() {
-    // Reset select options
-    $('#Select_1').val('');
-    $('#Select_1').selectpicker('refresh');
-    $('#Select_2').val('');
-    $('#Select_2').selectpicker('refresh');
+    $(document).ready(function() {
+        $('#flatpickr-range').flatpickr({
+            mode: 'range',
+            dateFormat: 'Y-m-d'
+        });
 
-    // Reset date range picker
-    $('#flatpickr-range').flatpickr().clear();
+        $('#flatpickr-range').on('change', function() {
+            var dateRange = $(this).val();
+            var url = new URL(window.location.href);
+            url.searchParams.set('range', dateRange);
+            window.location.href = url.href;
+        });
 
-    // Remove URL parameters and reload page
-    var currentUrl = new URL(window.location.href);
-    currentUrl.searchParams.delete('package');
-    currentUrl.searchParams.delete('status');
-    currentUrl.searchParams.delete('range');
-    window.location.href = currentUrl.toString();
-});
+        $('#Select_1').on('change', function() {
+            var packageType = $(this).val();
+            var url = new URL(window.location.href);
+            url.searchParams.set('package_type', packageType);
+            window.location.href = url.href;
+        });
+
+        $('#Select_2').on('change', function() {
+            var status = $(this).val();
+            var url = new URL(window.location.href);
+            url.searchParams.set('status', status);
+            window.location.href = url.href;
+        });
+
+        $('#resetFilters').on('click', function() {
+            var url = new URL(window.location.href);
+            url.searchParams.delete('range');
+            url.searchParams.delete('package_type');
+            url.searchParams.delete('status');
+            window.location.href = url.href;
+        });
+    });
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
