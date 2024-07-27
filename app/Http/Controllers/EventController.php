@@ -505,6 +505,12 @@ class EventController extends Controller
         if ($request->has('status') && !empty($request->input('status'))) {
             $query->where('status', $request->input('status'));
         }
+        // Filter by package type
+        if ($request->has('package_type') && !empty($request->input('package_type'))) {
+            $query->whereHas('package', function ($query) use ($request) {
+                $query->where('type', $request->input('package_type'));
+            });
+        }
 
         $event = $query->get();
         $packages = Package::where('pack', 'lt')->get(); // Select only packages with 'lt' pack
@@ -514,6 +520,12 @@ class EventController extends Controller
             'BM' => 'Building Management',
             'EE' => 'Engagement and Enrollment'
         ];
+
+        // Export to Excel
+        if ($request->has('export') && $request->input('export') === 'excel') {
+            return Excel::download(new EventsExport($event), 'events.xlsx');
+        }
+
         return view('event.lecture', [
             'event' => $event,
             'packages' => $packages,
