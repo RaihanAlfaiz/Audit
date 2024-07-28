@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Package;
 use App\Models\UserRole;
+use App\Models\Addition;
 use App\Mail\sendEmail;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Storage;
@@ -235,7 +236,8 @@ class EventController extends Controller
         $event = Event::findOrFail($id);
         $booking = Booking::find($id); // Mengganti findOrFail dengan find
         $package = Package::findOrFail($event->package_id);
-        return view('event.show', compact('event', 'package', 'booking'));
+        $additions = Addition::where('booking_id', $id)->get();
+        return view('event.show', compact('event', 'package', 'booking', 'additions'));
     }
 
     public function print(string $id)
