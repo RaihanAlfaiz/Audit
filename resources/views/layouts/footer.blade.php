@@ -5,8 +5,8 @@
             <a target="_blank" href="{{ url('log-viewers') }}">©</a> 2024-<script>
                 document.write(new Date().getFullYear())
             </script>
-             <a href="https://itic.jgu.ac.id/" target="_blank" class="footer-link fw-bolder">ITIC 1
-                JGU</a>
+             <a href="https://itic.jgu.ac.id/" target="_blank" class="footer-link fw-bolder">KELOMPOK 1
+                 </a>
         </div>
     </div>
 </footer>
