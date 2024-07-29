@@ -186,7 +186,7 @@
               <div class="faq-item">
                 <h3><span>05</span>Exhibition dll</h3>
                 <div class="faq-content">
-                <p>Kami juga menyediakan Berbagai Macam Layanan yang tidak bisa kami lampirkan semuanya disini silahkan hubungi nomor whatsapp kami atau bisa melalui akun instagram kami!</p>
+                <p>Kami juga menyediakan berbagai macam layanan yang tidak bisa kami lampirkan semuanya disini. Tetapi jika anda tertarik silahkan hubungi nomor whatsapp yang tertera atau akun instagram kami!</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
