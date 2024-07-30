@@ -70,7 +70,7 @@
                 <div data-i18n="Dashboards">Booking</div>
             </a>
         </li>
-
+        @if(Auth::user()->hasRole('BM'))
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Building Management</span>
         </li>
@@ -81,7 +81,7 @@
                 <div data-i18n="Dashboards">Tools</div>
             </a>
         </li>
-       
+       @endif
        
         {{-- <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Service and Package </span>

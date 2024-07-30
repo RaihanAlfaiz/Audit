@@ -4,7 +4,7 @@
 @endsection
 @section('css') 
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
-
+<link rel="stylesheet" href="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css')}}" />
 @endsection
 @section('content')
 
@@ -40,7 +40,20 @@
                                 <trix-editor input="item"></trix-editor>
                               </div>
 
-                              
+                              <div class="mb-3">
+                                <label for="selectpickerBasic" class="form-label">Type</label>
+                                <select id="selectpickerBasic" class="selectpicker w-100" data-style="btn-default" name="type">
+                                    @if(Auth::user()->hasRole('EE') || Auth::user()->hasRole('AD'))
+                                        <option value="EE" {{ $package->type == 'EE' ? 'selected' : '' }}>Engagement and Enrollment</option>
+                                    @endif
+                                    @if(Auth::user()->hasRole('ME'))
+                                        <option value="ME" {{ $package->type == 'ME' ? 'selected' : '' }}>Moon Event</option>
+                                    @endif
+                                    @if(Auth::user()->hasRole('BM'))
+                                        <option value="BM" {{ $package->type == 'BM' ? 'selected' : '' }}>Building Management</option>
+                                    @endif
+                                </select>
+                            </div>
 
                         </div>
 
@@ -66,7 +79,13 @@
                                 <input id="service" type="hidden" name="service" value="{{ $package->service }}">
                                 <trix-editor input="service"></trix-editor>
                               </div>
-
+                              <div class="mb-3">
+                                <label for="selectpickerBasic" class="form-label">Pack</label>
+                                <select id="selectpickerBasic" class="selectpicker w-100" data-style="btn-default" name="pack">
+                                    <option value="lt" {{ $package->pack == 'lt' ? 'selected' : '' }}>Lecture Theatre</option>
+                                    <option value="audit" {{ $package->pack == 'audit' ? 'selected' : '' }}>Auditorium</option>
+                                </select>
+                              </div>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Simpan Perubahan</button>
@@ -82,6 +101,10 @@
 
 @section('script')
 <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+<script src="{{asset('assets/vendor/libs/bootstrap-select/bootstrap-select.js')}}"></script> 
+<script>
+    $(".selectpicker").selectpicker();
+</script>
 <!-- Jika diperlukan script tambahan -->
 {{-- <script>
         function formatRupiah(angka) {

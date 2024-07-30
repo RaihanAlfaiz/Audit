@@ -49,7 +49,7 @@ class PackageController extends Controller
             'item' => 'required',
             'price' => 'required|numeric',
             'type' => 'required',
-
+            'pack' => 'required',
 
         ]);
 
@@ -90,6 +90,8 @@ class PackageController extends Controller
             'service' => 'required',
             'item' => 'required',
             'price' => 'required|numeric',
+            'type' => 'required',
+            'pack' => 'required',
         ]);
 
         $package->fill($validatedData);

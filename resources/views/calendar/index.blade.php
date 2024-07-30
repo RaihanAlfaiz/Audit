@@ -57,15 +57,19 @@
                     <div class="app-calendar-events-filter">
                         
                         <div class="form-check mb-2">
-                            <input class="form-check-input input-filter" type="checkbox" id="select-business"
-                                data-value="business" checked>
-                            <label class="form-check-label" for="select-business">Event</label>
+                            <input class="form-check-input input-filter" type="checkbox" id="select-personal" data-value="personal" checked>
+                            <label class="form-check-label" for="select-personal">Auditorium</label>
+                        </div>
+                        <div class="form-check form-check-info mb-2">
+                            <input class="form-check-input input-filter" type="checkbox" id="select-etc" data-value="etc" checked>
+                            <label class="form-check-label" for="select-etc">Lecture Theatre</label>
                         </div>
                         <div class="form-check form-check-warning mb-2">
                             <input class="form-check-input input-filter" type="checkbox" id="select-family"
                                 data-value="family" checked>
                             <label class="form-check-label" for="select-family">Rehearsals Date</label>
                         </div>
+                      
                         {{-- <div class="form-check form-check-success mb-2">
                             <input class="form-check-input input-filter" type="checkbox" id="select-holiday"
                                 data-value="holiday" checked>
@@ -201,6 +205,21 @@
     <script>
         window.events =  [
             @foreach($events as $event){
+     id:  "{{ $event->id }}",
+     url:  "",
+     title:  "{{ $event->title }}",
+     tenant_name:  "{{ $event->tenant_name }}",
+     start:  "{{ $event->start }}",
+     end:  "{{ $event->end }}",
+     location:  "{{ $event->location }}",
+     phone:  "{{ $event->phone }}",
+     capacity:  "{{ $event->capacity }}",
+     allDay:  ! 1,
+     extendedProps:  {
+         calendar:  "{{ $event->type }}"
+    }
+}, @endforeach
+@foreach($eventslt as $event){
      id:  "{{ $event->id }}",
      url:  "",
      title:  "{{ $event->title }}",

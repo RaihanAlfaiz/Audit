@@ -47,10 +47,10 @@ class Event extends Model
     {
         $x = "";
         if ($this->status == "Complete") {
-            $x = "primary";
+            $x = "info";
         } else if ($this->status == "DP") {
             $x = "warning";
-        } else if ($this->status == "Pending") {
+        } else if ($this->status == "Pending" || $this->status == "Cancel") {
             $x = "danger";
         } else if ($this->status == "Process") {
             $x = "info";

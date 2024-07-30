@@ -71,6 +71,10 @@
         width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
         white-space: nowrap; /* Mencegah teks melompat ke baris baru */
     }
+    .primary-blue {
+    background-color: blue !important; /* Ubah warna latar belakang */
+    color: white !important; /* Ubah warna teks jika diperlukan */
+}
 </style>
 @endsection
 
